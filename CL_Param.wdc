@@ -1,0 +1,554 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CL_Param
+ major_version : 30
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+ options : 256
+class :
+ identifier : 0x1656d2ae35602658
+ internal_properties : HwAAAB4AAAD+1kTo6KJy2WQU0Y4fbFD6aQ7NWfD4KKkN7Ml67nIqLXIRxJ1vjfJ1
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1+
+      STParametre est une Structure
+      	bTrouve est un booleen
+      	
+      	sCopar est une chaine
+      	sDESPAR est une chaine
+      	sVALPAR est une chaîne
+      	sAUTREVAL est une chaîne
+      	moLIBRENUM1 est un monetaire
+      	sLIBREOBS est une chaîne
+      	sLIBRETXT1 est une chaîne
+      	dhDateHeureModif est un dateheure
+      	
+      	nIDParam est un entier
+      FIN
+      
+      ERubriqueParam est une Enumération
+      	COPAR
+      	DESPAR
+      	VALPAR
+      	AUTREVAL
+      	LIBRENUM
+      	LIBREOBS
+      	LIBRETXT
+      FIN
+      
+      CL_Param est une Classe
+      	ST_Courant est un STParametre
+      	PRIVÉE
+      		m_nDerniereVersion est un entier
+      		m_dhDerniereVersion est un dateheure
+      		m_taParametres est un tableau associatif (*, null) de STParametre
+      FIN
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1609705562493232759
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur()
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1609705562493298295
+     type_code : 28
+     code : |1+
+      PROCEDURE Destructeur()
+      
+     type : 655360
+   -
+     name : ChargementFichierParam
+     procedure_id : 1609709750673081783
+     type_code : 12
+     code : |1+
+      // Résumé : Chargement des parametres dans le tableau
+      // Paramètres :
+      //	bChargementTotal (booléen) : Si vrai : charge tout, sinon charge les derniers param modifiés si il y en a
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE PRIVÉE ChargementFichierParam(bChargementTotal est un booleen)
+      ST_Param est un STParametre
+      sCondition est une chaine
+      DureeCharge est une Durée
+      nParam est un entier
+      
+      chronodebut()
+      
+      si bChargementTotal alors
+      	
+      	TableauSupprimeTout(m_taParametres)
+      	m_nDerniereVersion = HVersion(PARAM)
+      	m_dhDerniereVersion = DateHeureSys()
+      	
+      	pour TOUT PARAM sur COPAR
+      		ST_Param = Lecturefichier()
+      		m_taParametres[param.COPAR] = ST_Param
+      	FIN
+      	
+       	DureeCharge = ChronoFin()
+      //	si EnModeTest() alors Trace(chaineconstruit("** Chargement Parametre, %1 paramètres, durée %2 ms", m_taParametres..Occurrence, val(DureeCharge)))
+      sinon
+      	si HVersion(param) <> m_nDerniereVersion alors
+      		sCondition = ChaîneConstruit("DateHeureModification > '%1'", m_dhDerniereVersion[[à 14]])
+      	
+      		m_nDerniereVersion = HVersion(PARAM)
+      		m_dhDerniereVersion = DateHeureSys()
+      	
+      		hfiltre(PARAM, copar, hvalmin, hvalmax, sCondition)
+      	
+      		POUR TOUT PARAM SUR COPAR
+      			ST_Param = Lecturefichier()
+      			m_taParametres[PARAM.COPAR] = ST_Param
+      			nParam++
+      		FIN
+      	
+      		HDésactiveFiltre(PARAM)
+      		
+      		DureeCharge = ChronoFin()
+      //		SI EnModeTest() ALORS Trace(ChaîneConstruit("** Chargement Parametre partiel, %1 parametre(s), durée %2 ms", nParam, Val(DureeCharge)))
+      	sinon
+      //		SI EnModeTest() ALORS Trace("** Chargement Parametre, aucune modification")
+      	fin
+      FIN
+      
+      
+      
+     type : 458752
+   -
+     name : Lecture
+     procedure_id : 1609716970514000818
+     type_code : 12
+     code : |1+
+      // Résumé : Lit le parametre demandé dans ST_Courant
+      // Paramètres :
+      //	sCopar (chaîne ANSI) : copar du paramètre demandé
+      // Valeur de retour :
+      // 	booléen : // 	vrai sil le parametre existe, faux sinon. Le membre ST_Courant de la classe est mis à jour
+      //
+      PROCEDURE Lecture(sCopar est une chaîne) : booleen
+      stValNul est un STParametre
+      sPar est une chaine = complete(sCopar, dimension(param.COPAR))
+      
+      SI Existe(sPar) ALORS
+      	ST_Courant = m_taParametres[sPar]
+      	RENVOYER Vrai
+      sinon
+      	ST_Courant = stValNul
+      	RENVOYER faux
+      FIN
+     type : 458752
+   -
+     name : ParamOui
+     procedure_id : 1609717361356050077
+     type_code : 12
+     code : |1+
+      // Résumé : renvoit vrai si le param existe et que valpar = OUI / O / 1
+      // Paramètres :
+      //	sCopar (chaîne ANSI) : copar du parametre interrogé
+      // Valeur de retour :
+      // 	booléen : // 	Vrai ou faux selon le contenu du parametre
+      //
+      PROCEDURE ParamOui(sCopar est une chaîne) : booleen
+      sVal est une chaine
+      ST_Vide est un STParametre
+      sParam est une chaine = complete(sCopar, dimension(param.copar))
+      
+      SI pas Existe(sParam) ALORS
+      	ST_Courant = ST_Vide
+      	RENVOYER faux
+      FIN
+      
+      ST_Courant = m_taParametres[sParam]
+      sVal = ST_Courant.sVALPAR
+      renvoyer sVal~=<§@3eb7b3d93da3426300b1§> _ou_ sVal~="OUI" _ou_ sVal~="O" _ou_ sVal~="1"
+     type : 458752
+   -
+     name : Sauve
+     procedure_id : 1609717490205164743
+     type_code : 12
+     code : |1+
+      // Résumé : sauvegarde le parametre, renvoit vrai si ok
+      // Paramètres :
+      //	sCopar (chaîne ANSI - valeur par défaut="") : <indiquez ici le rôle de sCopar>
+      // 	<*> : élément de CL_Param.ERubriqueParam
+      // Valeur de retour :
+      // 	booléen : // 	Vrai si operation ok
+      //
+      
+      PROCEDURE Sauve(sCopar est une chaîne = "", *) : booleen
+      ST_Param est un STParametre
+      sLeParam est une chaine 
+      nParametre est un entier
+      nbParametres est un entier
+      bModificationTemporaire est un booléen
+      
+      nbParametres = MesParamètres..Occurrence
+      SELON nbParametres
+      	cas 0, 1:
+      		ST_Param = ST_Courant
+      		sLeParam = ST_Param.sCopar
+      	AUTRE CAS :
+      		nParametre = 2		// TFS51307
+      		SI nbParametres > 1 _ET_ MesParamètres[2] = Null ALORS 
+      			bModificationTemporaire = Vrai
+      			nParametre++ // TFS51306
+      			SI nbParametres = 2 ALORS
+      				ST_Param = ST_Courant
+      				sLeParam = ST_Param.sCopar
+      			FIN
+      		SINON		// TFS51306
+      			sLeParam = sCopar
+      		ST_Param = Retourne(sLeParam)
+      		fin
+      		POUR i = nParametre _A_ MesParamètres..Occurrence PAS 2
+      			eMavaleur est un ERubriqueParam
+      			eMavaleur = MesParamètres[i]
+      			SELON eMavaleur
+      				CAS ERubriqueParam.COPAR : ST_Param.sCopar = MesParamètres[i + 1]
+      				CAS ERubriqueParam.DESPAR : ST_Param.sDESPAR = MesParamètres[i + 1]
+      				CAS ERubriqueParam.VALPAR : ST_Param.sVALPAR = MesParamètres[i + 1]
+      				CAS ERubriqueParam.AUTREVAL : ST_Param.sAUTREVAL = MesParamètres[i + 1]
+      				CAS ERubriqueParam.LIBRENUM : ST_Param.moLIBRENUM1 = MesParamètres[i + 1]
+      				CAS ERubriqueParam.LIBREOBS : ST_Param.sLIBREOBS = MesParamètres[i + 1]
+      				CAS ERubriqueParam.LIBRETXT : ST_Param.sLIBRETXT1 = MesParamètres[i + 1]
+      				AUTRE CAS :
+      					SI EnModeTest ALORS
+      						Erreur()
+      					FIN
+      			FIN
+      		FIN
+      		si ST_Param.sCopar ~= "" alors ST_Param.sCopar = sLeParam
+      FIN
+      
+      si pas HLitRecherchePremier(param, COPAR, complete(sLeParam, dimension(param.copar)), hBlocageEcriture) _et_ htrouve(PARAM) alors renvoyer faux  // on a trouvé, mais pas réussi à le bloquer.
+      
+      PARAM.COPAR = ST_Param.sCopar 
+      PARAM.DESPAR = ST_Param.sDESPAR
+      PARAM.VALPAR = ST_Param.sValPar
+      PARAM.AUTREVAL = ST_Param.sAUTREVAL
+      PARAM.LIBRENUM1 = ST_Param.moLIBRENUM1
+      PARAM.LIBRETXT1 = ST_Param.sLIBRETXT1
+      PARAM.LIBREOBS = ST_Param.sLIBREOBS
+      
+      SI bModificationTemporaire ALORS	// TFS51306
+      	HDébloqueNumEnr(PARAM,hNumEnrEnCours) // pour le bug 16738
+      	m_taParametres[PARAM.COPAR] = LectureFichier()
+      	RENVOYER Vrai	// TFS51306
+      FIN
+      
+      si pas htrouve(PARAM) ALORS
+      	renvoyer hajoute(param)
+      sinon
+      	renvoyer hmodifie(PARAM)
+      FIN
+      //MajIndicateur() sera appellé en automatique par le trigger
+     type : 458752
+   -
+     name : Existe
+     procedure_id : 1609718456579913311
+     type_code : 12
+     code : |1+
+      // Résumé : Verifie que le param en parametre existe
+      // Paramètres :
+      //	sCopar (chaîne ANSI) : Copar du parametre
+      // Valeur de retour :
+      // 	booléen : Vrai si il existe, faux sinon
+      //
+      PROCEDURE Existe(sCopar est une chaine) : booleen
+      
+      RENVOYER m_taParametres[complete(sCopar, dimension(param.copar))] <> Null
+     type : 458752
+   -
+     name : Rafraichit
+     procedure_id : 1610083104937374767
+     type_code : 12
+     code : |1-
+      // Résumé : Lance le chargement partiel des parametres
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE Rafraichit()
+      
+      ChargementFichierParam(faux)
+     type : 458752
+   -
+     name : Initialisation
+     procedure_id : 1610087503407944345
+     type_code : 12
+     code : |1-
+      // Résumé : chargement total du tableau, lancer à chaque changement de société
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE Initialisation()
+      
+      ChargementFichierParam(vrai)
+     type : 458752
+   -
+     name : ApresHAjouteParam
+     procedure_id : 1610096072558477631
+     type_code : 12
+     code : |1-
+      // Résumé : Appeler par le Trigger apres hAjoute, ajoute le Param dans le tableau, puis maj des indicateurs
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE ApresHAjouteParam()
+      
+      m_taParametres[PARAM.COPAR] = Lecturefichier()
+      MajIndicateur()
+     type : 458752
+   -
+     name : ApresHModifieParam
+     procedure_id : 1610096124098162828
+     type_code : 12
+     code : |1-
+      // Résumé : Appeler par le Trigger apres hModifie, modifie le Param dans le tableau, puis maj des indicateurs
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE ApresHModifieParam()
+      
+      m_taParametres[PARAM.COPAR] = Lecturefichier()
+      MajIndicateur()
+     type : 458752
+   -
+     name : AvantHSupprimeParam
+     procedure_id : 1610096201407657958
+     type_code : 12
+     code : |1+
+      // Résumé : Appeler par le Trigger avant hSupprime, supprime du tableau le Param si il existe
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE AvantHSupprimeParam()
+      
+      si Existe(param.copar) alors TableauSupprime(m_taParametres, PARAM.COPAR)
+     type : 458752
+   -
+     name : LectureFichier
+     internal_properties : HwAAAB4AAABepBXgOjxMgQxpMqlbyoNJGEzFJTpZNiGx8H0vRsJyRcv9kvMy/ccUN1v7Ac4lkdV6VijElhOInuA6RuhBa3i6cR0cxoB9HDZNlgDRWBy0JZhPwUIMNwKJsWGKEc48cAXwN6/cNvGAe2uRWzfuUsChH0gO425WpMEkMXJy+VqKSxzwbB0i6o54kP01N35vJ5gsWIgWSYzy+0E47BQWBnkWXUpodT47Sc7GujLy/6eTgZLkTqO0NZZbtuFyTIWi9lNTDFGLuDn4H7Xb59mtLorkwKN5XyTszgn0EDcgTxfB9wRv3llvF75S0LrfuDvix8PEuiyLC/Lk7tfAEZOuBU9tjThoiDvylLCBzaefDsZ+SvRHZ/Jz6HG4qBF1+Jkkzgefbfg9lN/ZozaQZq9rEQUncdttkoT9Qm6+npSnWxq/nrRxvQ==
+     procedure_id : 1611186774768321175
+     type_code : 12
+     code : |1-
+      // Résumé : copie l'enregistrement courant de Param dans une structure et la renvoi
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	STParametre : // 	enregistrement courant de param
+      //
+      PROCEDURE PRIVÉE LectureFichier() : STParametre
+      ST_Param est un STParametre
+      
+      ST_Param.bTrouve = vrai
+      
+      ST_Param.sCopar = PARAM.COPAR
+      ST_Param.sDESPAR = PARAM.DESPAR
+      ST_Param.sVALPAR = PARAM.VALPAR
+      ST_Param.sAUTREVAL = PARAM.AUTREVAL
+      ST_Param.moLIBRENUM1 = PARAM.LIBRENUM1
+      ST_Param.sLIBRETXT1 = PARAM.LIBRETXT1
+      ST_Param.sLIBREOBS = PARAM.LIBREOBS
+      ST_Param. dhDateHeureModif = param.DateHeureModification
+      
+      ST_Param.nIDParam = PARAM.IDPARAM
+      
+      renvoyer ST_Param
+     type : 458752
+   -
+     name : MajIndicateur
+     procedure_id : 1611190580118947469
+     type_code : 12
+     code : |1+
+      // Résumé : met à jour les indicateurs utiles de la Classe
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE PRIVÉE MajIndicateur()
+      m_dhDerniereVersion = DateheureSys()
+      m_nDerniereVersion = HVersion(PARAM)
+     type : 458752
+   -
+     name : ApresHSupprimeParam
+     procedure_id : 1611190812047300770
+     type_code : 12
+     code : |1+
+      // Résumé : Appeler par le Trigger apres hSupprime, maj des indicateurs
+      // Paramètres :
+      //	Aucun
+      // Valeur de retour :
+      // 	Aucune
+      //
+      PROCEDURE ApresHSupprimeParam()
+      
+      MajIndicateur()
+     type : 458752
+   -
+     name : Retourne
+     procedure_id : 1611630696435983050
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Paramètres :
+      //	sCopar (chaîne ANSI) : <indiquez ici le rôle de sCopar>
+      // Valeur de retour :
+      // 	STParametre : // 	Aucune
+      //
+      PROCEDURE PRIVÉE Retourne(sCopar est une chaine) : stparametre
+      stValNul est un STParametre
+      sParam est une chaine = complete(sCopar, dimension(param.copar))
+      
+      SI Existe(sParam) = Null ALORS
+      	renvoyer stValNul
+      SINON
+      	renvoyer m_taParametres[sParam]
+      FIN
+     type : 458752
+   -
+     name : Suppression
+     procedure_id : 1612685862638696972
+     type_code : 12
+     code : |1-
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Paramètres :
+      //	sCopar (chaîne ANSI) : <indiquez ici le rôle de sCopar>
+      // Valeur de retour :
+      // 	booléen : // 	Aucune
+      //
+      PROCEDURE Suppression(sCopar est une chaine) : booleen
+      
+      si HLitRecherchePremier(param,copar,complete(sCopar,dimension(PARAM.copar)),hBlocageEcriture) alors
+      	renvoyer HSupprime(param)
+      sinon
+      	renvoyer faux
+      FIN
+     type : 458752
+   -
+     name : CommencePar
+     procedure_id : 1648781690663935587
+     type_code : 12
+     code : |1+
+      // Résumé : Renvoie un tableau de STParametre dont le Copar commence par sChRecherchee
+      // Paramètres :
+      //	sChRecherchee (chaîne ANSI) :Ch Copar à chercher
+      // Valeur de retour :
+      // 	tableau :  Tableau de STParametre
+      //
+      
+      PROCEDURE CommencePar(sChRecherchee est une chaîne)
+      
+      ta_Retour est un tableau de STParametre
+      
+      pour tout st_Param, s_LeCopar de :m_taParametres
+      	si ChaîneCommencePar(s_LeCopar, sChRecherchee) alors	//s_Copar[=sCopar
+      		TableauAjoute(ta_Retour, ST_Param)
+      	FIN
+      FIN
+      renvoyer ta_Retour
+     type : 458752
+   -
+     name : LectureValeur
+     procedure_id : 1656883127597556334
+     type_code : 12
+     code : |1+
+      // Résumé : <indiquez ici ce que fait la procédure>
+      // Syntaxe :
+      //[ <Résultat> = ] LectureValeur (<sCopar> est chaîne)
+      //
+      // Paramètres :
+      //	sCopar (chaîne ANSI) :<indiquez ici le rôle de sCopare>
+      // Valeur de retour :
+      // 	Type indéterminé : // 	Aucune
+      //
+      // Exemple :
+      // Indiquez ici un exemple d'utilisation.
+      //
+      PROCEDURE LectureValeur(sCopar est une chaîne)
+      SI lecture(sCopar) alors
+      	renvoyer sansespace(ST_Courant.sVALPAR)
+      FIN
+      renvoyer null
+     type : 458752
+   -
+     name : FinitPar
+     procedure_id : 1662028357351298719
+     type_code : 12
+     code : |1+
+      // Résumé : Renvoie un tableau de STParametre dont le Copar Finit par sChRecherchee
+      // Paramètres :
+      //	sChRecherchee (chaîne ANSI) :Chaine Recherchee
+      // Valeur de retour :
+      // 	tableau : Tableau de STParametre qui correspond aux critères
+      //
+      
+      PROCEDURE FinitPar(sChRecherchee est une chaîne)
+      
+      ta_Retour est un tableau de STParametre
+      
+      pour tout st_Param, s_LeCopar de :m_taParametres
+      	si ChaîneFinitPar(s_LeCopar, sChRecherchee) alors
+      		TableauAjoute(ta_Retour, ST_Param)
+      	FIN
+      FIN
+      renvoyer ta_Retour
+     type : 458752
+   -
+     name : Copar_Contient
+     procedure_id : 1662030443897307235
+     type_code : 12
+     code : |1+
+      // Résumé : Recherche et renvoie toutes les occurrences du tableau m_taParametres qui Contient sChRecherchee
+      // Paramètres :
+      //	sChRecherchee (chaîne ANSI) :Morceau de chaine à rechercher dans la zone sCopar du tableau :m_taParametres
+      //	nOptionRecherche (entier - valeur par défaut=4) : MotComplet=2 ou SansCasse=4
+      // Valeur de retour :
+      // 	tableau : tableau de St_Parametres
+      //
+      PROCEDURE Copar_Contient(sChRecherchee est une chaîne, nOptionRecherche est un entier = sanscasse )
+      
+      ta_Retour est un tableau de STParametre
+      
+      pour tout st_Param, s_LeCopar de :m_taParametres
+      	si Contient(s_LeCopar, sChRecherchee, nOptionRecherche) alors
+      		TableauAjoute(ta_Retour, ST_Param)
+      	FIN
+      FIN
+      renvoyer ta_Retour
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : HwAAAB4AAAB7MB8NZB5rGUbyk77+IjQnJ74vm430Ar3yq0zmP05sGBBw0ur17uG6ZWry
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1656d272355d3d7e
+  internal_properties : HwAAAB4AAAA809Qj/IAi+r8QXyrnW7sarQeYORCUjKBkmMeTFexSj5AuvTfTUpN0Eg==
+  strings :
+   -
+     text : {}
+     index : 0
+custom_note :
+ internal_properties : HwAAAB4AAADnl3uxgA6ylw4vtqUKEOJQD3VAAOKeNUmhPNojcRFoDpHEcUyYAw==

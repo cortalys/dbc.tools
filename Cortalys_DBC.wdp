@@ -1,0 +1,182 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : Cortalys_DBC
+ major_version : 30
+ minor_version : 0
+ type : 4097
+ description : ""
+ subtype : 0
+ options : 256
+project :
+ identifier : 0x0
+ internal_properties : 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
+ configurations :
+  -
+    name : Exécutable Windows 64 bits
+    identifier : 0x48cd5d930006d58e
+    internal_properties : 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
+    configuration_id : 15143593720582797212
+    type : 1
+    generation_name : Cortalys_DBC_Tools.exe
+    version :
+     major_version : 1
+     generation_version : 3
+     internal_generation_version : 11
+    icon_filename : .\Tools.ico
+    language : 1
+    64bits : true
+    code_elements :
+     type_code : 159
+     p_codes : []
+ elements :
+  identifier : 0x48cd5d930005d58e
+  elements :
+   -
+     name : CL_Param
+     identifier : 0x48cd793107aeb873
+     internal_properties : HwAAAB4AAAAjO56Ncik7kVB+jHjIElCjEDdcdevEkIXB2CRJM4f0wO1EI3y/ex+LDmEtC2R+u/7jYBBdZ7FprG6Ys9g=
+     physical_name : .\CL_Param.wdc
+     type : 4
+   -
+     name : ProcéduresClipper
+     identifier : 0x48cd781307a65a78
+     internal_properties : HwAAAB4AAABjP4eq5uuNLi6+K9VhyQMLDNUfHCgJxwfkMZYEEK6JP3bO8zD+zX6vsxgqXG5WmzK2AgSdpP4zJXZk4A==
+     physical_name : .\ProcéduresClipper.wdg
+     type : 7
+   -
+     name : Fen_CreerBL
+     identifier : 0x48cd7e3408b34cf6
+     internal_properties : HwAAAB4AAAA43mNSl84YxocZs33PEV2Y5cKRrjqZFKC4l41Oo70GU47oXZQ1BpRUw65q1i+DvP3gZS2wEs6MUcMt2PM=
+     physical_name : .\Fen_CreerBL.wdw
+     type : 2
+   -
+     name : FEN_Accueil
+     identifier : 0x48cd70aa04a168ec
+     internal_properties : HwAAAB4AAADvuwMWYmcJmqKKl7GNlR9HVUG3ANSZa8XGrWaw6IBjdj8RSHnv6IG4/FHukFp6/5Ya7ngpKHKvofLgbA==
+     physical_name : .\FEN_Accueil.wdw
+     type : 2
+   -
+     name : FEN_Configuration
+     identifier : 0x48cd6a7c009b4627
+     internal_properties : HwAAAB4AAACUYoqB/ZJkNycPGupWzAYeOFTe73XSph4HTnMEvOqjXWRGWfT6+6x5VdZVaXNRpj+lcfuWveUcDGmXkw==
+     physical_name : .\FEN_Configuration.wdw
+     type : 2
+   -
+     name : ProcéduresGlobales
+     identifier : 0x48cd62dd001a7fb7
+     internal_properties : HwAAAB4AAAAk8lpRLaJU51ffSvrGXJaOj3wtb7bkCljBYrR2IWqtJE1NWvHnBGwzOJml2ePBNk9Voatm7bXsXLknIw==
+     physical_name : .\ProcéduresGlobales.wdg
+     type : 7
+   -
+     name : FEN_CreationBL
+     identifier : 0x48d157f2019dda4c
+     internal_properties : HwAAAB4AAADdVeGIwJVnKCygLd9jyz0dPYfZ0kAvqRM4y1oTbfxZvCkDosdV0umwkMlUanxYmSywBAabuuARAxDOWg==
+     physical_name : .\FEN_CreationBL.wdw
+     type : 2
+   -
+     name : FEN_Export_Fabera
+     identifier : 0x490e17c5009dc8aa
+     internal_properties : HwAAAB4AAACh/WHxMy2eLsLtooj5wjCtqrM+BUOY36Y53heHqeyDiDVDZrDTvWVHelMVo28k4WvgAFqKpTc2LmDK
+     physical_name : .\FEN_Export_Fabera.wdw
+     type : 2
+   -
+     name : CL_Log
+     identifier : 0x4912132f043adae1
+     internal_properties : HwAAAB4AAADByVU8FHl73Fj0YaOHn1Fhk5+otIjkMStwPQFpLUzj6V/X5jtpm9Dhis+QFiCE9YhsuLJv1ozFt8QyPg==
+     physical_name : .\CL_Log.wdc
+     type : 4
+  other_elements : []
+  array_of_analysis :
+   -
+     analysis : .\Analyse\CLIPPER8.wda
+  net_assemblies : []
+  uwp_api : []
+  external_components : []
+  internal_components : []
+ data_directory : <RepExeOuRepDonneesCommun>
+ common_generation_directory : true
+ user_groupware_executable :
+  internal_properties : HwAAAB4AAADD1jO7I2iw8OJDvM8ILd2TAkkwc+Q4NOYJ5IaSJ4gwJogWHcrl4JqFRSYa3jvp4XVRIxrURTJwduPmA8PbGuFqfZFSQF87cMCT69LzA9k71z3n39AJcD+/+FWR1pMbN2ovpSBWWsnPeRvUyZhYeMTaPrJ44pFOEbCeE8sRjT9W/g2zRXsF29bYMAcVgg==
+  connections_history : true
+ user_groupware_site :
+  internal_properties : HwAAAB4AAAAkoB+fdku1PpbrcnzP2GP5h3ykyFb4kqRSy8XFATg0Y/lCXmmPbGUFjl1MguqR2APWvuFznSMSmTE/OEfewtAbTCOR+LOeOf3CsOYyQzGfIvfk931B1mr2/A==
+  connections_history : true
+ languages :
+  - fr-FR
+ rad_options :
+  internal_properties : HwAAAB4AAAAjVCdEz410J8MZr6BQ981XRwdLMqA9eeovYV94nv34VEivuDndejtQNNqCEwAUagVYgXfdLV7XfZEpZjl9c/5TtnDgJWXc9ddic772ENQlTQ9Y7PVIJk9/qJt/ZA==
+ code_elements :
+  type_code : 0
+  p_codes :
+   -
+     code : |1-
+      CONSTANTE
+      	KEY_CLIPPER_USER_User							= "CLIPPER_USER_User"
+      	KEY_CLIPPER_USER_Password						= "CLIPPER_USER_Password"
+      
+      	KEY_COMMAND_LINE_Window							= "fen"
+      	KEY_COMMAND_LINE_User							= "operateur"
+      
+      	KEY_DATABASE_Server								= "DATABASE_Server"
+      	KEY_DATABASE_Port								= "DATABASE_Port"
+      	KEY_DATABASE_User								= "DATABASE_User"
+      	KEY_DATABASE_Password							= "DATABASE_Password"
+      	KEY_DATABASE_Name								= "DATABASE_Name"
+      	KEY_DATABASE_Crypto								= "DATABASE_Crypto"
+      
+      	DEF_DATABASE_Server								= "srvclipper"
+      	DEF_DATABASE_Port								= "4900"
+      	DEF_DATABASE_User								= "admin"
+      	DEF_DATABASE_Password							= ""
+      	DEF_DATABASE_Name								= "DBC"
+      	DEF_DATABASE_Crypto								= hCryptageNon
+      FIN
+      
+      Operateur	est une chaine
+      VersionCLIP	est une chaîne
+      
+      tantque pas DbInit()
+      	si ouinon("Impossible de se connecter à la base de données. Merci de vérifier la configuration. Souhaitez-vous modifier les paramètres ?") alors
+      		Ouvre(FEN_Configuration)
+      	sinon
+      		FinProgramme()
+      	FIN
+      FIN
+      
+      ProcéduresClipper.Initialise()
+      
+      local
+      sNomFenetre	est une chaine	= LigneCommande(KEY_COMMAND_LINE_Window)
+      sUser		est une chaine	= LigneCommande(KEY_COMMAND_LINE_User)
+      
+      //si sUser="" alors sUser = GetUser()
+      //si sUser = "" alors
+      //	Erreur("Impossible de se connecter à Clipper sans utilisateur. Merci de vérifier la configuration")
+      //	Ouvre(FEN_Configuration)
+      //	sUser = GetUser()
+      //	SI sUser = "" ALORS
+      //		FinProgramme()
+      //	FIN
+      //FIN
+      //
+      //operateur=sUser
+      //Charge_Droits_Operateur()
+      
+      si sNomFenetre="" alors ouvre(FEN_Accueil)
+     type : 196608
+   -
+     type : 196627
+     enabled : false
+ code_parameters :
+  internal_properties : HwAAAB4AAAAQz8K3FTTVnaPuCm+nYcIh8vPGHNcD3+V0lpD5aEBK0FAKNcPxYes3rgVDViM1+Ku6xuj5B+aG0Vq964j4ToHmnLNBOORO004cZIYaT6UxOOL9wvBwdwaUGCWBSudAuCkx1YAsyvqK26DNtpF4VH5bXnT6LFeJrHkzGTgibb13g/lCBzMsV+bwoTVBIxTNWy8yWHt/PjwEBNF91cVmlQJH4vFkim8BLR0PDexsjXGrdMVpl8+bKVe0eA6JBcdTTj0lpsQE6beZmA==
+rad :
+ internal_properties : HwAAAB4AAABTxT1BYSJhinS0Rr2tVZtlHULaWZCyb2+DDk9U
+project_explorer :
+ explorer_type : project
+resources :
+ string_res :
+  identifier : 0x0
+  internal_properties : HwAAAB4AAAA809Qj/IAi+r8QXyrnW7sarQeYORCUjKBkmMeTFexSj5AuvTfTUpN0Eg==
+custom_note :
+ internal_properties : HwAAAB4AAAC/dEP3OEKHRk5sh5jQo2RHMGiRgxBOTuUSX9o+2aOnF5l3F7BzQC8eKa62

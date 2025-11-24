@@ -1,0 +1,807 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Export_Fabera
+ major_version : 30
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+ options : 256
+window :
+ name : FEN_Export_Fabera
+ identifier : 0x290e17c502f7c89a
+ internal_properties : HwAAAB4AAAA0IoB7kvWUK895ubobL76LEIXPpFvZnRnxyt5pTAKG7Yk7+x6TWPtHme+zBts8p3l5wpYdYEAVTaFVS3J8e0XxdpSrHSj0KOwI0xvvQTbGniex7D20bg9PeifCix1GZtV1fAP6u7JnvdvUvPVzlDM7Kf1IQuCS97mGzWYA+kK4Qg9ogbrKKNUxMuWTFB08a6Bp6Y0CUHnvh7t+E5ovDzOFLJwQMymsHzQyhn8dttpH+gWC4o10yYDSesVXS3e1WVdhinnqAr+EhL966K9QyN8Y2gXyHMKfifAAteJ/Ogvjhd8LHmPFNTMPrCrUfbUAJ1iPASXkKp62C57Yga9QJNmnfdu66NsMHS2J3FPwSNAsadD9bm4z5dRF6Ubj0SBrv1Ye74pPbK+VDz2spoK+PUrJL4sbN4y9ZRTxrw1zdMsJnYhGp1o/5rtwq1Py7Eu4PhBKIOreU6nZrAthQNPM9wMLRCCQpDix5low+wdIPp2jqIHoSlCoWn/iVLTfdZObblPkc/oJ+zWX4uKcrpU4NeqRcI3cAIF7V3P7GZ4qGMJpVyXkqFLW5tLXTo5V1CsYbuqPbrnVjHnkMhW4Yzb424QDvV07bmeud/4ixTymJwq+T64mvvk6iF7fiU7WjU9+CbzVBa4B+MuTc3dBD7PzSn3QzjU6rubxvH3JiJ6zx/U9404ulQlSVSl9huiDA0FUVHkVSs+XjXWttiDyjmK0WSMt1TCDESrt/yCHTm/XqsxdDlAxyEEBft9otDPEzH1wIeb3Ig9OEj+JuX4qlP9KKRphpY8zFivFyMXNmoVk7Nc8eFbm0gXh4NlxtHPXtI82Edrg85SceMSCJ7y/GiwamwXsfnbz5SUg2VCl87bc63pnF9nf+qtFUqXeF4BhBIrJut7Pa+5aEjQm1OIhQLPwFuyKO+sByYu4z83lKClB7t/eqYCGoUwgv2OyetCZuhRjIiqEJ9r/LvelLCAhyMGf+LXXa5wcAtJHeDSHF0OjuYIa6GHxFYDe2lgE70OQ4e7VZs1V0EsHw1fPtKIdpcsb9OZIcbfgMInxEdmrD16LOeNdIyEKtGtlU/z/Vq+SjFk+XeR0VoPYx3tgFzDn9WS19KldYJ4MrCSVCrAOTuufmrtiE7lf+nfTrnzfCQpJpb7FJIJEOGXuy9ffKbqdRzOn
+ properties :
+  width : 404
+  height : 385
+  widthClient : 402
+  heightClient : 353
+ style : {}
+ controls :
+  -
+    name : SAI_PieceCyclee
+    identifier : 0x290e186804c4469a
+    internal_properties : HwAAAB4AAAB5oDZefDCNTq2N+U1BUD0uYAPjKBG/WcB+FW52agdudKQIJKnfWpQ1hrgZlaR7c7ExUnFOBENAsLHwqsqdz1Adw5WaPFe0C9UDl4v8x4DFBPke8O/S1Un/GvABoYoTIfon018Q9ud+asMtUPocKCRa5Pg3t9DdCARUFs18XHUBEaGSg0KUdzjCmz94931GZoQnAwF56d5OfGvzFEzES9fdN8dQlAV/EtFHvziPeNNEShZMEdHUOZaUThz3HddRmW7nRL/ghg84vDEG7sFRpI1WaOGdAJjojjpGZawo5naKLl3TfGK3xFdyngZktLjbC8u9qsMA2smWe1wNRqdTOxU4vcY2ojTU2SOs2yucpbtBzQUrRpi9mnoMp9seE0YUYn05YWl78jtRAp3my77OnypN4rJvow5XAIOn9jiJmPnfTRHEkxT4JrPUP1lyoMT6ve++HExWvzFCTHwaM4nDg8OG2oGe1pIfYKOh4xIItvt+6VXv9cFoNeIZ4l7NGNrjL1mBCiHrwHru2/9HMa1wxdBRwHBQROmHWMeqROaMMVQ07jWNH292AQN2qZy91Ej0KiXEH8Lpo6AmyYPCcXXGOBTdww8PszzRSXyJiLv6+w07vf3YJUPMZSTEw54EHu0vTg7QyTtYpDwb+9R9Txq4VGS6E166IpsGQQ391sMbfa7FbEnojP4jVX3D8FrNDBPIQvLDjcRf25KVZRbN9gXRqMWI80G9dIYUlndAcn2UoURsLOyavo0/F2kDNOFgrTN5cFRFZzZrWooFB2A20sK4fTPCCS9TJnGwEnyllV0pat9/PAldSnfU7cJba9eymAJDEBtj6jPws0oXgNeCUAg23IR1HiZeiCo4B81JMFQjOSu2DDZZ+94F9l7ztOOPddbcDdDqStOngjK9VqCLGFW9lMjqYlTKjUt5pbBjFr2CZTwUWH8A17NKF+4AizrQxHyWAHP2iGFmPjqeJp1d7/fStxvUIJqsP20xNMXQOBJwyB8L8h7DCPZ9acK7vPoHjuG7AH3JzN98jtDhFrPtHXVvKVOoIH8FmagxNwSjG5n1L/jnpei4NOVXJxnzQXNKJnl17wdyrOho1zohnMPskY7m8Rln8z02mePf79/cpLMOV8FgJJ9PvPNfleEyqLGsWSB80ZqgPGquUbJN5/qi40BpsF6D0R94oGy9C+AWTw6WfqyoVO/xwXXZAefLH2OnYJ6D0CucSsONyohxa7TrbR+TUFhhYTgjyWJtddpFWhNGt/2xJwmeaBuXIQNhJT6HmSS0CUh5j7kk+4hzJs6KN5xGBGdGW8auOl8WtHAwYYWHWWUMR0Cj2wrWNIdTBON+6FYeOMz7VkukySHMRfnbW9UghIiNtpafYVZsOvJNpScx9MQzBEcvs/5vsdRMxepm2/gNUDCx7LlDMlGToVWLbyvnO3b1
+    properties :
+     x : 6
+     y : 183
+     width : 390
+     height : 22
+     anchor : 8
+     accelerator_key : 65535
+     tab_order : 4
+    style : {}
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        type : 338
+        enabled : false
+      -
+        type : 339
+        enabled : false
+  -
+    name : SAI_Repertoire_Export
+    identifier : 0x290e188806f9c36b
+    internal_properties : HwAAAB4AAADfM6W4v8MhCrS1nQ0n47Kjg3oLWEetESxNxeehtdFloAJWezCfD9H3KXxCcRiSKybfSy0sxRRvRG25+HkMPwnNh8+NAbSdSyrVnCcUTKXuC6qZkWnxLJUDu5dLbAIzZzLOp5CuoGppZVg+rn0efATP4mBM/mwjOQkXGdqbLk1K9vTXRjCZne/vmydC98hwwqQr4LbKMFC1Q3Zo1Wl6b+OITbz6RgGtehbTxdjQsvKtd5MIQ1nJ7HUb4qtgOxEuk807zm22t1oW7XtvBoPifv3Hcu4e7SRGK4aB2Q9aZpHKGCMd1qT7lmOCCPcFMInxjhp9idV5cWJPWFFkqwH/Td76i+p4x8ZrrkGmu2vk7RqJdsqZSCv8mVMw3YusyhPpWJdY0s20pBnpm2UUGP7ETgbcYUCG4HVlFQ5KvFM1QueQXl24ST+Vv5ylrlNgv7vlIFMVaycCQjVBtPqRsVSjjErZWVkWv3vOKfBPiJbEVIMmU/FX+//6MTc/q7DNZC5hWlE85exiTq3VUmIqS/+xldmwdC2+etvhuiz3f1X8+64Mw9uHNpI3JlDaV+Um0uFiNkV/X4dNb8qmTuZMtNUUxS1Yqx4GG8b1XWs87wvL1ElGAw+6srPNsJFjah8ESWKOevwgEowuKV1dT+I3+gnVftY7IVioMW4jjiuLayP+ynLfneK4dOtYPCuDJoLS17L5CmXY7aRelcO3Nx+tmO5kYauYaZOtky1Ib9ipH8TlG2WpIhYBUMmEaKCe9fXRnlh8jEBWB2N+tCkQXs/ytcWHaFzte+LB0hZ+FZObhoufmBJhEKCD5XcHc/54TktqsPHPdoPElx7jsDb/C/iWsDTG37kTdDLycDOvsRgbiRTKfXVrnPq9klJOsc17LHkk0BcNJo5oM4EJtJbpruSgH2p0RP5pSe2UmefRvbQm2L4lX4dOFuKc2dyAyITUge7I9coOY6FNCmzNxKXE/RbJICONGQ3wESoHjXJv4ywfoWJoKzJyb4dDp5x1lMzPhiq4iO5p07iXU3eH+1JnQTw4jqryF6RVvv95OpF5tCbQ1jyq2NRhb6gUa9QxU908Yu7RsWiGJckK46nSGvGaeyDWrbAgSu1FiNHjRoFKg7Rwj6/pTVyZJC2knPpa5ywpfRc419SJND6ggbx11F4N2odSClDCGxgEqRTL+UpwFYkmwPh3T8+zlF/oeaqKDffPdz82SaRAlrubRb1nByUAICVWRFIv6fQ4N5QEyreVTL3wY1MvJRDJdjE65Y7Riyqxv4/RWmECZKXoF/+YqhQ7cxoyHA0ufCNF0jPQSM8tgQoSXqBiRV5DgQhAcmcxpj5q1iKKyU29pjdKhmygpCFC7qbVqDe8Gk2wvn0SPQ+nnEF0qVzgmLxhwvSN/G+InVOHmANmCVZnRMlS3xhl900K8YO6HZOtXpUM6ga4HcVn9SZw/XWmjCZsyOvFeZGZWG2qdVNxXklNbX/Ep5ZB9w==
+    properties :
+     x : 6
+     y : 123
+     width : 363
+     height : 25
+     anchor : 8
+     accelerator_key : 65535
+     tab_order : 2
+    style : {}
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        code : |1-
+         // Version 1
+         // Description 
+         // Sélecteur de répertoire
+        type : 14
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        type : 338
+        enabled : false
+      -
+        type : 339
+        enabled : false
+  -
+    name : BTN_Fichier_Export
+    identifier : 0x290e188806fbc37b
+    internal_properties : HwAAAB4AAACJL+bcx58mXcWgH1t+sX0D5NCTrpKg2sbcDJrqqjQecN25iGBml2V6iRRQoifoXvWGek7yuucJABNdh94QZ/UYY3C7e98Jl4qbhpGHeNmCv8qF+ZrhBgHD0Hkrgh0czqmCtRYZP4SPH1XZe7Eq82nQQj+nL9FGKIlitghF8vTMuekhglIL3jDE+FNwwZhtph5nrwqe/18NvmQIB/JDoKy2qlcWEDVcaUb2qBb0XMGWXPOi56TvGUbcmQ/X31kdawDDIf0FXA/HwRAN3c0fSiCuncRYv+35sTSghk11N8TOYOHnyD1mblVsAbJ6nF+eW9IFgpBngaW1oG0FYXjtmJLG1WXuEXYchXA0LiBh7J6oJZ3ZcTYNcVrxn4rfVmG7lsINCrMLmalV6U0s8RCRkbQPf4n0O2/+rtMqzKMqvXDcDVgV6KKHfIj+i/ihYJvBcFkl/57CRBZxG2cLWjp0n4KB663TRCUYcFzFBSmhXtYQtEIHBiV1I5t+4KnUNJ2iMLcPhNxx0MGGoZcTSBcuesUHNP4vY5nQfFpyQ5fxr2zwxZB98O1+an1x/wf2O2zTym/ufx/sZTuAO8A075dDmI258OzS/OxbolJDecllYR1QpmfU+qbgaSvqyiuCG9+fJr9MvgMlGBcnbSJk02FxUo+dkE4jXBWXUmNVEUt16GbcHjobly+zfJoEFOkv9C/xL8JnYTT59bPDcTugK6asvOsnavdemIks0PpGMvbbCcjGJF3eOxEdhm790MdDwnWcXcYYUQWpMMGXs4Y4FGAmmZmAv1XPHIksYrMxRIwUKQN6DlyasX6738ihfVrXdxM9CJHmjfHjgzQT9CdxJinypOl3fJt6ml+YoMS/mTOgBSQxZgO2JImcD36D7UXiu13dDFYQ+2j95BR2tXgLDzQK24dq6fsS1qtwmjYXNA+URXKEiy2ZcPMdV6uS644y911U8Lgq52zbsnqNOrkOzR8QcxLtLZ8GUz46ej8wW0IeMccQDuKmqpSykxHxnw==
+    properties :
+     x : 375
+     y : 123
+     width : 21
+     height : 21
+     anchor : 4
+     accelerator_key : 65535
+     tab_order : 3
+    style : {}
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         sRepertoire est une chaîne
+         
+         // Ouvre le sélecteur de fichiers
+         soit sTitre=<§R190e18880086c37b¤fr-FR¤Sélectionner un répertoire...¤en-GB¤Select a directory...¤es-ES¤Seleccione un directorio...¤0§>
+         // ouvre le sélecteur
+         sRepertoire = fRepSélecteur(SAI_Repertoire_Export, sTitre, "")
+         
+         si sRepertoire<>"" alors
+         	SAI_Repertoire_Export =  sRepertoire
+         	ExécuteTraitement(SAI_Repertoire_Export,trtModification)
+         FIN
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Configuration
+    identifier : 0x290e281025f26bec
+    internal_properties : HwAAAB4AAABvQkVCSnxC9IfT2ZR8MJYJoruyMC5rKW29PIO3nhtkYEwSgb9SL5f9aDMJgLc0LtX+MAjGYwRXFzLIFXkYy+xxvGVZQ4PmII80Mon6X74bJW4SDdOVPt+p1SxHJMMgwFQUkqZqV4resRi8b8NsEQNfyJJYS1KuMmxVhD8vtWUg45CbgEmyC+5z4Ptab7YUJ21Vgl+CRgF17YKXINy/Igppg7OIhpX4TDSkAfVbiOLMgflfcQ2e8BJa5bGngK0Y+NCN26HtCBBNsyp3SFkc0iowGIiUgXcM3bQCPNNUdT/K+X7JAaj5GD4DIyEw+YmvqhegXyALnrdYQhcB6SlBU9UMBaecsr7W5i3pAMn1VHseUb54OIVjlMOeZoZf1dWqnj7LFAbtZMUR22feliwhCxhagQa8Mkn0++XACv49ekVdE06dS7uT7IZQXW01YrbDKFR+RfQRumdzqNCFYxDZYC1GXM+RXGDVkHqIJwMX852X+qsFGIpfNAazTSnzpDSqtMfZ7QVSzeHLJTqkegJvdu51SPEmQwMfvLu52pfMvFjnlwttlITcnNt89zYMldeGGy/AH0SqmsHQNUKO5+hcfgj8IxWwr/xaYodVUPkaMGFXjCBurX4XhKVAWQTFEfPQCyqoMnhYH43zc91o0Q+e0vtf1y2ady5xbY7EG1ewDy/FOVDGmlDSsOkcTx1XDF2cl7SXS9rGQeiItW0LxllsiGOdSS4Dr3byKI1Szva+wrRulwSE/bPQXR82SOLqYHB51JkPjUCeiG2rRzzz+p76UT4FMAXZvVrCVmGuFlajrbzGrDKKGbjCjOa5c+Vo9lS+S/ZPe3LMa4aaWkUdqPmsLPMJshqa9hgdhAY2zXliNMS3EK4H8u5G
+    properties :
+     x : 363
+     y : 58
+     width : 33
+     height : 24
+     anchor : 4
+     take_focus : 0
+     accelerator_key : 112
+     tab_order : 1
+    style : {}
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         // Version 1
+         // Description 
+         // Bouton au style aide
+         
+        type : 14
+      -
+        code : |1-
+         Ouvrefille(FEN_Configuration)
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Exporter
+    identifier : 0x290e284727284303
+    internal_properties : HwAAAB4AAAAS52+uH7zhsWs45HDoGiVGFWirdn2TyUC/aEO2WfEkqiPx/7GsCrh5ob8fbnJ+5S+PsZjlxn3qq0/GpIXqL2orqPnO35f3BRWgbAsSK0h1wVgmDLnEeVjL8f0vFiSPfz1SnBScdQ+T9K0o+xB6bkHfG2Vp08VxXV51sUeb+Lw6MJFzrTeTGynxgeAGYvIwEDrE5y3mjye5CLOoK2SDLzakeAQVv8k3cmRrlwOZ+tQKoMq1RMDnr7GASm3l4qhSuZYFIwUOQJvtpiWZbYC9ClkbUuFY3UwCuw1TX8ix2+xYMacnMLll4BLTdwqJoqo/rYH6G0NhazJxXqR4tF7cQ+4Gg9nYktgW8YH17TylcGuaN816Sz3B7HvysKcKUwlVYoxNQryzXbOCMyn5jdNuNb5f+bT1xptkR9N0Cr1/iRQhyFds4BRfW6JorM8NCMPARMeJ7Wf/HNFd9QYUfoMc3pB1eoiATVwlAnpmV38h5ytPhxVEt2vVh+LS1xnc18CcTEFdWZ9JYsek7qX6FQ5s2KSwCrOVVPxXJ5je/ks2faMM3w/LJUXln8FpFUB1oheQUoUo+7XND+96Dm+dKsdt6APKikowB3V9vJVB0xIb076z23x2nWMAy1XSDeBn0qE4C1KI5bb7e1i6ZP38lX0QXEk3vT0peC6MDUj1rDQKZFh5N3r0v1PhBk0iOEo+q8WtGpx9mvxsQG/ytHV+R3NVam6lrvTECyExw5vc8tZdsRfTsbVGuL2X9dhRSIg3TMWWkxp/rHG68HcMtSph7ZsFqMrGgy7rg4EuOxcCwdR0XTS6g0CuO/5+FD89RmetnPrBN5qQfiKGEfC1ANZMYzTcRMxXhwPp3ooddaA06RIeOzVkb9OC+d6zuWINY23PqNxt3J1XJQ6UTyu5WvVNnDMMo3wh3rEy6NklJt+ohtulLmJvnLKgTVrkU41FsJlyV8TzpE+3pM0iNz/5O5sCvQGR7tKd9c3Ng7M=
+    properties :
+     x : 6
+     y : 58
+     width : 99
+     height : 24
+     accelerator_key : 65535
+     tab_order : 0
+    style : {}
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         
+        type : 14
+      -
+        code : |1+
+         // Data control
+         sRepertoireExport		est une chaîne	= ComplèteRep(SAI_Repertoire_Export)
+         SI sRepertoireExport = "" OU PAS fRepExiste(sRepertoireExport) ALORS
+         	Erreur("Le répertoire d'export est obligatoire")
+         	RepriseSaisie(SAI_Repertoire_Export)
+         FIN
+         sRepertoireExport=completerep(sRepertoireExport+DateDuJour+HeureSys)
+         fRepCrée(sRepertoireExport)
+         
+         Sablier(Vrai)
+         
+         xlsFileName	est une chaîne	= fConstruitChemin(sRepertoireExport,"export_clipper_fabera",".xlsx")
+         logFabera	est une CL_Log("FABERA",fConstruitChemin(sRepertoireExport,"logclipper_fabera",".log"))
+         logFabera.LogInfo("Répertoire des documents "+sRepDocuments)
+         logFabera.LogInfo("Répertoire des images "+sRepImages)
+         
+         // Create XL document
+         xlsFic		est un xlsDocument
+         xlsAjouteFeuille(xlsFic,"Export Clipper")
+         xlsFic..Feuille					= 1
+         // Set titles
+         POUR TOUT ÉLÉMENT col,titre DE tabEntete
+         	xlsFic..Ligne[1]..Cellule[col]	= titre
+         FIN
+         
+         i					est un entier		= 2
+         j					est un entier		= 2
+         nCpt				est un entier		= 0
+         sFiltreCodePiece	est une chaîne		= SAI_Piècecyclée
+         sFiltreRepere		est une chaîne		= SAI_Repère
+         dFiltreDebut		est une date		= SAI_DateDebut
+         dFiltreFin			est une date		= SAI_DateFin
+         sdArt				est une Requête SQL	=
+         [
+         	SELECT ART.* FROM ART<§cs:3§>
+         	LEFT OUTER JOIN ENGAPI ON ENGAPI.EN_PIECE = ART.GPCOPIECE AND ENGAPI.MODELE=art.MODELEDT AND ENGAPI.RANG = '001'<§cs:3§>
+         	LEFT OUTER JOIN HISTOFIC ON HISTOFIC.ABREVFAM = 'AR' AND HISTOFIC.LIBELLE = ART.GPCOPIECE<§cs:3§>
+         	WHERE ART.GPCOPIECE LIKE {codePiece} AND ENGAPI.REPERE LIKE {repere} AND HISTOFIC.DAT >= {dateDebut} AND HISTOFIC.DAT <= {dateFin}<§cs:3§>
+         ]
+         sdArt.codePiece	= sFiltreCodePiece<>"" ? sFiltreCodePiece+"%" sinon null
+         sdArt.repere	= sFiltreRepere<>"" ? sFiltreRepere+"%" SINON Null
+         sdArt.dateDebut	= datevalide(dFiltreDebut) ? dFiltreDebut sinon null
+         sdArt.dateFin	= DateValide(dFiltreFin) ? dFiltreFin SINON Null
+         // Search products
+         SI PAS HExécuteRequêteSQL(sdArt) ALORS
+         	logFabera.LogError("Erreur lors de l'exécution de la requête : "+Remplace(sdArt.CodeSQL,RC," "))
+         	logFabera.LogError("Détail de l'erreur : "+HErreurInfo())
+         	Erreur(HErreurInfo())
+         	RETOUR
+         FIN
+         logFabera.LogInfo("Requête pièces cyclées "+remplace(sdArt.CodeSQLExécuté,rc," "))
+         
+         // Iterate products
+         HLitPremier(sdArt)
+         Message(CBM_NbEnr,HNbEnr(sdArt)+" pièce(s)")
+         logFabera.LogInfo(HNbEnr(sdArt)+" pièce(s) cyclée(s) trouvée(s)")
+         MultitâcheRepeint(FEN_Export_Fabera)
+         TANTQUE PAS HEnDehors(sdArt)
+         	logFabera.LogInfo(sansespace(sdArt.GPCOPIECE) +" -> Début")
+         	// Common rows
+         	HLitRecherche(CLIENT,"COCLI",sdArt.COCLI)
+         	SI HTrouve(CLIENT) ALORS xlsFic..Ligne[i]..Cellule[tabEntete[sCocli]] = SansEspace(CLIENT.COCLI)
+         	xlsFic..Ligne[i]..Cellule[tabEntete[sRepere]]		= ""
+         	xlsFic..Ligne[i]..Cellule[tabEntete[sRef]]			= SansEspace(sdArt.GPCOPIECE)
+         	xlsFic..Ligne[i]..Cellule[tabEntete[sDes]]			= SansEspace(sdArt.DESA1)
+         	HLitRecherchePremier(HISTOFIC,ABREVLIB,["AR",sdArt.GPCOPIECE])
+         	SI HTrouve(HISTOFIC) ALORS xlsFic..Ligne[i]..Cellule[tabEntete[sDateCreation]] = DateVersChaîne(HISTOFIC.DAT,"AAAA-MM-JJ") SINON xlsFic..Ligne[i]..Cellule[tabEntete[sDateCreation]]=""
+         	nQteEco est un numérique = sdArt.QTEECO >0 ? sdArt.QTEECO SINON 1
+         	xlsFic..Ligne[i]..Cellule[tabEntete[sQteEco]]	= nQteEco
+         	xlsFic..Ligne[i]..Cellule[tabEntete[s2DClient]]	= ""
+         	xlsFic..Ligne[i]..Cellule[tabEntete[s3DClient]]	= ""
+         	xlsFic..Ligne[i]..Cellule[tabEntete[s2DPhase]]	= ""
+         	xlsFic..Ligne[i]..Cellule[tabEntete[s3DPhase]]	= ""
+         
+         	SI HLitRecherchePremier(ENGAPI,EPCLE,[sdArt.GPCOPIECE,sdArt.MODELEDT,Complète("001",Dimension(ENGAPI.RANG))]) ALORS
+         		// Search product files (2D & 3D drawings)
+         		sDrawing2D est une chaîne = SansEspace(ENGAPI.NomFichier)
+         		logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Plan 2D client dans l'oeil : "+sDrawing2D)
+         		si sDrawing2D="" alors
+         			sdProductDrawing2D est une Requête SQL	=
+         			[
+         				SELECT DocumentsENGAPI.NomFichier AS FichierDocuments, NORME.LIBELLE, NORME.REPDOC AS FichierNorme<§cs:3§>
+         				FROM DocumentsENGAPI<§cs:3§>
+         				LEFT OUTER JOIN NORME ON NORME.N0CLEUNIK = DocumentsENGAPI.N0CLEUNIK<§cs:3§>
+         				WHERE DocumentsENGAPI.EPCLEUNIK = {epCleunik} AND NORME.LIBELLE = 'PLAN CLIENT'<§cs:3§>
+         			]
+         			sdProductDrawing2D.epCleunik = engapi.EPCLEUNIK
+         			si HExécuteRequêteSQL(sdProductDrawing2D) alors
+         				HLitPremier(sdProductDrawing2D)
+         				SI PAS HEnDehors(sdProductDrawing2D) ALORS
+         					sDrawing2D=SansEspace(sdProductDrawing2D.FichierDocuments)
+         					si sDrawing2D= "" alors sDrawing2D=SansEspace(sdProductDrawing2D.FichierNorme)
+         					logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Plan 2D client dans la GED : "+sDrawing2D)
+         				FIN
+         			FIN
+         			HLibèreRequête(sdProductDrawing2D)
+         		FIN
+         		SI sDrawing2D<>"" ALORS
+         			// 2d drawing copy
+         			SI EnModeTest() ALORS sDrawing2D = Remplace(sDrawing2D,"P:\CLIENT","<RépertoireDocuments>",SansCasse)
+         			sDrawing2D	= Remplace(sDrawing2D,"<RépertoireDocuments>",sRepDocuments)
+         			sDrawing2D	= Remplace(sDrawing2D,"<RépertoireImages>",sRepImages)
+         			sDrawing2D	= Remplace(sDrawing2D,"\\","\")
+         			SI pas fFichierExiste(sDrawing2D) ALORS
+         				logFabera.LogWarning(SansEspace(sdArt.GPCOPIECE)+" Plan 2D client introuvable : "+sDrawing2D)
+         			sinon
+         				sFichier2D est une chaîne = fConstruitChemin(sRepertoireExport+"2DClient",fExtraitChemin(sDrawing2D,fFichier+fExtension))
+         				fCopieFichier(sDrawing2D,sFichier2D)
+         				logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Copie du fichier vers : "+fExtraitChemin(sFichier2D,fFichier+fExtension))
+         				xlsFic..Ligne[i]..Cellule[tabEntete[s2DClient]] = fExtraitChemin(sFichier2D,fFichier+fExtension)
+         				// 3d drawing steps search and copy
+         				sDrawingFolder	est une chaine	= completerep(fExtraitChemin(sDrawing2D,fDisque+fRépertoire))
+         				sSteps			est une chaine	= fListeFichier(sDrawingFolder+ "*.step")
+         				logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Liste des plans 3D STEP : "+Remplace(sSteps,RC,","))
+         				sColPlan3D est une chaîne
+         				POUR TOUTE CHAÎNE sStep DE sSteps SÉPARÉE PAR RC
+         					sFichier3D est une chaîne = fConstruitChemin(sRepertoireExport+"3DClient",fExtraitChemin(sStep,fFichier),fExtraitChemin(sStep,fExtension))
+         					fCopieFichier(sStep,sFichier3D)
+         					logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Copie du plan 3D client : "+fExtraitChemin(sFichier3D,fFichier+fExtension))
+         					SI sColPlan3D<>"" ALORS sColPlan3D+="|"
+         					sColPlan3D+=fExtraitChemin(sFichier3D,fFichier+fExtension)
+         				FIN
+         				SI sColPlan3D<>"" ALORS xlsFic..Ligne[i]..Cellule[tabEntete[s3DClient]] = sColPlan3D
+         				// 3d drawing SW search and copy
+         				sSldprts		est une chaine	= fListeFichier(sDrawingFolder+ "*.sldprt")
+         				logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Liste des plans 3D SLDPRT : "+remplace(sSldprts,rc,","))
+         				POUR TOUTE CHAÎNE sSldprt DE sSldprts SÉPARÉE PAR RC
+         					sFichier3D est une chaîne = fConstruitChemin(sRepertoireExport+"3DPhase",fExtraitChemin(sSldprt,fFichier),fExtraitChemin(sSldprt,fExtension))
+         					fCopieFichier(sSldprt,sFichier3D)
+         					logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Copie du plan 3D phase : "+fExtraitChemin(sFichier3D,fFichier+fExtension))
+         				FIN
+         			FIN
+         		FIN
+         	FIN
+         
+         	// Manufacturing
+         	sdGapiece est une requete sql =
+         	[
+         		SELECT * FROM GAPIECE WHERE EPCLEUNIK = {epcleunik} ORDER BY PHASE<§cs:3§>
+         	]
+         	sdGapiece.epcleunik=ENGAPI.EPCLEUNIK
+         	SI HExécuteRequêteSQL(sdGapiece) ALORS
+         		hlitpremier(sdGapiece)
+         		TANTQUE pas hendehors(sdGapiece)
+         			SI SansEspace(sdGapiece.COFRAIS)<>"NOMEN" ALORS
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sCocli]]		= xlsFic..Ligne[i]..Cellule[tabEntete[sCocli]]
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sRepere]]		= xlsFic..Ligne[i]..Cellule[tabEntete[sRepere]]
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sRef]]			= xlsFic..Ligne[i]..Cellule[tabEntete[sRef]]
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sDes]]			= xlsFic..Ligne[i]..Cellule[tabEntete[sDes]]
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sDateCreation]]	= xlsFic..Ligne[i]..Cellule[tabEntete[sDateCreation]]
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sQteEco]]		= xlsFic..Ligne[i]..Cellule[tabEntete[sQteEco]]
+         				xlsFic..Ligne[j]..Cellule[tabEntete[s2DClient]]		= xlsFic..Ligne[i]..Cellule[tabEntete[s2DClient]]
+         				xlsFic..Ligne[j]..Cellule[tabEntete[s3DClient]]		= xlsFic..Ligne[i]..Cellule[tabEntete[s3DClient]]
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sCDF]]			= SansEspace(sdGapiece.COFRAIS)+" "+SansEspace(sdGapiece.GA_DES)
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sType]]			= "VA"
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sQteNom]]		= 1
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sTpsPrepa]]		= sdGapiece.GA_PREP
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sTpsUnit]]		= sdGapiece.GA_NBH
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sEffPrepa]]		= sdGapiece.NBPERSTP
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sEffUnit]]		= sdGapiece.NBPERSTU
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sCout]]			= sdGapiece.GA_NBH+sdGapiece.GA_PREP = 0 ? 0 SINON (sdGapiece.GA_NBH*nQteEco+sdGapiece.GA_PREP)/nQteEco * (sdGapiece.GA_WPRIX/(sdGapiece.GA_NBH+sdGapiece.GA_PREP))
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sNumOp]]		= sdGapiece.GPCLEUNIK
+         				xlsFic..Ligne[j]..Cellule[tabEntete[sNumOpSuiv]]	= 0
+         				logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Ajout de la phase de gamme "+sdGapiece.PHASE+" - "+sansespace(sdGapiece.GA_DES))
+         				// Search phase drawing
+         				sdPhaseDrawing2D est une Requête SQL	=
+         				[
+         					SELECT NORME.REPDOC AS FichierDocuments <§cs:3§>
+         					FROM NORME <§cs:3§>
+         					WHERE CONORME = (<§cs:3§>
+         					SELECT NORME.CONORME<§cs:3§>
+         					FROM DocumentsGAPIECE<§cs:3§>
+         					JOIN NORME ON NORME.N0CLEUNIK = DocumentsGAPIECE.N0CLEUNIK AND (NORME.LIBELLE = 'PLAN DE PHASE' OR NORME.LIBELLE LIKE 'CDC%')<§cs:3§>
+         					WHERE DocumentsGAPIECE.GPCLEUNIK={gpCleunik}) AND FLAG = 'O'<§cs:3§>
+         				]
+         				sdPhaseDrawing2D.gpCleunik=sdGapiece.GPCLEUNIK
+         				sPhaseDrawing2D est une chaîne
+         				SI HExécuteRequêteSQL(sdPhaseDrawing2D) ALORS
+         					SI PAS HEnDehors(sdPhaseDrawing2D) ALORS
+         						sPhaseDrawing2D=SansEspace(sdPhaseDrawing2D.FichierDocuments)
+         						logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Plan 2D Phase dans la GED : "+sPhaseDrawing2D)
+         						SI EnModeTest() ALORS sPhaseDrawing2D = Remplace(sPhaseDrawing2D,"P:\CLIENT","<RépertoireDocuments>",SansCasse)
+         						sPhaseDrawing2D	= Remplace(sPhaseDrawing2D,"<RépertoireDocuments>",sRepDocuments)
+         						sPhaseDrawing2D	= Remplace(sPhaseDrawing2D,"<RépertoireImages>",sRepImages)
+         						sPhaseDrawing2D	= Remplace(sPhaseDrawing2D,"\\","\")
+         						SI pas fFichierExiste(sPhaseDrawing2D) ALORS
+         							logFabera.LogWarning(SansEspace(sdArt.GPCOPIECE)+" Plan 2D phase introuvable : "+sPhaseDrawing2D)
+         						sinon
+         							sFichierPhase2D est une chaîne = fConstruitChemin(sRepertoireExport+"2DPhase",fExtraitChemin(sPhaseDrawing2D,fFichier+fExtension))
+         							fCopieFichier(sPhaseDrawing2D,sFichierPhase2D)
+         							logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Copie du plan 2D phase : "+fExtraitChemin(sFichierPhase2D,fFichier+fExtension))
+         							xlsFic..Ligne[j]..Cellule[tabEntete[s2DPhase]]	= fExtraitChemin(sFichierPhase2D,fFichier+fExtension)
+         							sFichierPhase3D		est une chaine	= ExtraitChaîne(fExtraitChemin(sFichierPhase2D,fFichier),1," ")
+         							sPrefixe est une chaine = ExtraitChaîne(sFichierPhase3D,1,"-")
+         							sFichierPhase3D									= sPrefixe+".SLDPRT_"+sFichierPhase3D+".step"
+         							xlsFic..Ligne[j]..Cellule[tabEntete[s3DPhase]]	= sFichierPhase3D
+         						FIN
+         					FIN
+         				FIN
+         				HLibèreRequête(sdPhaseDrawing2D)
+         				j = j+1
+         			FIN
+         			HLitSuivant(sdGapiece)
+         		FIN
+         	FIN
+         
+         	// Bill of material
+         	HFiltre(NOMENPC,CLENC,[ENGAPI.GPCOPIECE,ENGAPI.MODELE,ENGAPI.RANG,hValMin],[ENGAPI.GPCOPIECE,ENGAPI.MODELE,ENGAPI.RANG,hValMax])
+         	HLitPremier(NOMENPC,CLENC)
+         	TANTQUE PAS HEnDehors(NOMENPC)
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sCocli]]		= xlsFic..Ligne[i]..Cellule[tabEntete[sCocli]]
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sRepere]]		= xlsFic..Ligne[i]..Cellule[tabEntete[sRepere]]
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sRef]]			= xlsFic..Ligne[i]..Cellule[tabEntete[sRef]]
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sDes]]			= xlsFic..Ligne[i]..Cellule[tabEntete[sDes]]
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sDateCreation]]	= xlsFic..Ligne[i]..Cellule[tabEntete[sDateCreation]]
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sQteEco]]		= xlsFic..Ligne[i]..Cellule[tabEntete[sQteEco]]
+         		xlsFic..Ligne[j]..Cellule[tabEntete[s2DClient]]		= xlsFic..Ligne[i]..Cellule[tabEntete[s2DClient]]
+         		xlsFic..Ligne[j]..Cellule[tabEntete[s3DClient]]		= xlsFic..Ligne[i]..Cellule[tabEntete[s3DClient]]
+         		xlsFic..Ligne[j]..Cellule[tabEntete[s2DPhase]]		= xlsFic..Ligne[i]..Cellule[tabEntete[s2DPhase]]
+         		xlsFic..Ligne[j]..Cellule[tabEntete[s3DPhase]]		= xlsFic..Ligne[i]..Cellule[tabEntete[s3DPhase]]
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sCDF]]			= SansEspace(NOMENPC.NPCE)
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sType]]			= Gauche(NOMENPC.NPCE,4)="STR/" ? "ST" SINON "AC"
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sQteNom]]		= NOMENPC.COEF
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sTpsPrepa]]		= 0
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sTpsUnit]]		= 0
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sEffPrepa]]		= 0
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sEffUnit]]		= 0
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sCout]]			= NOMENPC.COEF*NOMENPC.PRIXART*NOMENPC.CoefPrix
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sNumOp]]		= 0
+         		xlsFic..Ligne[j]..Cellule[tabEntete[sNumOpSuiv]]	= NOMENPC.GPCLEUNIK
+         		j													= j+1
+         		logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Ajout de la phase de nomenclature "+SansEspace(NOMENPC.NPCE))
+         		HLitSuivant(NOMENPC,CLENC)
+         	FIN
+         	HDésactiveFiltre(NOMENPC)
+         
+         	nCpt++
+         	Message(CBM_Enr,"Pièce "+nCpt+" : "+SansEspace(sdArt.GPCOPIECE))
+         	logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE) +" -> Fin")
+         	MultitâcheRepeint(FEN_Export_Fabera)
+         	HLitSuivant(sdArt)
+         FIN
+         HLibèreRequête(sdArt)
+         
+         // Save XL document
+         xlsFic.Sauve(xlsFileName)
+         xlsFerme(xlsFic)
+         
+         Message(CBM_Enr,"Terminé, "+nCpt+" pièce(s) exportée(s)")
+         Sablier(Faux)
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : LIB_Export_DT_vers_Fabera
+    identifier : 0x290e287b27510fe8
+    internal_properties : HwAAAB4AAAAVJ92dIwHbhTyzof/HzKbvZZKktR7Tn4RfU5xihidnp9+a70FQlUqX2BGaFTccc9XbU5UVGrpov/b2F6B1QBBTr8J29rEgZp0jm8dF9NIcKI3BconzVpoQ/zVjrak8JLTQ3MrMgF54tV7DZQ9OuC5mS43qshgV0nwq6m8iw9nb5/X88R49RNXI/3zGNLItw1gRmmK+IplCEuzEdR9dI87NXW1XX6YXMt4QBRFTNlpiZ6Dy4QUXb9acg+4AwZ/G7w8XCDwm25dSBJpFJP06dtXwl4JOjq12oI1rTjhC0WGEZ0eYRb68L2/hDBpfHIDkjz9S+u10nmJTqOcAUeG91etsIs1oONKSkPbYUlYS3BgpKO+KWpZnIeG7oSDJ5W0i5J6nWKsYZJjYp9ofzthL5cgKcqNI8e7+lL997acZarQEimqLGZkT9Xw6pyHHEvonnynQCYMh5NyeKFhUVIo1JY1ZAifeCgshdm6s4zzMxsrhPAAE
+    properties :
+     x : 6
+     y : 11
+     width : 390
+     height : 24
+     tab_stop : 0
+     take_focus : 0
+    style : {}
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1+
+         // Version 1
+         // Description 
+         // Libellé pour écrire un titre
+        type : 14
+  -
+    name : LIB_Export
+    identifier : 0x291aea3814b2e063
+    internal_properties : HwAAAB4AAABcWsGpSDPkc0e9okPVIvJG2qe+uyuCPRh6CigUFRzLQnzldM4LjwmGjYAzFa3dNU3WNtNA52uYEIEnJD6Gw+yjKE0LyrUMSzxs4luoCGgnIj++cbyq7b9cuJyoM31R1MQpkK0UtAfY9JpoTrD3p8g20j9zYb2SYBGMKiV+SQ7y+n7oHIW3+iTUimh/QlTNk2QBC/B6sWU738dUruZOqSbIg+uQHY3tXzuLAhrpQaHykUZPIiMzIYxCnsrC9h7LVX5iX5ti74R5MqPLWpC7kCmZRxENOKxH6gTilf6a836qdYCvZ0jZECE537LvN21QvrO1ChIOEENX3JLjEeasYTQVYBCH+N0g6sczbwjWZpHlpHI1DOZOQ8VPR/7E6TlyUcRGvYOmCsuCjZhmiQ4GSF9ULnvJLYGy8CGp2GmAiDgtuEqaIhGRVjpX39pIKDbuB6bbw3q2zKw4rGlfqAvB5J8UNJqnppUlZpynJejNFQgpZTlV2q9b
+    properties :
+     x : 6
+     y : 94
+     width : 390
+     height : 23
+     anchor : 8
+     tab_stop : 0
+     take_focus : 0
+    style : {}
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+  -
+    name : LIB_Filtres
+    identifier : 0x291aea9414d64998
+    internal_properties : HwAAAB4AAACCoTiGD5hBR/E1j86KwALyf73mhaUv+JGrsvFiLc0e35rGkOHD7wiyYnSDGamnb5Ymrl1xsVRcIf74zuwTuijOagpPvj6JRCuNvcNjelXJUC3N7fyuMBLmf/oRxyxGQBfwl+KqUwOEwh0nHVUJpslNIWVEh/qowhqfyaPkyBgMFf7v9nEgdbbedysCIlhVrqHdWm1wocdSUS5UdESzMLac+wczoQwGTsw9s0Ly8Vu9uMr5LSWsZ7UHFNKpsKwuYZzvxQgrIliz5iSsZvOJw43Z3hc0m5cLjLbFuPpttfEgAZVTTodGmNNnmi1T7HWLkr1qJrsDy1tFzj+wb5FggL7Vx5Bi265A8N1y3qxBHsJNpLtd12V7cdmtisF64iWB6541w2btUxn6UwnnP8E64VWoee02dra0AMP6WYnP0jc/3OEQXy5sThBfWuWQ11YMkPGzBe1ZGSpqoWP/FiqinvK201oMLC1OMlXWJKQZxpgLrwxiPusM54WI
+    properties :
+     x : 6
+     y : 154
+     width : 390
+     height : 23
+     anchor : 8
+     tab_stop : 0
+     take_focus : 0
+    style : {}
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+  -
+    name : SAI_Client
+    identifier : 0x291aeab214f9bf06
+    internal_properties : HwAAAB4AAADfANv/YTcWj1OuD1FFkM2TwtSyAAEYdaC7Gfu60S35I/DsqImi2yTqxwV8e363CB5MNG6mAfADww7Cqvu4Xda4zcFEwArxr/aVA3s6STI7AMnQRyEFIKOSIThvLzLTOuzHpou2aYZyjsPCUDo69BMd41KyYqAGqWB4ph5mNlg69KKGiAbDKbSXvJmbxuFGjMyO9SQ60NIJ6/7IvJLw7UhB4BCuoCX9TSbCWLqtk43Jy+x7vuuE3xK0RbvnE/uS7hMUVSXHwuhUTOYUUnhB3EPvt4HKgP0XaOqOl/bBtOVuze7ZolXeMsrTqCwRobpquhYbz/fSD7PUwe/Ya32purjVSdsPB1aEVtyWH/LzbyF7lBiZclDm8Nh6Nrs63ZiMYla3AMBdjeErY2cPSd6QHY3nFk0s3FLbPHAjylARuXCHQ82dSB51qGtp+iEoOfLiHAJ1dngNx821blCy54FYnbG3K4LnwYJNo1EG1g7UFzc+o/dJ/HsSUmLuyJOWq7UKed3mdOMwYKiOI8Kz+1W/R+pdkGyEY0ABowJGy01gk7Sp+qh25mODdrE+5bzMn3pPiPy/OOr80I8qTJY1DeeD9wRPKavfStgamVjPJ4eQSKOy5/QJr02MYKL5N/aXAgiEJvF9TTgMSxSAsmszCPO0ONmpliefLUrJUAhe3zFkxdZs/mDhz9bFliawuiIbs5bpsU7hetqLUaAzEMHXTxSa0QlfZUJ57WtrIDsSjBrhF3vQfnk7yzTTusZX7HBxRKfXSD1M3fMsJbD1/ky+eSS8eRJT+y200QoX6eS8qkvKJ63S4CWtO2aowu+MzTy1GzuUuknQlKsT40ObQe/n13n5Mfsd32t/TE1PyGhUTlazUGKVWWL64zbKzhWpyM8Dnkn6eXvtHieMZ3XScnLtr5iyaxyWWMu7YhPseeY17V/HIhgEyh9+WUTSBwY6bAUKOvNCDv7PU16NKHwlgRi0X9VfgHL60qBiQSq+haz6zjqTXcGlXGRjcTB3Ofd/6ygzEif2nX47b6kqdNSs7UQQeP045p0Gc4S5RIX+zGwaT/QwS50Rl0icOUZ10Jqs4SH4OhDigSHSxBAh3gWk1yxxOMxfJk7jtpV55vIxJWnd6Jor2zvrzMKBIshsgBlB1y6f0gunjXMFUhXwLWDWMoYRAilR5XjKV5HXqzij73n/kDJomn0+dXInaQwm/6LLwDLW5E3WVO/prFG6DKRLdTQmtDqyv1ow+KScptmgEYoTJLh5BfEYNDYtx4sxOsoGw8yHSgV4f0YJ6Ao3ICEpdirpKfHA16TxnHBbp9WBtSZ/UeMBoR6qc6vRcfAzZpxPG3q3FwJsJBldGWfMmmk74gBPxCqUJHsJW3cEzh+/iz4KuV3by621gwA9HcrKVKZH
+    properties :
+     x : 6
+     y : 211
+     width : 390
+     height : 22
+     anchor : 8
+     accelerator_key : 65535
+     tab_order : 5
+    style : {}
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        type : 338
+        enabled : false
+      -
+        type : 339
+        enabled : false
+  -
+    name : SAI_Repère
+    identifier : 0x291aeabc14fce6f1
+    internal_properties : HwAAAB4AAADcFamScxuYxm6Sd03vERU0Toae1KUNWzFZHNkpObvZzsKwDLJWWP2IrDwqDRQ8o59tA9b5+A6i7a2vPWNNw5FQqQ0LUE3pJjnMf1ZgYRdJ4mB4b7e0pk8eyjksfAivxNLEx96KjMlM3mpe/ns0107EW9ttq455EnQcJpQHuHGxZf60mzU9XXm4p8evaK9tGMPUJcK2unCwxkWE3BcnV+DmF7xzF5+V/uWnvjjPLfjNJhO/RsHSkfLnAC3zILEzmne+dZequzhh16wn3PebjjOg8PTknmHvCdiV0dCOp1tBrDRMEKopXneS/6aacYYGdaQOm/1aRObNh7L2PFw469SaZAvBeYA5TylAytJXhuT7lvtYkdpn3gTNlRgzGLJLxld54EfyGRK63l2GoXcflfW/h+D1aV3SewEjqdCN17hcvgUQXQh8X3xPyI0+4H2v7mjqNui4G2YX5Hu6fNmEGiVk3eunohQCheUyOp8b6Qm6IbGkBZU8bJrE9BBjP9mbP/BuAjpdlYPPDi94sd8s+zO5Cm87fhMWPBF3CJQp6+Zc2UZJ2B7tKYl+FDl47etTCwkAZmv2kZ+jyy3kAzL+nMJgF7cXYP+WFU5QW7gWgxYmwX6qX5bGunWs/4O1c00GEi/DRx4ZLnQtE1Zn2lrRD8X6019jdgVnXknUAi6HiMUgP9K1f/bvSLsW9Q/R9jV144kYJRGoxSP9S3TmgQzHvYdO4gvURmmWSgAJxyIDvpfK4ZzacCMDd2qYFcWH9GohXK7PVH4ttRd35R9lzwjbc5C2Lpy3UlbOAw3NV7fA2sc2F5p24mt6fZ1JmiXR/RKUfByVHbiSy6ZTZs6yAdVgoxeK1AQmmalSNHdNqxZ52cxHHH358HWa5/N0zehfJNSa/QDmG87JN4aglZ8uDbAXz5j5UeC2w8fRhxeuSl2XpYy2y7jjWNGiQJbrNbJ61EDoBkGaivGGRMutZAPL5+dOvjxRvZfZZtIpr2eHv5qZdomdh2G86D0HAtXYOJnlLuAeDyFqygTTfjUuvkMLRoE3OIH/SvdOi6eTdnsTnGBWpk1d7oVNjE+PkZxjkv4IoANaKxjj4b1oMiYEckEipiy6uBj8WQyGbQZK5cgUsyIBrisjbV8SU9NCizM8PC9RhkpfLwBQaURtmf14gy/mBFk0+4JHzgxqRHAqPQQADdI+PRks8uGq6AnYTvpSb11exjKqgGbQp8RbtivhrKuZWNgdfZq/zY0fR5szTRnYVRadXIXugyd6vBKH80CRRjfqAKNU/TsvMErMzzEQ8jYp4ctXumJc+ZuI1OGq5FJRDyrc4tFNexnIyRsbzx/Iiy6a2AClJ4N8pF4A5ww+Xra7PxFLhQO/HC5e73opnQXXBPk1luzuvFZnPCojuA==
+    properties :
+     x : 6
+     y : 239
+     width : 390
+     height : 22
+     anchor : 8
+     accelerator_key : 65535
+     tab_order : 6
+    style : {}
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        type : 338
+        enabled : false
+      -
+        type : 339
+        enabled : false
+  -
+    name : SAI_DateDebut
+    identifier : 0x291aeaee1835a8ab
+    internal_properties : HwAAAB4AAAB0YGmaQnt1beWgaIdHW5A0j1UMXXcekMmVn/6a0QAdVPmeaDqDKdsRXXDJJ/YqOpO9pTmwqFGl+2VBczONpEU7RIDsA9hlM7qhEBM/3brW1ZeR2TVkZhx1RzCn5+GWAfVtDFeclsgC2C0YCU97oVSIANHs8tZ0LJTdoGB7ysOeSnHPlU7ie2E+Hmm3XUd/jLnBHzMuylrLDEC8dX3ovxsS5lnr5XfX4sDmWdhJlWFXXIgOXZ19rwu+TFuRUN9IPFm9bRqug12Qf/I4a59P44xbagbOAPAG66Enh/2U5t8SrezYVBkI6dUABTnNEeFNivgM0hsWOTqLfD8tPb2D+ET8VLnXiSPiVKpvgCsTVeR0cpsZ3nQg9twcQ9lhkWQqxLf7XOHk5Y4hjltIfCfT6IRrqyBMX74AQtfn0TwGIVbepA+TbTKs8UI/OBCkIrTHbsRwndVOtFMVdPPTr4ohBTQs35NOaZn2CMbYQPQSrcqFSvvrH8UDPHMoNCQOHhtOrGYujR1Gr0PYPUN9O98l7SaIdalXHt9Wrf4GG/8BmWbnmXwxyVnl/cKBIcEBEIpJD7eNe7ZFLRfaS+MSGf2gPyBnxwc4MXdv8Gmnt3WBZxH1IXWGfWWMwjsPj9Ljks1Jnmc4YGThnJb7xBzphB49YhnHZbTlb9NiIODLBVb0l+VsCjmYdeTEKQBNnULtNMspHp0jGC8rhv3zcohJ1M1+Xo4zPOWURTlyrwU4YC5CX5H0YD351wu3AGiNea8Z0O34fQYHfm9OE9HljPsbChcHd7mJlOxASwMm/il3bWYGzGuM8cgF38GqTg/37gTVXMBm+2PKbFPjvOkDt9rUE4siX0gKktcKpUHEkxR+HcHOWOxeFGKKIvAiDdg93LPI8EqHTfMGE0kAt2ugP5umSeYoXYYGWgAZ5t68JiJ0Kn4uprHXWFFySe59MLXSYUZ+S0dC/o4ON9cBcjzOPEqyjbD+0Zqsm1VHod1LPse81cf72Uw5WC/YkWmQxM/ANdu7wCHLNRTQIgoq5BbTC4DFun9ddOWQaEV13FpWV/IkYY8BXrbQ14BoES2GGJrj5jibD/X/RXI8lZOzXWYql6Zd4Zm630qMDhoRScHseW4J3K9YzyQDm1Rf31hQxwX/Qq7S1kAHlZ5ZItHRutkjQrTm0KAZFmB/dQ9QjHdW0BZwmPRX5naLP6jAMYj9SPYxrDgBFZLTqn6elBW/mCUo2ykvB6u/N4cKe9SgQ45iLmA4q8Texcgoa4sJtSW9ux86Mp9uZ3CeKwQj36YDjTUwh7vPBk1m6Nm3PJLIZ8+oy6/OvnfQmwPlJ8HJkhyGO60Vfz9VlFyM7M7ho1BvHHgId3WgXSWtOhXpv78mIrmLWG/ivJUMCDSlHKXoevIrnezmDBGiXcBTEwBI3EShZgp5C9kiJS8/1LvtRQX6O5FmpSWOfjZmc0X8AikMVxtKbDHwYim8MalPnwqIjKqvluJacJjEwN3r8VlSeSHdXvnLXLT650RZle8fNWlysax1q8HGhsgYWHh5yzAm/+CxwZeNzqJcc9TY8qQ8seTkr2D36gLtOhtkwU88XChFWNIcjLnOkNIeBCWfLES4KTlyLZzz4/cIUylRykqfOi3ismI/mRX+XJJQNT0X9UskGUXzbhmVprGknqoIKFocZN/wZxQnyUNHrCc=
+    properties :
+     x : 6
+     y : 267
+     width : 390
+     height : 22
+     anchor : 8
+     accelerator_key : 65535
+     tab_order : 7
+    style : {}
+    calendar :
+     internal_properties : HwAAAB4AAAB46ZtUsYQ5BjMvjQIUy09gNAmuTNxsbSYCWycIx2vXG+4um932MU5H291Rl6g/lt0F7wzv7SVCFoa0rFZP7KK1FpXZfc5Eidooowm4/cjvddBFsamFa7qQvse5Ty3PxhEMvIMLE6Z90BW3/ayQuBaSRmaUqvRIC0rZMmmDZzUcn/g0duiqU5bG0bnZrdB3Oi98IHMxjNTsOD86+TTugDt5LQtsvPhUQecjVQoiZUkHwssVWeEtQjFyZUsikWOlNiSiJ5P4z/Hilqu8WzukYjUBD/o3GyI/n7POxsOC+75RM6pTYb1x6QKLyMUT6iIw16lBLXCSAcyOApnEv5IzCHbtG0gKuqORQEYo3+0wIPsLRUd6eoEw7IXzQmOfCIvGi+mvuNzSl+u+B2blKmHqgInVJq/Na9cjUqPNuivRi9c3E95yMl1FE0YxHd0PlKtUtEZx/ANPUqt0bopBWsQYcSlY6Y6n/Rzm65rZKDjkBvPfqcvZrtQblbY5JClVlDlnL+fidKcahFI/LPxqHHidB5v4ddREPh97OFmVgMtlpYiIJlf2ZTTaqMN2uwwaOVwdUYoegExIRAN/V36MBGSwWxLWlnpyX4dem2PgZGmMTqprtj4649IK7FNvcY4y8gWDCmKHa3oBm5GQh9pS6XTKouinnuql1WavpQZWl08KxT7llX8rMzODanGIfpEXpo4PDGLiVFBSD8CEZ46vzqhHNfIjmk16LetqqN0ij6oE7dpIZShquEbeWRRVavyzOV+l/41A77Jl8r+t3gLsoFpFmvRpjbfL+XinKct+Q4/5YkxGnY3IpKoaxN+o6lQffxS2qm+EJMXCzuf72TI0ri0SV/MAviOF1XDrAuvNAOWdBj0wMNViXhalEk3Ihrv2flsZSlp4gxinb+RBkmcv8A46pACo2jNQg4GFyWeDLcvE1whUtbq8VS1S6pXDEdWmTBZMUv8FVht/BYuknIaS0VB+rPkFyd8wMLqu4jGGWU3G+JQ1cFbR80EPKxKnL6TLcupPPeF4iD5ylUKQP9W3Se5yOR6/EQtkWw4n3l+4gRO3J8zbNqg7g4ju+nBWg9ohhtZs3uEdhgjeOUkRsyF93K4GHbcd1pOmcAtOyrpYB/a6oRzzqkpQ3+MZGDhOwSY/lkOoutNLdvBZWg590bqMM5tNzKVAAusipGF+sLiTIWWgMuDDzyucslkCWfysmKQtdrPzEUmWN5lSxGtBZmw4xJ3b9nGYG1/kN2SRrjUJMSOSAgnuny6lcmIRdIFMR5f2qnN0dbPFTGGN2vB5IPCpb7lZWZ2b4/FPy6p9N5Rci8uX+CnvMlKQRza7v5Jhz4ALqYAvlZ5CiCJ32qkyxIAwRB/51voWGLpzZJJxzEeFPErVxMuOtuuthm7oyUzjcbiw/y/aZwodpu+Kaitbck40tlgOz9uVzIuh4Sa8mZeEFi+B1VJxXY1r1rs05xbsi1j63AtHB2WhR3lLmHfzYc6q1HlIQvpKOdhlFNyskQyD9Qi/yK+UUo2sKeQE+LaBVx9pPz/gWq7Qyk8x255I37sY14TpQV8cte3GOxvtXO6AInQdmlfMv87zw49d1cEdofF7+FQU+FhLtfBo8SJezAloch6y6QAl2d9O9uRI2XYjVbcwlb1wOY+ovPtvD4Qjb2SMDg90YClOndJxkDw2gXdBS0EJc7FRtHHDDSzHtAps//YH4CT9cCcTeckFbOZCS/UmhrvgaC97sT4EFnIlQ6qNvWOsb/bpv+L190hw6uRVNBVaf+S9INn2itFJK41jM+LAADWx5s4gktE6lF9jf0tsePLrzA==
+     properties : {}
+     style : {}
+     type : 47
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        code : |1-
+         
+        type : 14
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        type : 338
+        enabled : false
+      -
+        type : 339
+        enabled : false
+  -
+    name : SAI_DateFin
+    identifier : 0x291aeb09183812a0
+    internal_properties : HwAAAB4AAAB735vp8TPeM+QJbogFOtukLOkc33vvGAHZ5czipsWVcBm24asmnRq76gP3DAxVVNAKk1I+DzTvhGtCl0lxNFywIU2s0TzRNB5fqf4H2LTC3dh/2p9JnnzUE8uf4b4g/kGiFy2PQ/BzCmcLERYEi0srJNz3aXeGL9An7/WuDnD2BCXsYYbv7xOKg2Hyq2QPsaHfHHjMRNNc5c6xcGI2xm/AU9ZLUikbajgtyjUw33lpHhCGzX09p9icFBGvZ7J2Ycu2XTd2TRbDH3FSWCB5Zekrl3So9IIqXCefluJrNaHZMzNJSr9IOaPHHcYPlkL4E/tIXEDunXR70vtgT+D1Hn4COPsJRMdsbedKmhOqPyT583c7d/Y1KzzUAgT8/iDfaoZSgMahcjed+vOE7f20gYFIRbnsdZxUlQCapWryBxbowkB9jo4WVD9wtkTR98F1UevNBsAeDy1tzJQsLUnRaIJScG6zm4oEJGYEQbo31sQQ56ga3Tui/iqn+vaJbo+Wx1CBjy7OFe1p0ozBVxyec7S5gy3Ara73aWiV30WavrzvkCyPgI53oQ3kKXGjKEFfpW/ZAmDasAagqX4A+MG6Cpj3ZAhxi4l3IS3RuE3J3rd1LkApr8GvU9GGzwM5zC8mqkxHaIY1hSHF201+GZyfvJz4LTRUXGXmtkGfEoIxKnvTXYAPE5qr14WwQ5YljNMQpGSpWQd19XZsK1CGX9BOp+orf9mWs5JCBfYR2PryoSXn/MulYPBPwmsZEZ5Y+TRA0Q4xjDX2Akm7Cin5WCZ4Dus/Gk+YF2UIn2uwzU9mEdf5k+Gy7f9yfs3yDFxu84lWruwLOx1Cnz9P9NPOHUEboWn4QaAkrHBYoLsx6fV07j83M7GAzI/wRM5QdrDk9QS4dKfJGh8wp6f4SnFlFN0OegixOjbGxebcDVpYHj0NdAwt/e3oih0pV6GWB1+d5CHu3Naq1fKe7fHuyXzAfH97L13LAMFaBFdxuJm/i8FaSMRb+8697Mn+V/5+cwWNLM7DswSE4mxwf72sZz5HQ1BC2Q//f9ouQe7+Sw+NlG6zzu4okubH15GZwBxZM01ipSE8novuyZXX8ZRUwGkaYcXYL7fwHcOshGs+EllSTVOoRTBblJxIkcVh3Z7RGFE+/1+ZWR5BQNngxrQLP31W2zaRk5nWWXyrGn83vuimq2RBlF2JeNiXMIRUWexNWU7R8oqbZdSaosrOf7RavLJGEEDwrISov/jv1kLAcQ3gFSamwAJJjpUCDEFqtykVK779o8uEUnx0vHENSpBk6MlYpzG74beF/ruHdnZ5tS+RtUYSyL6riEH8qwUUe1bzS/DWqvg74yr88QmYMwlOUobmFrLZFejCflPxfEE/HseA7YEwC5LlrRdNyWl3dno78Z1mfDRCKhCI6tXBkznimWmVsXoFYCNFCZWNWkCY8EijqdPVNNbzaeCsMJ6+JLysbk/z3RKPUn+d9axdCE4eYzStgt/B56piOYx8pQ7gWNDvcDTe253tewf1Dp1C019HvsPLmlf9hMwsH6wTM+gwBE4A22SkEAu8dNgwSxId9t93mJLJz3g9w5cbNkOcwCLXPBLa
+    properties :
+     x : 6
+     y : 295
+     width : 390
+     height : 22
+     anchor : 8
+     accelerator_key : 65535
+     tab_order : 8
+    style : {}
+    calendar :
+     internal_properties : HwAAAB4AAAB46ZtUsYQ5BjMvjQIUy09gNAmuTNxsbSYCWycIx2vXG+4um932MU5H291Rl6g/lt0F7wzv7SVCFoa0rFZP7KK1FpXZfc5Eidooowm4/cjvddBFsamFa7qQvse5Ty3PxhEMvIMLE6Z90BW3/ayQuBaSRmaUqvRIC0rZMmmDZzUcn/g0duiqU5bG0bnZrdB3Oi98IHMxjNTsOD86+TTugDt5LQtsvPhUQecjVQoiZUkHwssVWeEtQjFyZUsikWOlNiSiJ5P4z/Hilqu8WzukYjUBD/o3GyI/n7POxsOC+75RM6pTYb1x6QKLyMUT6iIw16lBLXCSAcyOApnEv5IzCHbtG0gKuqORQEYo3+0wIPsLRUd6eoEw7IXzQmOfCIvGi+mvuNzSl+u+B2blKmHqgInVJq/Na9cjUqPNuivRi9c3E95yMl1FE0YxHd0PlKtUtEZx/ANPUqt0bopBWsQYcSlY6Y6n/Rzm65rZKDjkBvPfqcvZrtQblbY5JClVlDlnL+fidKcahFI/LPxqHHidB5v4ddREPh97OFmVgMtlpYiIJlf2ZTTaqMN2uwwaOVwdUYoegExIRAN/V36MBGSwWxLWlnpyX4dem2PgZGmMTqprtj4649IK7FNvcY4y8gWDCmKHa3oBm5GQh9pS6XTKouinnuql1WavpQZWl08KxT7llX8rMzODanGIfpEXpo4PDGLiVFBSD8CEZ46vzqhHNfIjmk16LetqqN0ij6oE7dpIZShquEbeWRRVavyzOV+l/41A77Jl8r+t3gLsoFpFmvRpjbfL+XinKct+Q4/5YkxGnY3IpKoaxN+o6lQffxS2qm+EJMXCzuf72TI0ri0SV/MAviOF1XDrAuvNAOWdBj0wMNViXhalEk3Ihrv2flsZSlp4gxinb+RBkmcv8A46pACo2jNQg4GFyWeDLcvE1whUtbq8VS1S6pXDEdWmTBZMUv8FVht/BYuknIaS0VB+rPkFyd8wMLqu4jGGWU3G+JQ1cFbR80EPKxKnL6TLcupPPeF4iD5ylUKQP9W3Se5yOR6/EQtkWw4n3l+4gRO3J8zbNqg7g4ju+nBWg9ohhtZs3uEdhgjeOUkRsyF93K4GHbcd1pOmcAtOyrpYB/a6oRzzqkpQ3+MZGDhOwSY/lkOoutNLdvBZWg590bqMM5tNzKVAAusipGF+sLiTIWWgMuDDzyucslkCWfysmKQtdrPzEUmWN5lSxGtBZmw4xJ3b9nGYG1/kN2SRrjUJMSOSAgnuny6lcmIRdIFMR5f2qnN0dbPFTGGN2vB5IPCpb7lZWZ2b4/FPy6p9N5Rci8uX+CnvMlKQRza7v5Jhz4ALqYAvlZ5CiCJ32qkyxIAwRB/51voWGLpzZJJxzEeFPErVxMuOtuuthm7oyUzjcbiw/y/aZwodpu+Kaitbck40tlgOz9uVzIuh4Sa8mZeEFi+B1VJxXY1r1rs05xbsi1j63AtHB2WhR3lLmHfzYc6q1HlIQvpKOdhlFNyskQyD9Qi/yK+UUo2sKeQE+LaBVx9pPz/gWq7Qyk8x255I37sY14TpQV8cte3GOxvtXO6AInQdmlfMv87zw49d1cEdofF7+FQU+FhLtfBo8SJezAloch6y6QAl2d9O9uRI2XYjVbcwlb1wOY+ovPtvD4Qjb2SMDg90YClOndJxkDw2gXdBS0EJc7FRtHHDDSzHtAps//YH4CT9cCcTeckFbOZCS/UmhrvgaC97sT4EFnIlQ6qNvWOsb/bpv+L190hw6uRVNBVaf+S9INn2itFJK41jM+LAADWx5s4gktE6lF9jf0tsePLrzA==
+     properties : {}
+     style : {}
+     type : 47
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        code : |1-
+         
+        type : 14
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        type : 338
+        enabled : false
+      -
+        type : 339
+        enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x292573e513b5f221
+  internal_properties : HwAAAB4AAAAE1pQ0cgqQ+TvanjTUDq/hLGlHrzfIoGQ5ktO0NGxMqRRu/HYzyDONZtOE1e8FBhPEKKkDZo3KARHv38pwMXlVtn27M2eNb5xqujrkrZO8Jn5vDs2b78M71h3Ws05qSjgEZN8e71dyQwWoPgFgSjdiaOlMS4jJ56t0eTY1D9YXkxFQ3Y3Md5oMTTxu39PLAYbhUhh1d/QFFaQsvF5pUMUykm9rqa4GIElDzfwg0T+TCENYWBfvzpScsw0C2Xr3HtvWtEWdmQZ3DCDqWbutZTf4bzYgmNbszZLfp7y6mjFWUwYkw5Si
+  properties : {}
+  style : {}
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : HwAAAB4AAAAGhKkh5ZPvD1IGufEWzfQ/iMrhHXC2Br3OqR0NIXWRCbpw0wZcjkeecVjJnMlE8nQDtxnyQ+2GVded5Yh3MzoUnX9OVgfLEUnywkZwnVrSWt94DDAqPz4zmY0ELBrTYms0KeU=
+  controls :
+   -
+     name : CBM_NbEnr
+     identifier : 0x290e218f12ae03e5
+     internal_properties : HwAAAB4AAABPaL8hgUF8eaGaDgDgzExeFpY4ayo7NHr5qKFCrFrxw7AXv9bXs6Z5ViZ7JKzLXDUJBVivNULvUASnJiMWbZbph0G+sUiQYbIxJ5kjmEFZ2X17fmu7N/f4f6T2x4nRZELD
+     type : 62
+     code_elements :
+      type_code : 62
+      p_codes :
+       -
+         type : 15
+         enabled : false
+       -
+         type : 16
+         enabled : false
+       -
+         type : 39
+         enabled : false
+       -
+         type : 17
+         enabled : false
+   -
+     name : CBM_Enr
+     identifier : 0x290e21d512cf1881
+     internal_properties : HwAAAB4AAADYsdyy5A14kTuYmqaQ4irBMjT2aFAv/0EC3wFpZPhbaH837LRDIm8D/XSUvuWnKbUUiF4fqfSqf/3rQc7mwy2+05iPrg1P0m3oKzBMNIwN8UB1w/uAGpGFQzWJSn6/eQNFMBXi
+     type : 62
+     code_elements :
+      type_code : 62
+      p_codes :
+       -
+         type : 15
+         enabled : false
+       -
+         type : 16
+         enabled : false
+       -
+         type : 39
+         enabled : false
+       -
+         type : 17
+         enabled : false
+ actionbar : {}
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1+
+      PROCEDURE MaFenêtre()
+      
+      tabEntete	est un tableau associatif d'entiers
+      sCocli		est une chaîne	= "Code client"
+      tabEntete[sCocli]			= 1
+      sRepere est une chaîne = "Repère"
+      tabEntete[sRepere]					= 2
+      sRef est une chaîne = "Référence"
+      tabEntete[sRef]				= 3
+      sDes est une chaîne = "Désignation"
+      tabEntete[sDes]			= 4
+      sDateCreation est une chaîne = "Date création"
+      tabEntete[sDateCreation]			= 5
+      sQteEco est une chaîne = "Quantité éco"
+      tabEntete[sQteEco]			= 6
+      sCDF est une chaîne = "Centre de frais"
+      tabEntete[sCDF]		= 7
+      sType est une chaîne = "Type"
+      tabEntete[sType]					= 8
+      sQteNom est une chaîne = "Quantité nomenclature"
+      tabEntete[sQteNom]	= 9
+      sTpsPrepa est une chaîne = "Temps préparation"
+      tabEntete[sTpsPrepa]		= 10
+      sTpsUnit est une chaîne = "Temps unitaire"
+      tabEntete[sTpsUnit]			= 11
+      sEffPrepa est une chaîne = "Effectif préparation"
+      tabEntete[sEffPrepa]	= 12
+      sEffUnit est une chaîne = "Effectif unitaire"
+      tabEntete[sEffUnit]		= 13
+      sCout est une chaîne = "Coût unitaire"
+      tabEntete[sCout]			= 14
+      sNumOp est une chaîne = "Numéro opération"
+      tabEntete[sNumOp]		= 15
+      sNumOpSuiv est une chaîne = "Numéro opération liée"
+      tabEntete[sNumOpSuiv]	= 16
+      s2DClient est une chaîne = "2D Client"
+      tabEntete[s2DClient]				= 17
+      s3DClient est une chaîne = "3D Client"
+      tabEntete[s3DClient]				= 18
+      s2DPhase est une chaîne = "2D Phase"
+      tabEntete[s2DPhase]				= 19
+      s3DPhase est une chaîne = "3D Phase"
+      tabEntete[s3DPhase]				= 20
+      
+      sRepDocuments est une chaîne
+      sdRepDocuments		est une Requête SQL	=
+      [
+      	SELECT * FROM PARAM<§cs:3§>
+      	WHERE COPAR LIKE 'REPGAM'<§cs:3§>
+      ]
+      SI PAS HExécuteRequêteSQL(sdRepDocuments) ALORS
+      	erreur("Le répertoire des documents n'est pas renseigné (PARAM 'REPGAM'")
+      	ferme(moimeme)
+      	retour
+      FIN
+      sRepDocuments = completerep(sansespace(sdRepDocuments.VALPAR))
+      sRepImages est une chaîne
+      sdRepImages		est une Requête SQL	=
+      [
+      	SELECT * FROM PARAM<§cs:3§>
+      	WHERE COPAR LIKE 'REP'<§cs:3§>
+      ]
+      SI PAS HExécuteRequêteSQL(sdRepImages) ALORS
+      	Erreur("Le répertoire des images n'est pas renseigné (PARAM 'REP'")
+      	Ferme(MoiMême)
+      	RETOUR
+      FIN
+      sRepImages = ComplèteRep(SansEspace(sdRepDocuments.VALPAR))
+      si enmodetest alors
+      	sRepDocuments = "C:\Users\oprev\OneDrive - CORTALYS\Projets\DBC\Clipper\20251106 Fabera\Fabera\"
+      	sRepImages = sRepDocuments
+      FIN
+   -
+     code : |1+
+      
+      
+     type : 34
+   -
+     code : |1+
+      
+      
+     type : 234
+   -
+     code : |1+
+      
+      
+     type : 165
+   -
+     code : |1+
+      
+      
+     type : 177
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1-
+      FinProgramme()
+     type : 2
+ code_parameters :
+  internal_properties : HwAAAB4AAAATJE33z8GJHL8wyaJCONZo6KRdMGsb1W7qj4D4VgDgCEgk+OW6jzutOyuhPC76yhPgorKKtlfIuup/5aujquTBD8ahIWf18Y+QF3RqgPYH4pwfw9aJKfTmsVk=
+  original_name : Modele1
+resources :
+ string_res :
+  identifier : 0x190e17bc004da6aa
+  internal_properties : HwAAAB4AAAAbY53bgJCA6ACd5sR5fZYih4LkZ0z/7MNl2ie3oeS6YrMl61oqequUz9/EYNu6qdnQHBIqcP9y4NZw
+custom_note :
+ internal_properties : HwAAAB4AAAAw1yJwJOWnBFt8iy6Ww8JWR1G08XnjNT9VuwnlXBOxjoNDueSgBJd4Fg==
+rad :
+ internal_properties : HwAAAB4AAADk2Hz6/QT0adx8e89Zvm7g9bWRpROkGCmpSKmSd1HXAi8ev5F7h+hr

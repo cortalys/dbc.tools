@@ -1,0 +1,1351 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : ProcéduresClipper
+ major_version : 30
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+ options : 256
+procedure_set :
+ identifier : 0x18cd78130f285a68
+ internal_properties : HwAAAB4AAADjksEavC8JwuEiHc63C+ul0ggS/BOiC8PJfOp/6aEkSKX4qEWcBw==
+ code_elements :
+  type_code : 31
+  p_codes :
+   -
+     code : |1+
+      prive
+      	gclParam est un CL_Param
+      
+      INFOSDIMENSIO,INFOSMULTISIT,INFOSARTICLEM,INFOSRESERVE	sont des Sources de Données
+      gTableauAccèsCatégories									est un tableau dynamique de 0 entiers
+      gLangueEnCours											est un entier
+      
+      bModeRequete											est un booléen
+      GMultiSitesOUI											est un booléen
+      gta_MagasinsActifs										est un tableau associatif de booléens
+      gnQtéStockGisement										est un entier
+      gnModeStockSecuMultisite								est un entier
+     type : 720896
+  procedures :
+   -
+     name : FormatDecimal
+     procedure_id : 1787216774944115789
+     type_code : 15
+     code : |1+
+      procédure FormatDecimal(vmode,ChampPrix="",ChampQte="",SaisieEnNegatif=Faux)
+      
+      vChampPrix							est une chaîne	= ChampPrix
+      vChampQte							est une chaîne	= ChampQte
+      i									est un entier
+      vnbdecimale,vNbDecPrix,vNbDecQte	est une entier
+      vmsk								est une chaîne
+      SeparateurDec						est une chaîne	= ","
+      
+      vdecimale							est une chaîne	= "999999"
+      
+      SELON vmode
+      	CAS ~="ACHAT":  gclParam.Lecture("DECIACH")
+      	CAS ~="NOMEN": gclParam.Lecture("DECINOM")
+      	CAS ~="SOMME": gclParam.Lecture("ARDSOM")
+      	AUTRE CAS: gclParam.Lecture("DECIVTE")
+      FIN
+      SI vmode~="SOMME" ALORS
+      	SI PAS gclParam.ST_Courant.bTrouve ALORS gclParam.ST_Courant.sVALPAR="2"
+      SINON
+      	SI PAS gclParam.ST_Courant.bTrouve ALORS
+      		gclParam.ST_Courant.sVALPAR		= "#6"
+      		gclParam.ST_Courant.sAUTREVAL	= "#6"
+      	FIN
+      	SI gclParam.ST_Courant.sVALPAR[[1]]<>"#" ALORS
+      		gclParam.ST_Courant.sVALPAR="#6"
+      	FIN
+      	SI gclParam.ST_Courant.sAUTREVAL[[1]]<>"#" ALORS
+      		gclParam.ST_Courant.sAUTREVAL="#6"
+      	FIN
+      FIN
+      
+      SI vChampPrix<>"" ALORS
+      	vnbdecimale = (vmode~="SOMME")? Val(gclParam.ST_Courant.sVALPAR) SINON Val(SansEspace(gclParam.ST_Courant.sVALPAR[[2 À ]]))
+      	SI vnbdecimale<1 ALORS vnbdecimale=2
+      	vNbDecPrix	= vnbdecimale
+      	i			= 1
+      	vChampPrix	= ExtraitChaîne(ChampPrix,i,TAB)
+      	TANTQUE vChampPrix<>EOT
+      		SI ChampExiste(vChampPrix) ALORS
+      			vmsk="99 999 999 999 999 999"
+      			SI vnbdecimale>0 ALORS vmsk+=SeparateurDec+vdecimale[[1 À vnbdecimale]]
+      			SI ChaîneOccurrence({vChampPrix,indChamp}..MasqueSaisie,"+")>0 _OU_ SaisieEnNegatif ALORS vmsk="+"+vmsk
+      			SI ChaîneOccurrence({vChampPrix,indChamp}..MasqueSaisie,"$")>0 ALORS vmsk+=" $"
+      			{vChampPrix,indChamp}..MasqueSaisie=vmsk
+      		FIN
+      		i++
+      		vChampPrix=ExtraitChaîne(ChampPrix,i,TAB)
+      	FIN
+      FIN
+      
+      SI vChampQte<>"" ALORS
+      	vnbdecimale=Val(SansEspace(gclParam.ST_Courant.sAUTREVAL[[ 2 À ]]))
+      	SI vnbdecimale<1 ALORS vnbdecimale=0
+      	vNbDecQte	= vnbdecimale
+      
+      	i			= 1
+      	vChampQte	= ExtraitChaîne(ChampQte,i,TAB)
+      	TANTQUE vChampQte<>EOT
+      		SI ChampExiste(vChampQte) ALORS
+      			vmsk="99 999 999 999 999 999"
+      			SI vnbdecimale>0 ALORS vmsk+=SeparateurDec+vdecimale[[1 À vnbdecimale]]
+      			SI ChaîneOccurrence({vChampQte,indChamp}..MasqueSaisie,"+")>0 _OU_ SaisieEnNegatif ALORS
+      				vmsk="+"+vmsk
+      			FIN
+      			{vChampQte,indChamp}..MasqueSaisie=vmsk
+      		FIN
+      		i++
+      		vChampQte=ExtraitChaîne(ChampQte,i,TAB)
+      	FIN
+      FIN
+      
+      SI vChampQte="" ALORS RENVOYER vNbDecPrix SINON RENVOYER vNbDecQte
+      
+     type : 458752
+   -
+     name : Initialise
+     procedure_id : 1787218647562875804
+     type_code : 15
+     code : |1+
+      procédure Initialise()
+      
+      gclParam.Initialisation()
+      
+      SI gclParam.Lecture("CODEFOU") ALORS VersionCLIP=SansEspace(gclParam.ST_Courant.sAUTREVAL) SINON VersionCLIP=""
+      
+      bModeRequete				= gclParam.ParamOui("MODESQL")
+      GMultiSitesOUI				= gclParam.ParamOui("MULTISI")
+      gta_MagasinsActifs			= Get_Tableau_MagsDispos()
+      gnQtéStockGisement			= 0
+      gnModeStockSecuMultisite	= 0
+      SI gclParam.Lecture("PDPQMIN") ALORS gnModeStockSecuMultisite = Val(gclParam.ST_Courant.sVALPAR)
+      SI gnModeStockSecuMultisite<1 ALORS gnModeStockSecuMultisite = 3
+     type : 458752
+   -
+     name : COMPRESSERANG
+     procedure_id : 1787224299839064233
+     type_code : 15
+     code : |1-
+      procédure COMPRESSERANG(Num)
+      
+      i,j	sont des entiers
+      sCh	est une chaîne
+      s	est une chaîne	= Num
+      
+      SI s~="" ALORS RENVOYER ""
+      
+      j=ChaîneOccurrence(s,"/")
+      POUR i=0 À j
+      	sCh += Val(s[[i*4+1 À i*4+3]])+"/"
+      FIN
+      sCh=Gauche(sCh,Taille(sCh)-1)
+      
+      //
+      //j=ChaîneOccurrence(s,"/")+1
+      //pour i=1 a j
+      //	s2 += val(s[[(i-1)*4+1 a (i-1)*4+3]])+"/"
+      //FIN
+      //s2=gauche(s2,taille(s2)-1)
+      
+      RENVOYER sCh
+     type : 458752
+   -
+     name : GetCoefPrix
+     procedure_id : 1787224626257571764
+     type_code : 15
+     code : |1+
+      procédure GetCoefPrix(pArticle, pUniteQte, pUnitePrix,moCoefInverse=0)
+      moCoefQte			est un monétaire
+      moCoefPrix			est un monétaire
+      rCoefReel			est un réel
+      rQTEReel			est un réel
+      nSensQte, nSensPrix	sont des entiers
+      
+      SI PAS HRecherchePremier(ARTICLEM,COARTI,Complète(pArticle,Dimension(ARTICLEM.COARTI))) ALORS RENVOYER 1 // Demander un coef ?
+      
+      	moCoefQte	= GetCoefUnite(pArticle,pUniteQte,nSensQte,Faux)
+      	moCoefPrix	= GetCoefUnite(pArticle,pUnitePrix,nSensPrix,Faux)
+      
+      SI moCoefQte<=0 ALORS moCoefQte=1
+      SI moCoefPrix<=0 ALORS moCoefPrix=1
+      
+      SI nSensQte=1 ALORS
+      	SI nSensPrix=1 ALORS
+      		rCoefReel	= moCoefPrix
+      		rQTEReel	= moCoefQte
+      		rCoefReel	= rQTEReel/rCoefReel
+      		SI Arrondi(rCoefReel,8)<moCoefQte/moCoefPrix ALORS moCoefInverse = moCoefPrix
+      		RENVOYER moCoefQte/moCoefPrix
+      	SINON
+      		moCoefInverse = (1/moCoefQte)*(1/moCoefPrix)
+      		RENVOYER (moCoefQte*moCoefPrix)
+      	FIN
+      SINON
+      	SI nSensPrix=1 ALORS
+      		moCoefInverse = moCoefQte*moCoefPrix
+      		RENVOYER (1/(moCoefQte*moCoefPrix))
+      	SINON
+      		RENVOYER (moCoefPrix/moCoefQte)
+      	FIN
+      FIN
+      
+     type : 458752
+   -
+     name : GetCoefUnite
+     procedure_id : 1787224819531145819
+     type_code : 15
+     code : |1-
+      procédure GetCoefUnite(pArticle, pUnite, pSens=1, pInverser=Vrai,pFenMere="§§§§!§§§§")
+      
+      nInd est un entier
+      
+      SI PAS Gauche(pFenMere,8)~= "Article_" ALORS
+      	SI HLitRecherchePremier(Unite,COARTIUNITE,[pArticle,pUnite]) ALORS
+      		SI Unite.SENS=0 ALORS Unite.SENS=1
+      		SI Unite.COEF<=0 ALORS Unite.COEF=1
+      		pSens=Unite.SENS
+      		SI Unite.SENS>1 _ET_ pInverser ALORS RENVOYER (1/Unite.COEF)
+      		RENVOYER Unite.COEF
+      	SINON
+      		RENVOYER 1
+      	FIN
+      SINON
+      	SI TableauOccurrence({pFenMere+".gftabUnite",indVariable})<1 ALORS RENVOYER GetCoefUnite(pArticle, pUnite, pSens, pInverser,"")
+      	nInd=TableauCherche({pFenMere+".gftabUnite",indVariable},tcLinéaire,"sUnite",SansEspace(pUnite))
+      	SI nInd>0 ALORS
+      		pSens={pFenMere+".gftabUnite",indVariable}[nInd]:nSens
+      		SI {pFenMere+".gftabUnite",indVariable}[nInd]:moCoef<=0 ALORS {pFenMere+".gftabUnite",indVariable}[nInd]:moCoef=1
+      		SI {pFenMere+".gftabUnite",indVariable}[nInd]:nSens>1 _ET_ pInverser ALORS RENVOYER (1/{pFenMere+".gftabUnite",indVariable}[nInd]:moCoef)
+      		RENVOYER {pFenMere+".gftabUnite",indVariable}[nInd]:moCoef
+      	SINON
+      		RENVOYER 1
+      	FIN
+      FIN
+     type : 458752
+   -
+     name : FamDimGen
+     procedure_id : 1787225038575445762
+     type_code : 15
+     code : |1-
+      procédure FamDimGen(sCodeFamille,bEstPositionné=Faux)
+      SI PAS bEstPositionné ALORS
+      	SI sCodeFamille~="" ALORS RENVOYER Faux
+      	SI PAS HRecherchePremier(FAMILLE,COFA,Complète(sCodeFamille,Dimension(FAMILLE.COFA))) _OU_ PAS HLit(FAMILLE,HNumEnr(FAMILLE)) ALORS FA.DIMENSIONS=0
+      FIN
+      SI FAMILLE.MULTIDIM ALORS RENVOYER Vrai // T143754
+      
+      RENVOYER Faux
+     type : 458752
+   -
+     name : RechercheDim
+     procedure_id : 1787225094410099021
+     type_code : 15
+     code : |1-
+      procédure RechercheDim(nAMCleunik, moDim1, moDim2, nMagasin)
+      
+      HRecherchePremier(DIMENSIO,AMCLEUNIK,nAMCleunik)
+      TANTQUE HTrouve(DIMENSIO)
+      	SI HLit(DIMENSIO,HNumEnr(DIMENSIO)) ALORS
+      		SI GMultiSitesOUI ALORS // T143754
+      			SI PAS HLitRecherchePremier(MULTISIT,DMCLEUNIK,DIMENSIO.DMCLEUNIK) ALORS HRAZ(MULTISIT)
+      		FIN
+      		SI DIMENSIO.DIM1=moDim1 _ET_ DIMENSIO.DIM2=moDim2 _ET_ (PAS GMultiSitesOUI _OU_ (GMultiSitesOUI _ET_ nMagasin>0 _ET_ nMagasin=MULTISIT.MAGASIN)) ALORS RENVOYER DIMENSIO.DMCLEUNIK // T143754
+      	FIN
+      	HSuivant(DIMENSIO,AMCLEUNIK)
+      FIN
+      RENVOYER -1
+     type : 458752
+   -
+     name : CompteursNew
+     procedure_id : 1788297835148378384
+     type_code : 15
+     code : |1-
+      procédure CompteursNew(LOCAL psFichier est une chaîne, LOCAL PnCptAf est un entier =0, LOCAL PbPrévisualisationCompteur est un booléen =Faux, LOCAL PbExportHongrie est une booléen =Faux)
+      
+      
+      // nCptAf : compteur d'affaire 2 à 10
+      // nCptAf = 1 n'existe pas
+      sCIndex, sCompteur, sFlux, sPrefix, sSuffix	sont des chaînes
+      nValRet										est un entier
+      nNumFac										est un entier
+      bSpecFac									est un booléen				// compteur pour les factures
+      sdAliasCompteur								est une Source de Données	// W38104
+      sValpar										est une chaîne
+      btrouve										est un booléen
+      
+      
+      SELON psFichier
+      	CAS "AF" : sCIndex="CPTAF"; sCompteur=AFFAIRE.NAF..Nom; sFlux=AFFAIRE..Nom
+      	CAS "BC" : sCIndex="CPTBC"; sCompteur=BC.COBC..Nom; sFlux=BC..Nom
+      	CAS "BL" : sCIndex="CPTBL"; sCompteur=BL.NUMBL..Nom; sFlux=BL..Nom
+      	CAS "DA" : sCIndex="CPTDA"; sCompteur=DA.CODA..Nom; sFlux=DA..Nom
+      	CAS "DV" : sCIndex="CPTDV"; sCompteur=IDDEVIS.NUMERODEVIS..Nom; sFlux=IDDEVIS..Nom			//TF 57726
+      	CAS "PRO-F" : sCIndex="CPTPROF"; sCompteur=ENFACT.NUMFACT..Nom; sFlux=ENFACT..Nom
+      	CAS "BLFOU" : sCIndex="BLFOU"; sCompteur=BLFOURN.NUMBLF..Nom; sFlux=BLFOURN..Nom
+      	CAS "RELEVEE" : sCIndex="CPTRELE"; sCompteur=ECHEANC.NUMRELEV..Nom; sFlux=ECHEANC..Nom
+      	CAS "AODV" :
+      		sCIndex		= "CPTAODV";
+      		sCompteur	= ENTETEAO.TYPECOAPPEL..Nom; sFlux=ENTETEAO..Nom
+      		SI HLitRecherchePremier(Trans_Compteur,Code,Complète(sCIndex,Dimension(Trans_Compteur.Code))) ALORS
+      			nValRet=Trans_Compteur.Valeur
+      			BOUCLE
+      				nValRet++
+      				HLitRecherchePremier(ENTETEAO,COAPPEL,nValRet)
+      				SI PAS HTrouve(ENTETEAO) ALORS SORTIR
+      				TANTQUE HTrouve(ENTETEAO)
+      					SI ENTETEAO.TYPE = 2 btrouve = Vrai
+      					HLitSuivant(ENTETEAO)
+      				FIN
+      				SI PAS btrouve ALORS SORTIR
+      				btrouve = Faux
+      			FIN
+      			Trans_Compteur.Valeur=nValRet
+      			SI PAS PbPrévisualisationCompteur ALORS HModifie(Trans_Compteur)
+      			RENVOYER (nValRet)
+      		FIN
+      	CAS "AOAF" :
+      		sCIndex		= "CPTAOAF";
+      		sCompteur	= ENTETEAO.TYPECOAPPEL..Nom; sFlux=ENTETEAO..Nom
+      		SI HLitRecherchePremier(Trans_Compteur,Code,Complète(sCIndex,Dimension(Trans_Compteur.Code))) ALORS
+      			nValRet=Trans_Compteur.Valeur
+      			BOUCLE
+      				nValRet++
+      				HLitRecherchePremier(ENTETEAO,COAPPEL,nValRet)
+      				SI PAS HTrouve(ENTETEAO) ALORS SORTIR
+      				TANTQUE HTrouve(ENTETEAO)
+      					SI ENTETEAO.TYPE = 1 btrouve = Vrai
+      					HLitSuivant(ENTETEAO)
+      				FIN
+      				SI PAS btrouve ALORS SORTIR
+      				btrouve = Faux
+      			FIN
+      			Trans_Compteur.Valeur=nValRet
+      			SI PAS PbPrévisualisationCompteur ALORS HModifie(Trans_Compteur)
+      			RENVOYER (nValRet)
+      		FIN
+      	CAS "RV" : sCIndex="CPTREVU"; sCompteur=IDDEVIS.COREVUE..Nom; sFlux=IDDEVIS..Nom
+      	CAS "RESE" : sCIndex="CPTRESE"; sCompteur=RESERVE.CORESE..Nom; sFlux=RESERVE..Nom
+      	CAS "COLIS"
+      		SI HLitRecherchePremier(Trans_Compteur,Code,Complète("CPTCOLI",Dimension(Trans_Compteur.Code))) ALORS
+      			nValRet=Trans_Compteur.Valeur
+      			nValRet++
+      			Trans_Compteur.Valeur=nValRet
+      			SI PAS PbPrévisualisationCompteur ALORS HModifie(Trans_Compteur)
+      			RENVOYER (nValRet)
+      		FIN
+      	CAS "COLIS2"
+      		SI HLitRecherchePremier(Trans_Compteur,Code,Complète("CPTCOLI",Dimension(Trans_Compteur.Code))) ALORS
+      			nValRet=Val(Trans_Compteur.Designation2)
+      			nValRet++
+      			Trans_Compteur.Designation2=nValRet
+      			SI PAS PbPrévisualisationCompteur ALORS HModifie(Trans_Compteur)
+      			RENVOYER (nValRet)
+      		FIN
+      	CAS "PV" : sCIndex="CPTPV"; sCompteur=PV.NPV..Nom; sFlux=PV..Nom
+      	CAS "FNC" : sCIndex="CPTFNC"; sCompteur=FNC.COFNC..Nom; sFlux=FNC..Nom
+      	CAS "FNC2" : sCIndex="CPTFNC2"; sCompteur = FNC.COFNC..Nom; sFlux = FNCEntete..Nom
+      	CAS "CLI" : sCIndex="CPCOCLI"; sCompteur=CLIENT.COCLI..Nom; sFlux=CLIENT..Nom
+      	CAS "FOU" : sCIndex="CPCOFOU"; sCompteur=FOURNISS.COFOU..Nom; sFlux=FOURNISS..Nom
+      	CAS "PRO" : sCIndex="CPCOPRO"; sCompteur=PROSPECT.PROCOD..Nom; sFlux=PROSPECT..Nom
+      	CAS "PCE" : sCIndex="CPCOPIE"; sCompteur=ART.GPCOPIECE..Nom; sFlux=ART..Nom
+      	CAS "ARTI" : sCIndex="CPTARTI"; sCompteur=ARTICLEM.COARTI..Nom; sFlux=ARTICLEM..Nom
+      	CAS "SERIE" : sCIndex="CPTSERI"; sCompteur=ENSERIE.NOSERIE..Nom; sFlux=ENSERIE..Nom
+      	CAS "FACFO" : sCIndex="CPPCEA"; sCompteur=FACFO.TFCHRONO..Nom; sFlux=FACFO..Nom
+      	CAS "REPCOM" : sCIndex="REPCOM"; sCompteur=""; sFlux="" // TF31796
+      
+      	CAS "FAI"
+      		sCIndex		= "CTPFAI"
+      		sCompteur	= FAI_FICHE.COMPTEUR..Nom
+      		sFlux		= FAI_FICHE..Nom
+      
+      	AUTRE CAS
+      
+      FIN
+      
+      sCIndex=Complète(sCIndex,Dimension(Trans_Compteur.Code))
+      // compteur normal
+      SI PnCptAf>1 _ET_ psFichier<>"FACFOU" ALORS
+      	HRecherchePremier(Trans_Compteur,Code,Complète("CPTAF"+NumériqueVersChaîne(PnCptAf,"02d"),Dimension(Trans_Compteur.Code)))
+      SINON
+      	HRecherchePremier(Trans_Compteur,Code,Complète(sCIndex,Dimension(Trans_Compteur.Code)))
+      FIN
+      SI PAS HTrouve(Trans_Compteur) ALORS
+      	HRAZ(Trans_Compteur)
+      	SI PnCptAf>1 _ET_ psFichier<>"FACFOU"  ALORS
+      		Trans_Compteur.Code="CPTAF"+NumériqueVersChaîne(PnCptAf,"02d")
+      	SINON
+      		Trans_Compteur.Code=sCIndex
+      	FIN
+      	Trans_Compteur.Designation1="Compteur "+psFichier
+      	SI psFichier="MAINT" ALORS
+      		Trans_Compteur.Valeur=100
+      	SINON
+      		SI bSpecFac ALORS
+      			SI VersionCLIP[[1 À 4]]="SFS_" _ET_ Val(VersionCLIP[[5]])>0 ALORS
+      				// SPECIFIQUE SOFRASER
+      				sValpar					= VersionCLIP[[5]]+"00"
+      				Trans_Compteur.Valeur	= Val(sValpar)-1
+      			SINON // TECHNIMODERNE
+      				SI VersionCLIP="TEC00" ALORS Trans_Compteur.Valeur=999 SINON Trans_Compteur.Valeur=0
+      			FIN
+      		SINON
+      			Trans_Compteur.Valeur=0
+      			SI PbExportHongrie ALORS Trans_Compteur.Designation2=10000					// Hongrie W34278  //autreval
+      		FIN
+      	FIN
+      	HAjoute(Trans_Compteur)
+      FIN
+      HLit(Trans_Compteur,HNumEnr(Trans_Compteur),(PbPrévisualisationCompteur ? hBlocageNon SINON hBlocageEcriture))
+      SI sFlux=ENSERIE..Nom ALORS
+      	sPrefix	= SansEspace(Trans_Compteur.Designation2)  //TF 24934
+      	sSuffix	= SansEspace(Trans_Compteur.Designation3)
+      FIN
+      SI sFlux=CLIENT..Nom _OU_ sFlux=FOURNISS..Nom _OU_ sFlux=PROSPECT..Nom ALORS  // TF 24934
+      	SI Val(Trans_Compteur.Designation2) = 2 ALORS
+      		sPrefix=SansEspace(Trans_Compteur.Designation3)
+      	FIN
+      FIN
+      //	SI sFlux=ARTICLEM..Nom _OU_ sFlux=ART..Nom ALORS
+      //		sPrefix=SansEspace(PARAM.LIBREOBS)
+      //	FIN
+      SI PbExportHongrie ALORS
+      	nValRet=Trans_Compteur.Valeur+1							// Hongrie W34278
+      SINON
+      	SI psFichier="FACFO" ALORS
+      		nValRet=Trans_Compteur.Valeur+1
+      	SINON
+      		nValRet=Trans_Compteur.Valeur+1     //TF 33746
+      	FIN
+      FIN
+      
+      
+      
+      SI sCompteur<>"" ALORS
+      	SI HFichierExiste(sdAliasCompteur) ALORS HAnnuleAlias(sdAliasCompteur) // W38104
+      	HAlias(sFlux,sdAliasCompteur) // W38104
+      	HChangeNom(sdAliasCompteur,sFlux) // W38104
+      
+      	SI bSpecFac ALORS
+      		//	Compteur="NUMFACT"
+      		//	CIndex="F"+Fichier
+      		//	Flux="ENFACT"
+      		HRecherchePremier(sdAliasCompteur,sCompteur,Val(NumériqueVersChaîne(nNumFac)+nValRet)) // W38104
+      		TANTQUE HTrouve(sdAliasCompteur) // W38104
+      			nValRet++
+      			HRecherchePremier(sdAliasCompteur,sCompteur,Val(NumériqueVersChaîne(nNumFac)+nValRet)) // W38104
+      		FIN
+      	SINON
+      		//			SI sFichier<>"RV" _ET_ sCompteur<>"" ALORS
+      		SI psFichier<>"RV" ALORS
+      			BOUCLE
+      				SELON sFlux
+      					CAS ENSERIE..Nom
+      						// parce que NOSERIE une chaine de 10
+      						HRecherchePremier(sdAliasCompteur,sCompteur,Complète(sPrefix+NumériqueVersChaîne(nValRet)+sSuffix,Dimension({sdAliasCompteur..Nom+"."+sCompteur,indRubrique}))) // W38104
+      					CAS CLIENT..Nom, FOURNISS..Nom,PROSPECT..Nom
+      						SI SansEspace(sPrefix)="" ALORS
+      							HRecherchePremier(sdAliasCompteur,sCompteur,Complète(sPrefix+NumériqueVersChaîne(nValRet,"05d"),Dimension({sdAliasCompteur..Nom+"."+sCompteur,indRubrique})))//D183762 D191898
+      						SINON
+      							HRecherchePremier(sdAliasCompteur,sCompteur,Complète(sPrefix+NumériqueVersChaîne(nValRet,"04d"),Dimension({sdAliasCompteur..Nom+"."+sCompteur,indRubrique})))//D183762 D191898
+      						FIN
+      					CAS ARTICLEM..Nom, ART..Nom
+      						HRecherchePremier(sdAliasCompteur,sCompteur,Complète(NumériqueVersChaîne(nValRet,"05d"),Dimension({sdAliasCompteur..Nom+"."+sCompteur,indRubrique})))//D183762   D191898
+      					AUTRES CAS
+      						HRecherchePremier(sdAliasCompteur,sCompteur,nValRet) // W38104
+      				FIN
+      				SI PAS HTrouve(sdAliasCompteur) ALORS SORTIR // W38104
+      				nValRet++
+      			FIN
+      		FIN
+      	FIN
+      
+      	HAnnuleAlias(sdAliasCompteur) // W38104
+      FIN
+      
+      //	SI sFichier="INSTANCE" ALORS// Compteur d'execution du prog
+      //		SI nValRet>900 ALORS nValRet=1
+      //	FIN
+      SI PbExportHongrie ALORS
+      	Trans_Compteur.Valeur=NumériqueVersChaîne(nValRet)										// Hongrie W34278
+      SINON
+      	SI psFichier="FACFO" ALORS
+      		Trans_Compteur.Valeur=NumériqueVersChaîne(nValRet)
+      	SINON
+      		Trans_Compteur.Valeur=NumériqueVersChaîne(nValRet)  //TF 33746
+      	FIN
+      FIN
+      
+      SI PAS PbPrévisualisationCompteur ALORS HModifie(Trans_Compteur)
+      
+      SI sFlux=CLIENT..Nom _OU_ sFlux=FOURNISS..Nom _OU_ sFlux=PROSPECT..Nom ALORS
+      	SI SansEspace(sPrefix)="" ALORS
+      		RENVOYER(sPrefix+NumériqueVersChaîne(nValRet,"05d")) //D191898
+      	SINON
+      		RENVOYER(sPrefix+NumériqueVersChaîne(nValRet,"04d"))	//D191898
+      	FIN
+      SINON
+      	SI sFlux=ARTICLEM..Nom _OU_ sFlux=ART..Nom ALORS
+      		RENVOYER(NumériqueVersChaîne(nValRet,"05d"))  //D191898
+      	SINON SI sFlux=ENSERIE..Nom ALORS
+      		RENVOYER SansEspace(Trans_Compteur.Designation2)+nValRet+SansEspace(Trans_Compteur.Designation3)
+      	SINON
+      		RENVOYER(nValRet)
+      	FIN
+      FIN
+     type : 458752
+   -
+     name : Format_NomPrenom
+     procedure_id : 1788298926071046105
+     type_code : 15
+     code : |1-
+      procédure Format_NomPrenom(__nom,__prenom, _civ=0, __langue=-1,  s_separateur=" ",Format=0) //caract(160)) D178954  W44433
+      _modeAffEmploye	est un entier
+      sRenvoi			est chaîne
+      _nom, _prenom	sont chaîne
+      _langue			est entier	= __langue
+      
+      SI s_separateur _DANS_ (Null, Caract(160)) ALORS s_separateur = " "		// TF 9082
+      
+      _nom	= SansEspace(__nom)
+      _prenom	= SansEspace(__prenom)
+      
+      ///
+      SI Format=0 ALORS
+      	SI gclParam.Lecture("AFFEMPI") ALORS
+      		_modeAffEmploye = gclParam.ST_Courant.sVALPAR
+      	SINON
+      		_modeAffEmploye=2 // Nom Prénom
+      	FIN
+      SINON
+      	_modeAffEmploye = Format
+      FIN
+      
+      SI _langue<1 ALORS _langue=gLangueEnCours
+      
+      SELON _modeAffEmploye
+      	CAS 1 //sans changement
+      		sRenvoi = RécupèreCivilité(_langue,_civ) + SansEspace(_nom) + s_separateur + SansEspace(_prenom)
+      	CAS 2 //Nom Prénom
+      		sRenvoi = Format_ChaineComposee(_nom) + s_separateur + Format_ChaineComposee(_prenom)		//O331697 + O332439
+      	CAS 3 //NOM Prénom
+      		sRenvoi = Majuscule(_nom) + s_separateur + Format_ChaineComposee(_prenom)		//O331697
+      	CAS 4 //Civ.Nom Prénom
+      		sRenvoi = RécupèreCivilité(_langue,_civ) + Format_ChaineComposee(_nom) + s_separateur+Format_ChaineComposee(_prenom)		//O331697 + O332439
+      	CAS 5 //Civ.NOM Prénom
+      		sRenvoi = RécupèreCivilité(_langue,_civ) + Majuscule(_nom) + s_separateur + Format_ChaineComposee(_prenom)		//O331697
+      	CAS 6 //Prénom Nom
+      		sRenvoi = Format_ChaineComposee(_prenom) + s_separateur + Format_ChaineComposee(_nom)		//O331697
+      	CAS 7 //Prénom NOM
+      		sRenvoi = Format_ChaineComposee(_prenom) + s_separateur + Majuscule(_nom)		//O331697
+      	CAS 8 //Civ.Prénom Nom
+      		sRenvoi = RécupèreCivilité(_langue,_civ) + Format_ChaineComposee(_prenom) + s_separateur + Format_ChaineComposee(_nom) 	//O331697  + O332439
+      	CAS 9 //Civ.Prénom NOM
+      		sRenvoi = RécupèreCivilité(_langue,_civ) + Format_ChaineComposee(_prenom) + s_separateur + Majuscule(_nom)		//O331697
+      FIN
+      
+      ///
+      RENVOYER sRenvoi
+     type : 458752
+   -
+     name : RécupèreCivilité
+     procedure_id : 1788299501596732499
+     type_code : 15
+     code : |1+
+      procédure RécupèreCivilité(Langue,TypedeCivilité)
+      
+      SI PAS 1<=TypedeCivilité<=3 ALORS RENVOYER ""
+      
+      SELON Langue
+      	CAS 1 //Francais
+      		SELON TypedeCivilité
+      			CAS 1: RENVOYER "M."+" "
+      			CAS 2: RENVOYER "Mme"+" "
+      			CAS 3: RENVOYER "Mlle"+" "
+      		FIN
+      	CAS 3 //Allemand
+      		SELON TypedeCivilité
+      			CAS 1: RENVOYER "H."+" "
+      			CAS 2: RENVOYER "Frau"+" "
+      			CAS 3: RENVOYER "Frl."+" "
+      		FIN
+      	CAS 5 //Espagnol
+      		SELON TypedeCivilité
+      			CAS 1: RENVOYER "Sr."+" "
+      			CAS 2: RENVOYER "Sra"+" "
+      			CAS 3: RENVOYER "Mlle"+" "
+      		FIN
+      	CAS 10 //Hongrois
+      		SELON TypedeCivilité
+      			CAS 1: RENVOYER "Úr"+" "
+      			CAS 2: RENVOYER "Assz."+" "
+      			CAS 3: RENVOYER "Hölgy"+" "
+      		FIN
+      	CAS 11 //Tchèque
+      		SELON TypedeCivilité
+      			CAS 1: RENVOYER "DI"+" "
+      			CAS 2: RENVOYER "Dna"+" "
+      			CAS 3: RENVOYER "Dra"+" "
+      		FIN
+      
+      	AUTRE CAS // Anglais par défaut
+      		SELON TypedeCivilité
+      			CAS 1: RENVOYER "Mr."+" "
+      			CAS 2: RENVOYER "Mrs."+" "
+      			CAS 3: RENVOYER "Miss"+" "
+      		FIN
+      FIN
+      
+      RENVOYER ""
+      
+     type : 458752
+   -
+     name : Format_ChaineComposee
+     procedure_id : 1788299600381068936
+     type_code : 15
+     code : |1+
+      procédure Format_ChaineComposee(psChaineCompo est une chaîne) 		//O331697
+      
+      sPrenomFinal	est une chaîne
+      MaPosition		est un entier
+      psChaineCompo	= SansEspace(psChaineCompo)
+      
+      psChaineCompo	= Majuscule(psChaineCompo[[1]]) + ChaîneFormate (psChaineCompo[[2 À ]], ccMinuscule+ccNormal)	//TF21627
+      
+      MaPosition		= PositionOccurrence(psChaineCompo, [" ", "-"], rangPremier, SansCasse)
+      SI MaPosition=0 ALORS
+      	sPrenomFinal = psChaineCompo
+      SINON
+      	TANTQUE MaPosition <> 0
+      		sPrenomFinal	= psChaineCompo[[ À MaPosition]] + Majuscule(psChaineCompo[[MaPosition+1]]) + psChaineCompo[[ (MaPosition+2) À ]]
+      		psChaineCompo	= sPrenomFinal
+      		MaPosition		= PositionOccurrence(psChaineCompo, [" ", "-"], rangSuivant, SansCasse)
+      	FIN
+      FIN
+      
+      RENVOYER sPrenomFinal
+      
+     type : 458752
+   -
+     name : ChercherFormatCommercial
+     procedure_id : 1788299913913753826
+     type_code : 15
+     code : |1+
+      procédure ChercherFormatCommercial(nAMCLEUNIK, moDim1=0, moDim2=0) // T143754
+      HFiltre(DIMENSIO,AMCLEUNIK,nAMCLEUNIK,nAMCLEUNIK,"CHUTE='1'")
+      HLitPremier(DIMENSIO,AMCLEUNIK)
+      HDésactiveFiltre(DIMENSIO)
+      SI PAS HEnDehors(DIMENSIO) ALORS
+      	moDim1	= DIMENSIO.DIM1
+      	moDim2	= DIMENSIO.DIM2
+      	RENVOYER DIMENSIO.DMCLEUNIK
+      SINON
+      	HRAZ(DIMENSIO) // T143754
+      	moDim1	= 0 // T143754
+      	moDim2	= 0 // T143754
+      	RENVOYER 0
+      FIN
+      
+     type : 458752
+   -
+     name : InfosArticle
+     procedure_id : 1788300055648625613
+     type_code : 15
+     code : |1+
+      procédure InfosArticle(FichierPositionne=Faux,Article="",NMagasin=0,QteMagasin="",...
+      Gisement		= "",Qtemin="",CalcDispo=Faux,Qtedispo="",nomfichier="AM",varrondi=Faux,...
+      CleunikDIM		= 0,AffichPoidsOui=Faux,poids="",EstDimensionnel=Faux,CalcDispoReservable=Faux,QtedispoReservable="",QtedispoImput="",...
+      DateAnterieure	= DateSys())
+      // Renvoi les différents infos d'un magasin
+      // QteMagasin: Qté. en magasin de l'artile ou somme de tous les magasins
+      // Gisement: Gisement de l'article par rapport au magasin
+      // Qtemin: Qté. min. de l'artcile par rapport au magasin
+      // CalcDispo: si faux pas de calcul du dispo.
+      // Qtedispo: Qté. dispo. de l'artcile par rapport au magasin
+      // NomFichier: pour exécuter un pré-placement sur ARTICLEM ou un de ses ALIAS
+      // CleunikDIM: Clée unique pour se positionner dans le fichier DIMENSION
+      // AffichPoidsOui: Calcul du poids si mode multi-dimensionnel
+      // vpoids: Poids
+      // vChargeAlias: dans une boucle pour ne charger l'alias qu'une fois
+      // QtédispoImput: qté dispo uniquement des réservation imputable="O" (pour etat stock)
+      // DateAntèrieure: Afficher à une date les qtés en stock
+      vfichier					est une chaîne	= nomfichier
+      varticle					est une chaîne	= Article
+      vGisement					est une chaîne
+      vQtemin						est un monétaire
+      vQteMagasin					est un monétaire
+      vQtedispo,vQtedispoImput	est un monétaire
+      vQtedispoReservable			est un monétaire
+      vpoids						est un monétaire
+      vqterese					est un monétaire
+      //varrondiQRESE est un entier // NIC: maintenant QRESE est un monetaire donc on ne devrait plus en avoir besoin
+      dDate						est une Date			// Date du jour par défaut...à moins que pour les besoins spontanés..on lui affecte une autre date.. ce que l'on fait juste dessous..
+      SI DateValide(DateAnterieure) ALORS dDate = DateAnterieure // T97441//TF32031
+      
+      bCalculeDate	est un booléen	= (dDate<DateSys())	// T97441
+      vcond			est un chaîne
+      sdRequeteQte	est une Source de Données
+      sRequeteQte		est une chaîne
+      vNMagasin		est un entier	= NMagasin
+      
+      EstDimensionnel=Faux
+      SI bCalculeDate ALORS dDate++ // T97441
+      
+      SI PAS GMultiSitesOUI _ET_ vNMagasin=0 ALORS vNMagasin=1
+      SI PAS FichierPositionne ALORS
+      	SI PAS HRecherchePremier(INFOSARTICLEM,"COARTI",Complète(varticle,Dimension(AM.COARTI))) ALORS
+      		QteMagasin			= 0
+      		Gisement			= ""
+      		Qtemin				= 0
+      		Qtedispo			= 0
+      		QtedispoImput		= 0
+      		QtedispoReservable	= 0
+      		SI AffichPoidsOui ALORS poids=0
+      		RENVOYER Faux
+      	FIN
+      	SI PAS HLit(INFOSARTICLEM,HNumEnr(INFOSARTICLEM)) ALORS
+      		QteMagasin			= 0
+      		Gisement			= ""
+      		Qtemin				= 0
+      		Qtedispo			= 0
+      		QtedispoImput		= 0
+      		QtedispoReservable	= 0
+      		SI AffichPoidsOui ALORS poids=0
+      		RENVOYER Faux
+      	FIN
+      	vfichier=INFOSARTICLEM
+      SINON
+      	varticle={vfichier+".COARTI",indRubrique}
+      FIN
+      SI PAS {vfichier+"."+ARTICLEM.GestionStock..Nom,indRubrique} ALORS
+      	QteMagasin			= 0
+      	Gisement			= ""
+      	Qtemin				= 0
+      	Qtedispo			= 0
+      	QtedispoImput		= 0
+      	QtedispoReservable	= 0
+      	SI AffichPoidsOui ALORS poids=0
+      SINON
+      	SI CleunikDIM=0 ALORS
+      		SI HRecherchePremier(INFOSDIMENSIO,"AMCLEUNIK",{vfichier+".AMCLEUNIK",indRubrique}) ALORS // DIMENSIONS ??
+      			//			HRecherchePremier(INFOSDIMENSIO,"AMCLEUNIK",{vfichier+".AMCLEUNIK",indRubrique}) // T143754
+      			//			tantque HTrouve(INFOSDIMENSIO)
+      			//				si hlit(INFOSDIMENSIO,hnumenr(INFOSDIMENSIO)) alors
+      			//					vQteMagasin+=INFOSDIMENSIO.QTE
+      			//					vpoids+=INFOSDIMENSIO.KGMT*INFOSDIMENSIO.QTE
+      			//				fin
+      			//				hsuivant(INFOSDIMENSIO,"AMCLEUNIK")
+      			//			FIN
+      			//			QteMagasin=vQteMagasin
+      			//			si CalcDispo alors Qtedispo=vQteMagasin; vQtédispoImput=vQteMagasin sinon Qtedispo=0; vQtédispoImput=0
+      			//			si AffichPoidsOui alors poids=vpoids
+      			//
+      			//			si HRecherchePremier(MULTISIT,COARTIMAG,[complete(varticle,dimension(MULTISIT.COARTI)),0,1]) _et_ hlit(multisit,hnumenr(MULTISIT)) alors Qtemin=MULTISIT.QMIN sinon Qtemin=0
+      
+      			EstDimensionnel=Vrai
+      			//			renvoyer vrai // T143754
+      		FIN
+      		SI vNMagasin=0 _ET_ PAS GMultiSitesOUI ALORS vNMagasin=1
+      		//		si vNMagasin=0 alors // T143754
+      		SI bModeRequete ALORS
+      			sRequeteQte = [
+      				SELECT 
+      				MULTISIT.COARTI AS COARTI,	
+      				MULTISIT.QTE AS QTE,	
+      				MULTISIT.QMIN AS QMIN,	
+      				MULTISIT.QMAX AS QMAX,	
+      				MULTISIT.GIS AS GIS,	
+      				MULTISIT.DMCLEUNIK AS DMCLEUNIK,	
+      				MULTISIT.MAGASIN AS MAGASIN,	
+      				DIMENSIO.DMCLEUNIK AS DMCLEUNIK_DI,	
+      				Gisements.GIS AS GIS_Gi,	
+      				Gisements.TYPE AS TYPE,	
+      				DIMENSIO.KGMT AS KGMT,	
+      				DIMENSIO.CHUTE AS CHUTE
+      				FROM 
+      				MULTISIT
+      				LEFT OUTER JOIN
+      				GISEMENTS
+      				ON Gisements.GIS = MULTISIT.GIS
+      				Left OUTER JOIN DIMENSIO
+      				ON DIMENSIO.DMCLEUNIK = MULTISIT.DMCLEUNIK
+      				WHERE  MULTISIT.COARTI = '%1'
+      			]
+      			SI vNMagasin>0 ALORS sRequeteQte += " and MULTISIT.MAGASIN="+vNMagasin
+      
+      			HexécuteRequêteSQL(sdRequeteQte,ChaîneConstruit(sRequeteQte,GereQuotes(varticle)))
+      			HLitPremier(sdRequeteQte)
+      			TANTQUE HTrouve(sdRequeteQte)
+      
+      				//			HRecherchePremier(INFOSMULTISIT,"COARTI",complete(varticle,dimension(multisit.COARTI))) // D150396
+      				//			tantque HTrouve(INFOSMULTISIT) // D150396
+      				//				SI HLit(INFOSMULTISIT,HNumEnr(INFOSMULTISIT)) ALORS // D150396
+      				//					SI vNMagasin=0 _OU_ (vNMagasin>0 _ET_ INFOSMULTISIT.MAGASIN=vNMagasin) ALORS // T143754 + D150396 + D150396
+      				//						SI gnQteStockGisement=0 _OU_ gnQteStockGisement=7 _OU_ ... // W37651
+      				//							(ETBinaire(gnQteStockGisement,1) _ET_ INFOSMULTISIT.GIS~="") _OU_ ... // D150396
+      				//								(HLitRecherchePremier(Gisements,GIS,INFOSMULTISIT.gis) _ET_ ... // D150396
+      				//									((ETBinaire(gnQteStockGisement,2) _ET_ Gisements.TYPE=1) _OU_ (ETBinaire(gnQteStockGisement,4) _ET_ Gisements.TYPE=2))) ALORS
+      				//							SI INFOSMULTISIT.DMCLEUNIK<1 _OU_ PAS HLitRecherchePremier(INFOSDIMENSIO,"DMCLEUNIK",INFOSMULTISIT.DMCLEUNIK) _OU_ PAS HLit(INFOSDIMENSIO,HNumEnr(INFOSDIMENSIO)) ALORS HRAZ(INFOSDIMENSIO) // T143754 + D150396
+      
+      				SI (vNMagasin=0 _OU_ sdRequeteQte.MAGASIN=vNMagasin) _ET_ gta_MagasinsActifs[sdRequeteQte.MAGASIN] ALORS	//tf8654
+      					SI gnQtéStockGisement=0 _OU_ gnQtéStockGisement=7 _OU_ ...
+      						(ETBinaire(gnQtéStockGisement,1) _ET_ sdRequeteQte.GIS~="") _OU_ (ETBinaire(gnQtéStockGisement,2) _ET_ sdRequeteQte.TYPE=1) _OU_ (ETBinaire(gnQtéStockGisement,4) _ET_ sdRequeteQte.TYPE=2) ALORS
+      
+      						SI PAS EstDimensionnel _ET_ CalcDispoReservable _ET_ VérifieAccèsMagasin(sdRequeteQte.MAGASIN,"Z") ALORS vQtedispoReservable+=sdRequeteQte.QTE // D150396
+      						vQteMagasin+=sdRequeteQte.QTE // D150396
+      						vpoids+=sdRequeteQte.KGMT*sdRequeteQte.QTE // T143754 + D150396
+      
+      						vGisement=sdRequeteQte.GIS // W39561 + D150396
+      						SI EstDimensionnel ALORS // T171277
+      							SI sdRequeteQte.CHUTE=1 ALORS vQtemin = sdRequeteQte.QMIN
+      						SINON
+      							SI vNMagasin=0 ALORS
+      								SELON gnModeStockSecuMultisite
+      									CAS 1 : SI sdRequeteQte.MAGASIN={vfichier+".MAGASIN",indRubrique} ALORS vQtemin = sdRequeteQte.QMIN
+      									CAS 2 : vQtemin = Max(vQtemin,sdRequeteQte.QMIN)
+      									AUTRE CAS : vQtemin += sdRequeteQte.QMIN
+      								FIN
+      							SINON
+      								vQtemin = sdRequeteQte.QMIN
+      							FIN
+      							//						vqtemin=Max(vqtemin,INFOSMULTISIT.QMIN) // pas de total de qté min qd multimagasin (on prend le max : c'est faux, au moins il faut vérifier l'accès) // D150396
+      						FIN
+      					FIN
+      				FIN
+      				//				hsuivant(INFOSMULTISIT,"COARTI") // D150396
+      				HLitSuivant(sdRequeteQte)
+      			FIN
+      			HAnnuleDéclaration(sdRequeteQte)
+      		SINON
+      			HRecherchePremier(INFOSMULTISIT,"COARTI",Complète(varticle,Dimension(MULTISIT.COARTI))) // D150396
+      			TANTQUE HTrouve(INFOSMULTISIT) // D150396
+      				SI HLit(INFOSMULTISIT,HNumEnr(INFOSMULTISIT)) ALORS // D150396
+      					SI (vNMagasin=0 _OU_ INFOSMULTISIT.MAGASIN=vNMagasin) _ET_ gta_MagasinsActifs[INFOSMULTISIT.MAGASIN] ALORS // T143754 + D150396 + D150396, TF8654
+      						SI gnQtéStockGisement=0 _OU_ gnQtéStockGisement=7 _OU_ ... // W37651
+      							(ETBinaire(gnQtéStockGisement,1) _ET_ INFOSMULTISIT.GIS~="") _OU_ ... // D150396
+      							(HLitRecherchePremier(Gisements,GIS,INFOSMULTISIT.gis) _ET_ ... // D150396
+      							((ETBinaire(gnQtéStockGisement,2) _ET_ Gisements.TYPE=1) _OU_ (ETBinaire(gnQtéStockGisement,4) _ET_ Gisements.TYPE=2))) ALORS
+      							SI INFOSMULTISIT.DMCLEUNIK<1 _OU_ PAS HLitRecherchePremier(INFOSDIMENSIO,"DMCLEUNIK",INFOSMULTISIT.DMCLEUNIK) _OU_ PAS HLit(INFOSDIMENSIO,HNumEnr(INFOSDIMENSIO)) ALORS HRAZ(INFOSDIMENSIO) // T143754 + D150396
+      							SI PAS EstDimensionnel _ET_ CalcDispoReservable _ET_ VérifieAccèsMagasin(INFOSMULTISIT.MAGASIN,"Z") ALORS vQtedispoReservable+=INFOSMULTISIT.QTE // D150396
+      							vQteMagasin+=INFOSMULTISIT.QTE // D150396
+      							vpoids+=INFOSDIMENSIO.KGMT*INFOSMULTISIT.QTE // T143754 + D150396
+      						FIN
+      						vGisement=INFOSMULTISIT.GIS // W39561 + D150396
+      
+      
+      
+      						SI EstDimensionnel ALORS // T171277
+      							SI INFOSDIMENSIO.CHUTE=1 ALORS vQtemin = INFOSMULTISIT.QMIN
+      						SINON
+      							SI vNMagasin=0 ALORS
+      								SELON gnModeStockSecuMultisite
+      									CAS 1 : SI INFOSMULTISIT.MAGASIN={vfichier+".MAGASIN",indRubrique} ALORS vQtemin = INFOSMULTISIT.QMIN
+      									CAS 2 : vQtemin = Max(vQtemin,INFOSMULTISIT.QMIN)
+      									AUTRE CAS : vQtemin += INFOSMULTISIT.QMIN
+      								FIN
+      							SINON
+      								vQtemin = INFOSMULTISIT.QMIN
+      							FIN
+      							//						vqtemin=Max(vqtemin,INFOSMULTISIT.QMIN) // pas de total de qté min qd multimagasin (on prend le max : c'est faux, au moins il faut vérifier l'accès) // D150396
+      						FIN
+      					FIN
+      				FIN
+      				HSuivant(INFOSMULTISIT,"COARTI") // D150396
+      
+      			FIN
+      		FIN
+      		//		SINON	 // T143754
+      		//			si HRecherchePremier(MULTISIT,COARTIMAG,[complete(varticle,dimension(MULTISIT.COARTI)),0,vNMagasin]) _et_ HLit(MULTISIT,HNumEnr(MULTISIT)) ALORS
+      		//				SI CalcDispoReservable _et_ VérifieAccèsMagasin(vNMagasin,"Z") ALORS vQtedispoRéservable=MULTISIT.QTE
+      		//				vQteMagasin=MULTISIT.QTE
+      		//				vGisement=MULTISIT.GIS
+      		//				vQtemin=MULTISIT.QMIN
+      		//			FIN
+      		//		fin
+      		SI CalcDispo ALORS
+      			vQtedispo		= vQteMagasin
+      			vQtedispoImput	= vQteMagasin
+      
+      			SI PAS EstDimensionnel ALORS // T143754
+      				SI bCalculeDate ALORS // T97441
+      					SI vcond<>"" ALORS vcond+=" ET "
+      					vcond+="DAT<='"+DateAnterieure+"'"
+      				FIN
+      
+      				SI vcond~="" _ET_ vNMagasin=0 ALORS // T128043
+      					HRecherchePremier(INFOSRESERVE,"COARTI",Complète(varticle,Dimension(RESERVE.COARTI))) // T128043
+      					TANTQUE HTrouve(INFOSRESERVE) // T128043
+      						SI HLit(INFOSRESERVE,HNumEnr(INFOSRESERVE)) _ET_ gta_MagasinsActifs[INFOSRESERVE.MAGASIN] ALORS // T128043
+      							vqterese=INFOSRESERVE.QTERESE // T128043
+      							SI PAS EstDimensionnel _ET_ CalcDispoReservable _ET_ VérifieAccèsMagasin(INFOSRESERVE.MAGASIN,"Z") ALORS vQtedispoReservable-=vqterese // T128043
+      							SI INFOSRESERVE.IMPUTABLE<>"O" ALORS vQtedispoImput-=vqterese // T128043
+      							vQtedispo-=vqterese // T128043
+      						FIN // T128043
+      						HSuivant(INFOSRESERVE,"COARTI") // T128043
+      					FIN // T128043
+      				SINON
+      					SI vNMagasin>0 ALORS // T128043
+      						HFiltre(INFOSRESERVE,"COARTIMAGASIN",[Complète(varticle,Dimension(RESERVE.COARTI)),vNMagasin],[Complète(varticle,Dimension(RESERVE.COARTI)),vNMagasin],vcond) // T128043
+      					SINON // T128043
+      						HFiltre(INFOSRESERVE,"COARTIMAGASIN",[Complète(varticle,Dimension(RESERVE.COARTI)),hValMin],[Complète(varticle,Dimension(RESERVE.COARTI)),hValMax],vcond) // T128043
+      					FIN
+      					HPremier(INFOSRESERVE,"COARTIMAGASIN") // T128043
+      					TANTQUE PAS HEnDehors(INFOSRESERVE)
+      						SI HLit(INFOSRESERVE,HNumEnr(INFOSRESERVE)) _ET_ gta_MagasinsActifs[INFOSRESERVE.MAGASIN] ALORS	//TF8654
+      							SI bCalculeDate ALORS
+      								vqterese=QtéRéservéeàlaDate(INFOSRESERVE.CORESE,DateAnterieure,INFOSRESERVE.QTERESE) // T97441
+      							SINON
+      								vqterese=INFOSRESERVE.QTERESE
+      							FIN
+      							SI PAS EstDimensionnel _ET_ CalcDispoReservable _ET_ VérifieAccèsMagasin(INFOSRESERVE.MAGASIN,"Z") ALORS vQtedispoReservable-=vqterese
+      							SI INFOSRESERVE.IMPUTABLE<>"O" ALORS vQtedispoImput-=vqterese
+      							vQtedispo-=vqterese
+      						FIN
+      						HSuivant(INFOSRESERVE,"COARTIMAGASIN") // T128043
+      					FIN
+      					HDésactiveFiltre(INFOSRESERVE)
+      				FIN
+      
+      				SI varrondi ALORS vQtedispo=ValArrondi(vQtedispo,0,"-")
+      				SI varrondi ALORS vQtedispoImput=ValArrondi(vQtedispoImput,0,"-")
+      
+      				SI bCalculeDate ALORS // T97441
+      					SI vcond<>"" ALORS vcond+=" ET "
+      					vcond+="DateSuppressionRéservation>='"+DateAnterieure+"'"
+      					SI vNMagasin>0 ALORS // T128043
+      						SI vcond<>"" ALORS vcond+=" ET " // T128043
+      						vcond+="MAGASIN="+vNMagasin // T128043
+      					FIN // T128043
+      
+      					HFiltre(HistoriqueRESERVE,COARTI,Complète(varticle,Dimension(HistoriqueRESERVE.COARTI)),Complète(varticle,Dimension(HistoriqueRESERVE.COARTI)),vcond)
+      					HPremier(HistoriqueRESERVE,COARTI)
+      					TANTQUE HTrouve(HistoriqueRESERVE)
+      						SI HLit(HistoriqueRESERVE,HNumEnr(HistoriqueRESERVE)) ALORS
+      							vqterese=QtéRéservéeàlaDate(HistoriqueRESERVE.CORESE,DateAnterieure,0)
+      							SI CalcDispoReservable _ET_ VérifieAccèsMagasin(HistoriqueRESERVE.MAGASIN,"Z") ALORS vQtedispoReservable-=vqterese
+      							SI HistoriqueRESERVE.IMPUTABLE<>"O" ALORS vQtedispoImput-=vqterese
+      							vQtedispo-=vqterese
+      						FIN
+      						HSuivant(HistoriqueRESERVE,COARTI)
+      					FIN
+      					HDésactiveFiltre(HistoriqueRESERVE)
+      				FIN
+      			FIN
+      		FIN
+      
+      		QtedispoReservable=vQtedispoReservable
+      		//		SI CalcDispo ALORS Qtedispo=vQtedispo SINON Qtedispo=0 //D146582
+      		SI AffichPoidsOui ALORS
+      			SI vpoids=0 ALORS vpoids=vQteMagasin*{vfichier+".KGMT",indRubrique} // vpoids<>0 si on a calculé la totalité.
+      			poids=vpoids
+      		FIN
+      	SINON
+      		SI CleunikDIM=-1 ALORS
+      			QteMagasin			= 0 // T161871
+      			Gisement			= "" // T161871
+      			Qtemin				= 0 // T161871
+      			Qtedispo			= 0 // T161871
+      			QtedispoImput		= 0 // T161871
+      			QtedispoReservable	= 0 // T161871
+      			SI AffichPoidsOui ALORS poids=0 // T161871
+      			RENVOYER Vrai
+      		FIN
+      		SI PAS HRecherchePremier(INFOSDIMENSIO,"DMCLEUNIK",CleunikDIM) ALORS RENVOYER Faux
+      		SI PAS HLit(INFOSDIMENSIO,HNumEnr(INFOSDIMENSIO)) ALORS RENVOYER Faux
+      		//		vQteMagasin=INFOSDIMENSIO.QTE // T143754
+      		//		Gisement=INFOSDIMENSIO.GIS
+      		SI NMagasin=0 ALORS // T143754
+      			SI bModeRequete ALORS
+      				sRequeteQte = [
+      					SELECT 
+      					MULTISIT.COARTI AS COARTI,	
+      					MULTISIT.QTE AS QTE,	
+      					MULTISIT.QMIN AS QMIN,	
+      					MULTISIT.QMAX AS QMAX,	
+      					MULTISIT.GIS AS GIS,	
+      					MULTISIT.DMCLEUNIK AS DMCLEUNIK,	
+      					MULTISIT.MAGASIN AS MAGASIN,	
+      					DIMENSIO.DMCLEUNIK AS DMCLEUNIK_DI,	
+      					Gisements.GIS AS GIS_Gi,	
+      					Gisements.TYPE AS TYPE,	
+      					DIMENSIO.KGMT AS KGMT,	
+      					DIMENSIO.CHUTE AS CHUTE
+      					FROM 
+      					MULTISIT
+      					LEFT OUTER JOIN
+      					GISEMENTS
+      					ON Gisements.GIS = MULTISIT.GIS
+      					Left OUTER JOIN DIMENSIO
+      					ON DIMENSIO.DMCLEUNIK = MULTISIT.DMCLEUNIK
+      					WHERE  MULTISIT.DMCLEUNIK = '%1'
+      				]
+      
+      				HexécuteRequêteSQL(sdRequeteQte,ChaîneConstruit(sRequeteQte,CleunikDIM))
+      				HLitPremier(sdRequeteQte)
+      				//			HRecherchePremier(INFOSMULTISIT,"DMCLEUNIK",CleunikDIM) // D150396
+      				TANTQUE HTrouve(sdRequeteQte) // D150396
+      					//				SI HLit(INFOSMULTISIT,HNumEnr(INFOSMULTISIT)) ALORS // D150396
+      					SI gnQtéStockGisement=0 _OU_ gnQtéStockGisement=7 _OU_ ... // W37651
+      						(ETBinaire(gnQtéStockGisement,1) _ET_ sdRequeteQte.GIS~="") _OU_ ... // D150396
+      						//						(HLitRecherchePremier(Gisements,GIS,INFOSMULTISIT.GIS) _ET_ ... // D150396
+      						((ETBinaire(gnQtéStockGisement,2) _ET_ sdRequeteQte.TYPE=1) _OU_ (ETBinaire(gnQtéStockGisement,4) _ET_ sdRequeteQte.TYPE=2)) ALORS
+      						vQteMagasin += sdRequeteQte.QTE // D150396
+      						vpoids += sdRequeteQte.KGMT*sdRequeteQte.QTE // T143754 + D150396
+      					FIN
+      					vQtemin = Max(vQtemin,sdRequeteQte.QMIN) // pas de total de qté min qd multimagasin (on prend le max : c'est faux, au moins il faut vérifier l'accès) // D150396
+      					//				FIN
+      					HLitSuivant(sdRequeteQte)
+      				FIN
+      			SINON
+      				HRecherchePremier(INFOSMULTISIT,"DMCLEUNIK",CleunikDIM) // D150396
+      				TANTQUE HTrouve(INFOSMULTISIT) // D150396
+      					SI HLit(INFOSMULTISIT,HNumEnr(INFOSMULTISIT)) ALORS // D150396
+      						SI gnQtéStockGisement=0 _OU_ gnQtéStockGisement=7 _OU_ ... // W37651
+      							(ETBinaire(gnQtéStockGisement,1) _ET_ INFOSMULTISIT.GIS~="") _OU_ ... // D150396
+      							(HLitRecherchePremier(Gisements,GIS,INFOSMULTISIT.GIS) _ET_ ... // D150396
+      							((ETBinaire(gnQtéStockGisement,2) _ET_ Gisements.TYPE=1) _OU_ (ETBinaire(gnQtéStockGisement,4) _ET_ Gisements.TYPE=2))) ALORS
+      							vQteMagasin+=INFOSMULTISIT.QTE // D150396
+      							vpoids+=INFOSDIMENSIO.KGMT*INFOSMULTISIT.QTE // T143754 + D150396
+      						FIN
+      						vQtemin=Max(vQtemin,INFOSMULTISIT.QMIN) // pas de total de qté min qd multimagasin (on prend le max : c'est faux, au moins il faut vérifier l'accès) // D150396
+      
+      
+      					FIN
+      					HSuivant(INFOSMULTISIT,"DMCLEUNIK") // D150396
+      				FIN
+      			FIN
+      		SINON
+      			SI HRecherchePremier(INFOSMULTISIT,"COARTIMAG",[Complète(varticle,Dimension(ARTICLEM.COARTI)),CleunikDIM,NMagasin]) _ET_ HLit(INFOSMULTISIT,HNumEnr(INFOSMULTISIT)) ALORS // D150396
+      				vQteMagasin	= INFOSMULTISIT.QTE // D150396
+      				vGisement	= INFOSMULTISIT.GIS // D150396
+      				vQtemin		= INFOSMULTISIT.QMIN // D150396
+      				vpoids		= INFOSDIMENSIO.KGMT*INFOSMULTISIT.QTE // T143754 + D150396
+      			FIN
+      		FIN
+      		QtedispoReservable	= 0
+      		vQtedispo			= vQteMagasin // T143754
+      
+      		//		SI CalcDispo ALORS Qtedispo=vQteMagasin SINON Qtedispo=0
+      		SI AffichPoidsOui ALORS
+      			SI vpoids=0 ALORS vpoids=INFOSDIMENSIO.KGMT // vpoids<>0 si on a calculé la totalité.
+      			poids=vpoids
+      		FIN
+      		EstDimensionnel=Vrai
+      	FIN
+      
+      	Gisement	= vGisement
+      	Qtemin	= vQtemin
+      
+      	SI bCalculeDate ALORS // T97441
+      		SI NMagasin>0 ALORS vcond="(MAGASIN="+NMagasin+" OU (ENTSO='T' ET MAGORIGINE="+NMagasin+"))" SINON vcond="" // T153001
+      		SI CleunikDIM>0 ALORS
+      			SI vcond<>"" ALORS vcond+=" ET "
+      			vcond+="DIM1="+INFOSDIMENSIO.DIM1+" ET DIM2="+INFOSDIMENSIO.DIM2
+      		FIN
+      		HFiltre(STOCK,COARTIDATEHEURE,[Complète(varticle,Dimension(STOCK.COARTI)),dDate,hValMin],[Complète(varticle,Dimension(STOCK.COARTI)),hValMax],vcond) // R142787
+      		HPremier(STOCK,COARTIDATEHEURE)
+      		TANTQUE PAS HEnDehors(STOCK)
+      			SI HLit(STOCK,HNumEnr(STOCK)) ALORS
+      				SELON STOCK.ENTSO
+      					CAS "S"
+      						vQteMagasin+=STOCK.QTE
+      						vQtedispo+=STOCK.QTE
+      						vQtedispoImput+=STOCK.QTE
+      					CAS "R","E"
+      						vQteMagasin-=STOCK.QTE
+      						vQtedispo-=STOCK.QTE
+      						vQtedispoImput-=STOCK.QTE
+      					CAS "T"
+      						SI NMagasin=0 _OU_ STOCK.MAGASIN=NMagasin ALORS
+      							vQteMagasin-=STOCK.QTE
+      							vQtedispo-=STOCK.QTE
+      							vQtedispoImput-=STOCK.QTE
+      						FIN
+      						SI NMagasin=0 _OU_ STOCK.MAGORIGINE=NMagasin ALORS
+      							vQteMagasin+=STOCK.QTE
+      							vQtedispo+=STOCK.QTE
+      							vQtedispoImput+=STOCK.QTE
+      						FIN
+      				FIN
+      			FIN
+      			HSuivant(STOCK,COARTIDATEHEURE)
+      		FIN
+      		HDésactiveFiltre(STOCK)
+      	FIN
+      
+      	SI CalcDispo ALORS Qtedispo=vQtedispo SINON Qtedispo=0 // D149928
+      	QteMagasin		= vQteMagasin			// D149928
+      	QtedispoImput	= vQtedispoImput
+      FIN
+      RENVOYER Vrai
+      
+     type : 458752
+   -
+     name : GereQuotes
+     procedure_id : 1788301739323580376
+     type_code : 15
+     code : |1+
+      procédure GereQuotes(LOCAL psChaineAEchapper est une chaîne)
+      // gestion des quotes dans les requetes SQLs
+      //psChaineAEchapper =  Remplace(psChaineAEchapper,"'","''")	// Ici, je fais mon remplacement habituel c'est à dire doubler la simple quote pour un doubl
+      //
+      // e simple quote ' => ''
+      // Laisser ce traitement spécial des remplacements des "\'" par "}¤{" et inversement en fin de traitement, car dans le hexcuterequete...c'est déjà trop tard pour les remplacer.. surtout après être passé ici.. !
+      psChaineAEchapper	= Remplace(psChaineAEchapper,"\'","}¤{")	// Dans 1er temps, je remplace la chaine déjà échappée par des caractères qu'on a de grandes chances de ne pas retrouver l'un collé à l'autre : '}¤{'
+      psChaineAEchapper	=  Remplace(psChaineAEchapper,"'","''")	// Ici, je fais mon remplacement habituel c'est à dire doubler la simple quote pour un double simple quote ' => ''
+      psChaineAEchapper	= Remplace(psChaineAEchapper,"}¤{", "\'")	// Et ici, je refais l'opération inverse c'est à dire remettre les "\'" remplacés provisoirement par des "}¤{"
+      
+      RENVOYER psChaineAEchapper
+      
+     type : 458752
+   -
+     name : Get_Tableau_MagsDispos
+     procedure_id : 1788302052906400602
+     type_code : 15
+     code : |1-
+      procédure Get_Tableau_MagsDispos()
+      
+      ta_MagsDispos	est un tableau associatif de booléens
+      sdMagasins		est une Source de Données
+      SI HexécuteRequêteSQL(sdMagasins,"Select IDMagasins, DATESO FROM magasins") ALORS
+      	HLitPremier(sdMagasins)
+      	TANTQUE PAS HEnDehors(sdMagasins)
+      		ta_MagsDispos[sdMagasins.IDMagasins] = (sdMagasins.DATESO~="" _OU_ sdMagasins.DATESO>DateSys())
+      		HLitSuivant(sdMagasins)
+      	FIN
+      FIN
+      RENVOYER ta_MagsDispos
+     type : 458752
+   -
+     name : VérifieAccèsMagasin
+     procedure_id : 1788303384440682090
+     type_code : 15
+     code : |1+
+      procédure VérifieAccèsMagasin(nIDMagasins,sType,bVérifierSortie=Vrai)
+      i			est un entier
+      sdMagasin	est une Source de Données
+      
+      
+      SI bVérifierSortie _ET_ HexécuteRequêteSQL(sdMagasin,"SELECT DATESO from MAGASINS where IDMAGASINS="+nIDMagasins) ALORS
+      	HLitPremier(sdMagasin)
+      	SI PAS HEnDehors(sdMagasin) _ET_ PAS sdMagasin.DATESO~="" _ET_ sdMagasin.DATESO<DateSys() ALORS
+      		HAnnuleDéclaration(sdMagasin)
+      		RENVOYER Faux
+      	FIN
+      	HAnnuleDéclaration(sdMagasin)
+      FIN
+      
+      SI Operateur[[1 À 5]]~="SUPER" ALORS RENVOYER Vrai
+      
+      SI TableauInfo(gTableauAccèsCatégories,tiDimension)<1 ALORS RENVOYER Faux
+      
+      
+      POUR i=1 _À_ TableauInfo(gTableauAccèsCatégories,tiDimension)
+      	SI HRecherchePremier(AccesMagasinsCategories,IDMagasinsIDCategoriesTypeAccès,[nIDMagasins,gTableauAccèsCatégories[i],sType]) ALORS RENVOYER Vrai
+      FIN
+      RENVOYER Faux
+      
+     type : 458752
+   -
+     name : Charge_Droits_Operateur
+     procedure_id : 1788303886951907404
+     type_code : 15
+     code : |1+
+      procédure Charge_Droits_Operateur(ps_Operateur est une chaîne = Operateur) : entier	//TF71382
+      
+      TableauSupprimeTout(gTableauAccèsCatégories)
+      HLitRecherchePremier(AccesEmployesCategories,CODEEMP,Complète(ps_Operateur,Dimension(AccesEmployesCategories.CODEEMP)))
+      TANTQUE HTrouve(AccesEmployesCategories)
+      	TableauAjoute(gTableauAccèsCatégories,AccesEmployesCategories.IDCategories)
+      	HLitSuivant(AccesEmployesCategories,CODEEMP)
+      FIN
+      
+      RENVOYER TableauInfo(gTableauAccèsCatégories, tiDimension)
+      
+     type : 458752
+   -
+     name : ChangeLangue
+     procedure_id : 1788304788897477195
+     type_code : 15
+     code : |1+
+      procédure ChangeLangue(Langue)
+      // Si Langue=0, on va chercher la langue dans le Wclip.INI et faire la correspondance entre les langues de WINDEV et de CLIPPER.
+      // si Langue>0, la langue sera celle dans CLIP, on va chercher la correspondance avec WINDEV pour changer la langue.
+      //1 Francais/French 		(5)
+      //2 Anglais/English 		(3)
+      //3 Allemand/German 		(1)
+      //4 Italien/Italian 		(11)
+      //5 Espagnol/Spanish 	(7)
+      //6 Danois/Danish 		(6)
+      //7 Portugais/Portuguese	(14)
+      //8 Suedois/Swedish		(17)
+      //9 Roumain			(35)
+      //10 Hongrois 			(29)  // 29 au lieu de 202 pour le hongrois T127298
+      //11 Tcheque 			(18)
+      //12 Slovaque             (37)
+      //13 Russe                (16)
+      //14 Polonnais            (34)
+      // Ajouter dans langue projet, image dans projet, majclangue, changelangue
+      n_LngDefaut	est un entier
+      n_Langue	est un entier	= Langue
+      
+      SI n_Langue=0 ALORS
+      		n_LngDefaut	= 1
+      		n_Langue	= 5
+      SINON
+      	n_LngDefaut	= n_Langue
+      	n_Langue	= ConvertirNation(n_LngDefaut, 2)
+      FIN
+      
+      SI n_Langue<>Nation() ALORS
+      	Nation(n_Langue)
+      	SELON n_Langue
+      		CAS nationHongrois :
+      			ChangeAlphabet(alphabetEuropeEst,langueHongrois) // 29 au lieu de 202 pour le hongrois T127298
+      		CAS nationPolonais :
+      			ChangeAlphabet(alphabetEuropeEst,languePolonais) // 34 Polonais
+      		CAS nationRoumain :
+      			ChangeAlphabet(alphabetEuropeEst,langueRoumain) // 35 Roumain	//TF40138
+      		CAS nationRusse :
+      			ChangeAlphabet(alphabetRusse)					// 16
+      		CAS nationAnglais :
+      			ChangeAlphabet(alphabetDéfaut)
+      		CAS nationAllemand :
+      			ChangeAlphabet(alphabetOccidental,langueAllemand)
+      		CAS nationFrançais :
+      			ChangeAlphabet(alphabetOccidental,langueFrançais)
+      
+      			//		CAS nationAllemand, nationAnglais, nationFrançais :
+      		//			ChangeAlphabet(alphabetAnsi)		// 1, 3 ,5	// D157324
+      		AUTRE CAS:
+      			ChangeAlphabet(alphabetOccidental)
+      	FIN
+      FIN
+      RENVOYER n_LngDefaut
+     type : 458752
+   -
+     name : ConvertirNation
+     procedure_id : 1788305085250289666
+     type_code : 15
+     code : |1+
+      procédure ConvertirNation(LaNation=Nation(), nSensConversion est un entier=1)
+      
+      SELON nSensConversion
+      	CAS 1 :  // de Windev Vers Clipper
+      		SELON LaNation
+      			CAS nationAllemand : RENVOYER 3			// 	1 => 3
+      			CAS nationAnglais : RENVOYER 2			// = 3 => 2
+      			CAS nationFrançais : RENVOYER 1			// = 5 => 1
+      			CAS nationDanois : RENVOYER 6			//  = 6 => 6
+      			CAS nationEspagnol : RENVOYER 5			//  = 7 => 5
+      			CAS nationItalien : RENVOYER 4			//  = 11 => 4
+      			CAS nationPortuguais : RENVOYER 7		//  = 14 => 7
+      			CAS nationRusse : RENVOYER 13			// = 16 => 13			W32034
+      			CAS nationSuédois : RENVOYER 8			// = 17 => 8
+      			CAS nationTchèque : RENVOYER 11			// = 18 => 11
+      			CAS nationHongrois : RENVOYER 10		// = 29 => 	10		 // 29 au lieu de 202 pour le hongrois T127298
+      			CAS nationRoumain : RENVOYER 9			// = 35 => 9
+      			CAS nationSlovaque : RENVOYER 12		// = 37 => 12
+      			CAS nationPolonais : RENVOYER 14		// = 34 => 14
+      			AUTRE CAS: RENVOYER 0					//
+      		FIN
+      	CAS 2 : // de Clipper vers Windev
+      		SELON LaNation
+      			CAS 1 : RENVOYER nationFrançais			// =5
+      			CAS 2 : RENVOYER nationAnglais 			//=3
+      			CAS 3 : RENVOYER nationAllemand  		//=1
+      			CAS 4 : RENVOYER nationItalien  		//=11
+      			CAS 5 : RENVOYER nationEspagnol  		//=7
+      			CAS 6 : RENVOYER nationDanois   		//=6
+      			CAS 7 : RENVOYER nationPortuguais  		//=14
+      			CAS 8 : RENVOYER nationSuédois   		//=17
+      			CAS 9 : RENVOYER nationRoumain   		//=35
+      			CAS 10 : RENVOYER nationHongrois  		//=29 // 29 au lieu de 202 pour le hongrois T127298
+      			CAS 11 : RENVOYER nationTchèque  		//=18
+      			CAS 12: RENVOYER nationSlovaque			//=37
+      			CAS 13: RENVOYER nationRusse   			//=16 // W32034
+      			CAS 14 : RENVOYER nationPolonais  		// = 34 // T136406
+      		FIN
+      	AUTRE CAS :
+      		RENVOYER 0
+      FIN
+      
+     type : 458752
+   -
+     name : QtéRéservéeàlaDate
+     procedure_id : 1788305214099404660
+     type_code : 15
+     code : |1+
+      procédure QtéRéservéeàlaDate(vCORESE,vDate,vQTERESdéfaut=0) // T97441
+      vqteRes est un monétaire=vQTERESdéfaut
+      
+      SI vDate<DateSys() ALORS
+      	HFiltre(HistoriqueQteRESERVE,CORESEDateHistorique,[vCORESE,hValMin],[vCORESE,vDate])
+      	SI HDernier(HistoriqueQteRESERVE,CORESEDateHistorique) _ET_ HLit(HistoriqueQteRESERVE,HNumEnr(HistoriqueQteRESERVE)) ALORS vqteRes=HistoriqueQteRESERVE.QTERESE
+      	HDésactiveFiltre(HistoriqueQteRESERVE)
+      FIN
+      
+      RENVOYER vqteRes
+      
+     type : 458752
+   -
+     name : ValArrondi
+     procedure_id : 1788305278523994542
+     type_code : 15
+     code : |1+
+      procédure ValArrondi(valeur,nbdecimal=0,sens="+")
+      
+      SI sens = "+" ALORS
+      	RENVOYER ArrondiSupérieur(valeur,nbdecimal)
+      SINON
+      	RENVOYER ArrondiInférieur(valeur,nbdecimal)
+      FIN
+     type : 458752
+   -
+     name : NomEmploye
+     procedure_id : 1788335953276759320
+     type_code : 15
+     code : |1-
+      procédure NomEmploye(vcodeemp=EOT,sfichier=EMPLOYE..Nom, s_Separateur=" ", paramModeAff=Faux)
+      sRenvoi		est une chaîne	// W34174
+      vFichier	est une chaîne	= sfichier~="" ? EMPLOYE..Nom SINON sfichier
+      
+      SI s_Separateur _DANS_ (Null, Caract(160)) ALORS s_Separateur = " "		// TF 9082 D178954
+      
+      SI vcodeemp<>EOT ALORS
+      	SI vcodeemp~="" ALORS
+      		RENVOYER ""
+      	SINON
+      		SI PAS HLitRecherchePremier(EMPLOYE,CODEEMP,Complète(vcodeemp,Dimension(EMPLOYE.CODEEMP))) ALORS RENVOYER ""
+      	FIN
+      FIN
+      
+      SI paramModeAff ALORS
+      	sRenvoi = Format_NomPrenom({vFichier+".NOMEMP",indRubrique}, {vFichier+".PRENOMEMP",indRubrique}, {vFichier+".CIVILITE",indRubrique},"", s_Separateur)	// W47083
+      SINON
+      	sRenvoi=SansEspace({vFichier+".NOMEMP",indRubrique})+s_Separateur+SansEspace({vFichier+".PRENOMEMP",indRubrique})
+      FIN
+      
+      SI sRenvoi="" ALORS sRenvoi = {vFichier+".CODEEMP",indRubrique}
+      SI sRenvoi[[Taille(sRenvoi)]]=s_Separateur ALORS sRenvoi = sRenvoi[[À Taille(sRenvoi)-1]] // W44167
+      
+      RENVOYER sRenvoi // W34174
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : HwAAAB4AAAB7MB8NZB5rGUbyk77+IjQnJ74vm430Ar3yq0zmP05sGBBw0ur17uG6ZWry
+  original_name : COL_SansNom1
+resources :
+ string_res :
+  identifier : 0x18cd780e0f26478c
+  internal_properties : HwAAAB4AAAA809Qj/IAi+r8QXyrnW7sarQeYORCUjKBkmMeTFexSj5AuvTfTUpN0Eg==
+custom_note :
+ internal_properties : HwAAAB4AAADnl3uxgA6ylw4vtqUKEOJQD3VAAOKeNUmhPNojcRFoDpHEcUyYAw==

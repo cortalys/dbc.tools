@@ -1,0 +1,152 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : ProcéduresGlobales
+ major_version : 30
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+ options : 256
+procedure_set :
+ identifier : 0x18cd62da000375a5
+ internal_properties : HwAAAB4AAADjksEavC8JwuEiHc63C+ul0ggS/BOiC8PJfOp/6aEkSKX4qEWcBw==
+ code_elements :
+  type_code : 31
+  p_codes :
+   -
+     code : |1-
+      
+     type : 720896
+   -
+     code : |1-
+      
+     type : 720898
+  procedures :
+   -
+     name : DbInit
+     procedure_id : 1787193354233354195
+     type_code : 15
+     code : |1-
+      procédure DbInit() : booléen
+      
+      sDbServer	est une chaîne	= ChargeParamètre(KEY_DATABASE_Server, DEF_DATABASE_Server)
+      nDbPort		est un entier	= ChargeParamètre(KEY_DATABASE_Port, DEF_DATABASE_Port)
+      sDbUser		est une chaîne	= ChargeParamètre(KEY_DATABASE_User, DEF_DATABASE_User)
+      sDbPassword	est une chaîne	= ParamDécrypte(ChargeParamètre(KEY_DATABASE_Password, DEF_DATABASE_Password))
+      sDbName		est une chaîne	= ChargeParamètre(KEY_DATABASE_Name, DEF_DATABASE_Name)
+      nDbCryptage	est une entier	= ChargeParamètre(KEY_DATABASE_Crypto, DEF_DATABASE_Crypto)
+      
+      DbcConnexion..Provider			= hAccèsHFClientServeur
+      DbcConnexion..Serveur				= sDbServer+(nDbPort<>"" ? ":"+nDbPort SINON "")
+      DbcConnexion..Utilisateur			= sDbUser
+      DbcConnexion..MotDePasse			= sDbPassword
+      DbcConnexion..BaseDeDonnées		= sDbName
+      DbcConnexion..Cryptage			= nDbCryptage
+      
+      renvoyer HOuvreConnexion(DbcConnexion) _ET_ HChangeConnexion("*", DbcConnexion)
+     type : 458752
+   -
+     name : ParamDécrypte
+     procedure_id : 1787193526032216794
+     type_code : 15
+     code : |1-
+      procédure  ParamDécrypte(sMessage est une chaine) : chaîne
+      
+      bMessage est un buffer = sMessage
+      SI bMessage..Vide ALORS RENVOYER ""
+      
+      bufRetour est un Buffer = DécrypteStandard(bMessage,CleCryptageIni,crypteAES128)
+      
+      RENVOYER bufRetour..Vide ? "" SINON bufRetour
+     type : 458752
+   -
+     name : ParamCrypte
+     procedure_id : 1787199195402951051
+     type_code : 15
+     code : |1+
+      procédure ParamCrypte(sMessage est une chaîne) : chaîne
+      
+      bMessage est un Buffer = sMessage
+      SI bMessage..vide ALORS RENVOYER ""
+      
+      bufRetour est un Buffer = crypteStandard(bMessage,CleCryptageIni,crypteAES128)
+      
+      RENVOYER bufRetour..Vide ? "" SINON bufRetour
+     type : 458752
+   -
+     name : PasswordCrypte
+     procedure_id : 1787212763368688683
+     type_code : 15
+     code : |1-
+      procédure PasswordCrypte(sPWD est une chaîne)
+      
+      sCh1, sCh2	sont des chaînes
+      i, j		sont des entiers sur 1 octet
+      //i, j sont des entiers sur 1 octet sans signe			---->>> Code clipper : Sans signe n'existe pas en Android (ajouter j = Abs(j))
+      
+      SI sPWD = "" ALORS
+      	RENVOYER ""
+      SINON
+      	sCh1 = Complète(sPWD, 10)
+      	POUR i = 1 À 10
+      		SELON i
+      			CAS 2, 5, 1: j = Asc(sCh1[[i]]) - (30 + i)
+      			CAS 9, 6: j = Asc(sCh1[[i]]) - (20 - i)
+      			AUTRE CAS : j = Asc(sCh1[[i]]) + i
+      		FIN
+      		j = modulo(j, 254) + 1
+      		SI j>255 ALORS j=j-255
+      		SI j<0 ALORS j=j+255
+      		sCh2 = sCh2 + Caract(j)
+      	FIN
+      	RENVOYER sCh2
+      FIN
+     type : 458752
+   -
+     name : PasswordDecrypte
+     procedure_id : 1787212806318437444
+     type_code : 15
+     code : |1-
+      procédure PasswordDecrypte(sPWD est une chaîne)
+      sCh1,sCh2	sont des chaînes
+      i,j			sont des entiers sur 1 octet sans signe
+      
+      SI sPWD~="" ALORS
+      	RENVOYER ""
+      SINON
+      	sCh1=sPWD
+      	POUR i=10 À 1 PAS -1
+      		j=Asc(sCh1[[i]])
+      		j--
+      		SELON i
+      			CAS 2,5,1: j=j+30+i
+      			CAS 9,6: j=j+20-i
+      			AUTRE CAS: j=j-i
+      		FIN
+      		SI j>255 ALORS j=j-255
+      		SI j<0 ALORS j=j+255
+      		sCh2=Caract(j)+sCh2
+      	FIN
+      	RENVOYER sCh2
+      FIN
+     type : 458752
+   -
+     name : GetUser
+     procedure_id : 1787213613792596082
+     type_code : 15
+     code : |1-
+      procédure GetUser() : chaine
+      renvoyer ParamDécrypte(ChargeParamètre(KEY_CLIPPER_USER_User))
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : HwAAAB4AAAB7MB8NZB5rGUbyk77+IjQnJ74vm430Ar3yq0zmP05sGBBw0ur17uG6ZWry
+  original_name : COL_SansNom1
+resources :
+ string_res :
+  identifier : 0x18cd62da000275a5
+  internal_properties : HwAAAB4AAAA809Qj/IAi+r8QXyrnW7sarQeYORCUjKBkmMeTFexSj5AuvTfTUpN0Eg==
+custom_note :
+ internal_properties : HwAAAB4AAADnl3uxgA6ylw4vtqUKEOJQD3VAAOKeNUmhPNojcRFoDpHEcUyYAw==

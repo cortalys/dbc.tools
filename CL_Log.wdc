@@ -1,0 +1,110 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : CL_Log
+ major_version : 30
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+ options : 256
+class :
+ identifier : 0x1912132f0805dad2
+ internal_properties : HwAAAB4AAAD+1kTo6KJy2WQU0Y4fbFD6aQ7NWfD4KKkN7Ml67nIqLXIRxJ1vjfJ1
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      CL_Log est une Classe
+      	prive
+      		sName est une chaine
+      		sFileName est une chaîne
+      		sContent est une chaine
+      		bAutoFlush est un booléen
+      fin
+     type : 131072
+   -
+     code : |1-
+      
+     type : 131074
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1806527493248047826
+     type_code : 27
+     code : |1-
+      procédure Constructeur(name est une chaine, fileName est une chaine, autoFlush = true)
+      sName = name
+      sFileName = fileName
+      bAutoFlush = autoFlush
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1806527493248113362
+     type_code : 28
+     code : |1-
+      procédure Destructeur()
+     type : 655360
+   -
+     name : LogInfo
+     procedure_id : 1806527896979195824
+     type_code : 12
+     code : |1-
+      procédure LogInfo(sMessage est une chaine)
+      sLogMessage(sMessage,1)
+     type : 458752
+   -
+     name : LogWarning
+     procedure_id : 1806527961403786206
+     type_code : 12
+     code : |1-
+      procédure LogWarning(sMessage est une chaîne)
+      sLogMessage(sMessage,2)
+     type : 458752
+   -
+     name : LogError
+     procedure_id : 1806528000058566828
+     type_code : 12
+     code : |1-
+      procédure LogError(sMessage est une chaîne)
+      sLogMessage(sMessage,3)
+     type : 458752
+   -
+     name : sLogMessage
+     procedure_id : 1806528064483156429
+     type_code : 12
+     code : |1-
+      procédure privée sLogMessage(sMessage est une chaîne, nType est un entier )
+      si sContent<>"" alors sContent+=rc
+      sContent+=dateSYS+" "+HeureSys + "|"
+      selon nType
+      	CAS 1
+      		scontent+="INFO   |"
+      	cas 2
+      		sContent+="WARNING|"
+      	cas 3
+      		sContent+="ERROR  |"
+      FIN
+      sContent+=sMessage
+      si (bAutoFlush) alors Flush()
+     type : 458752
+   -
+     name : Flush
+     procedure_id : 1806528923564765457
+     type_code : 12
+     code : |1-
+      procédure Flush()
+      fSauveTexte(sFileName,sContent)
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : HwAAAB4AAAB7MB8NZB5rGUbyk77+IjQnJ74vm430Ar3yq0zmP05sGBBw0ur17uG6ZWry
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x1912132a0802c507
+  internal_properties : HwAAAB4AAAA809Qj/IAi+r8QXyrnW7sarQeYORCUjKBkmMeTFexSj5AuvTfTUpN0Eg==
+custom_note :
+ internal_properties : HwAAAB4AAADnl3uxgA6ylw4vtqUKEOJQD3VAAOKeNUmhPNojcRFoDpHEcUyYAw==

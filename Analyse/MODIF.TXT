@@ -1,0 +1,733 @@
+//MO001-002.TXT ANA00001 TO ANA00002
+ACTIVITE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ACTIVITE		FCNX+	DbcConnexion	
+ACTTIERS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ACTTIERS		FCNX+	DbcConnexion	
+ADRESSE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ADRESSE		FCNX+	DbcConnexion	
+AFFAIRE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+AFFAIRE		FCNX+	DbcConnexion	
+AFF_BL		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+AFF_BL		FCNX+	DbcConnexion	
+APPELSAV		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+APPELSAV		FCNX+	DbcConnexion	
+ART		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ART		FCNX+	DbcConnexion	
+ARTICLEM		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ARTICLEM		FCNX+	DbcConnexion	
+BC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+BC		FCNX+	DbcConnexion	
+BESOIN		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+BESOIN		FCNX+	DbcConnexion	
+BL		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+BL		FCNX+	DbcConnexion	
+BLFOURN		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+BLFOURN		FCNX+	DbcConnexion	
+CALENDRI		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CALENDRI		FCNX+	DbcConnexion	
+CALEN_EM		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CALEN_EM		FCNX+	DbcConnexion	
+CC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CC		FCNX+	DbcConnexion	
+CFRAIS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CFRAIS		FCNX+	DbcConnexion	
+CHARGE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CHARGE		FCNX+	DbcConnexion	
+CHARGEJ		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CHARGEJ		FCNX+	DbcConnexion	
+CHARGES		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CHARGES		FCNX+	DbcConnexion	
+CHARGRES		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CHARGRES		FCNX+	DbcConnexion	
+CLIENT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CLIENT		FCNX+	DbcConnexion	
+CODEACT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CODEACT		FCNX+	DbcConnexion	
+CODEPOST		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CODEPOST		FCNX+	DbcConnexion	
+COMMANDE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+COMMANDE		FCNX+	DbcConnexion	
+COMMENTS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+COMMENTS		FCNX+	DbcConnexion	
+CONTACT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CONTACT		FCNX+	DbcConnexion	
+CONTROLE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CONTROLE		FCNX+	DbcConnexion	
+DA		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DA		FCNX+	DbcConnexion	
+DEFAUT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DEFAUT		FCNX+	DbcConnexion	
+DEPEND		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DEPEND		FCNX+	DbcConnexion	
+DESIGN		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DESIGN		FCNX+	DbcConnexion	
+DETAILBC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DETAILBC		FCNX+	DbcConnexion	
+DIMENSIO		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DIMENSIO		FCNX+	DbcConnexion	
+DIMNOMEN		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DIMNOMEN		FCNX+	DbcConnexion	
+ECHEANC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ECHEANC		FCNX+	DbcConnexion	
+EMPLCF		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+EMPLCF		FCNX+	DbcConnexion	
+ENDEVIS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ENDEVIS		FCNX+	DbcConnexion	
+ENFACT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ENFACT		FCNX+	DbcConnexion	
+ENGAM		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ENGAM		FCNX+	DbcConnexion	
+ENGAPI		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ENGAPI		FCNX+	DbcConnexion	
+ENSERIE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ENSERIE		FCNX+	DbcConnexion	
+EXOCLI		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+EXOCLI		FCNX+	DbcConnexion	
+FABTIERS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FABTIERS		FCNX+	DbcConnexion	
+FACFO		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FACFO		FCNX+	DbcConnexion	
+FACT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FACT		FCNX+	DbcConnexion	
+FAMILLE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FAMILLE		FCNX+	DbcConnexion	
+FNC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FNC		FCNX+	DbcConnexion	
+FOURNISS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FOURNISS		FCNX+	DbcConnexion	
+GADEVIS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GADEVIS		FCNX+	DbcConnexion	
+GAMAUTOC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GAMAUTOC		FCNX+	DbcConnexion	
+GAMME		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GAMME		FCNX+	DbcConnexion	
+GAMOUTIL		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GAMOUTIL		FCNX+	DbcConnexion	
+GAPIECE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GAPIECE		FCNX+	DbcConnexion	
+HISTOAFF		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HISTOAFF		FCNX+	DbcConnexion	
+HISTOAPP		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HISTOAPP		FCNX+	DbcConnexion	
+HISTOAQ		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HISTOAQ		FCNX+	DbcConnexion	
+HISTOEMP		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HISTOEMP		FCNX+	DbcConnexion	
+HISTOFIC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HISTOFIC		FCNX+	DbcConnexion	
+HISTOIND		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HISTOIND		FCNX+	DbcConnexion	
+HISTOMOD		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HISTOMOD		FCNX+	DbcConnexion	
+HISTONOR		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HISTONOR		FCNX+	DbcConnexion	
+HISTOPDP		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HISTOPDP		FCNX+	DbcConnexion	
+IDDEVIS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+IDDEVIS		FCNX+	DbcConnexion	
+INTERSAV		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+INTERSAV		FCNX+	DbcConnexion	
+INTERVEN		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+INTERVEN		FCNX+	DbcConnexion	
+LIENSUIV		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+LIENSUIV		FCNX+	DbcConnexion	
+LOTIE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+LOTIE		FCNX+	DbcConnexion	
+LPV		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+LPV		FCNX+	DbcConnexion	
+MESSAGES		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+MESSAGES		FCNX+	DbcConnexion	
+MOTCLE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+MOTCLE		FCNX+	DbcConnexion	
+MOUVOUT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+MOUVOUT		FCNX+	DbcConnexion	
+MULTISIT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+MULTISIT		FCNX+	DbcConnexion	
+NOMENAF		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+NOMENAF		FCNX+	DbcConnexion	
+NOMENDV		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+NOMENDV		FCNX+	DbcConnexion	
+NOMENPC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+NOMENPC		FCNX+	DbcConnexion	
+NOMETARI		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+NOMETARI		FCNX+	DbcConnexion	
+NORMCONS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+NORMCONS		FCNX+	DbcConnexion	
+NORMDIFU		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+NORMDIFU		FCNX+	DbcConnexion	
+NORME		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+NORME		FCNX+	DbcConnexion	
+OBSDEVIS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+OBSDEVIS		FCNX+	DbcConnexion	
+OFFRE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+OFFRE		FCNX+	DbcConnexion	
+OUTILINT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+OUTILINT		FCNX+	DbcConnexion	
+OUTILLAG		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+OUTILLAG		FCNX+	DbcConnexion	
+PARAM		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PARAM		FCNX+	DbcConnexion	
+PDP		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PDP		FCNX+	DbcConnexion	
+PIC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PIC		FCNX+	DbcConnexion	
+POINT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+POINT		FCNX+	DbcConnexion	
+POINTAGE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+POINTAGE		FCNX+	DbcConnexion	
+POTSEM		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+POTSEM		FCNX+	DbcConnexion	
+PRESENCE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PRESENCE		FCNX+	DbcConnexion	
+PV		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PV		FCNX+	DbcConnexion	
+RAPPEL		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+RAPPEL		FCNX+	DbcConnexion	
+RECBL		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+RECBL		FCNX+	DbcConnexion	
+REGLEM		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+REGLEM		FCNX+	DbcConnexion	
+RESEBC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+RESEBC		FCNX+	DbcConnexion	
+RESERVE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+RESERVE		FCNX+	DbcConnexion	
+SA		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SA		FCNX+	DbcConnexion	
+SAV		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV		FCNX+	DbcConnexion	
+Sections		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Sections		FCNX+	DbcConnexion	
+SERIE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SERIE		FCNX+	DbcConnexion	
+SERVICE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SERVICE		FCNX+	DbcConnexion	
+SORTISAV		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SORTISAV		FCNX+	DbcConnexion	
+STOCK		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+STOCK		FCNX+	DbcConnexion	
+SUBSTIT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SUBSTIT		FCNX+	DbcConnexion	
+SUIVEUSE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SUIVEUSE		FCNX+	DbcConnexion	
+TARIF		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TARIF		FCNX+	DbcConnexion	
+TARIFCLI		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TARIFCLI		FCNX+	DbcConnexion	
+TFACCL		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TFACCL		FCNX+	DbcConnexion	
+TFACFO		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TFACFO		FCNX+	DbcConnexion	
+TRADUCT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TRADUCT		FCNX+	DbcConnexion	
+TRANSIT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TRANSIT		FCNX+	DbcConnexion	
+ACCES1		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ACCES1		FCNX+	DbcConnexion	
+WDETAT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WDETAT		FCNX+	DbcConnexion	
+REGLCLI		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+REGLCLI		FCNX+	DbcConnexion	
+RELANCES		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+RELANCES		FCNX+	DbcConnexion	
+RESEFAB		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+RESEFAB		FCNX+	DbcConnexion	
+FBTEMPO		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FBTEMPO		FCNX+	DbcConnexion	
+HATEMPO		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HATEMPO		FCNX+	DbcConnexion	
+TEXBC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TEXBC		FCNX+	DbcConnexion	
+TEXBL2		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TEXBL2		FCNX+	DbcConnexion	
+TEXBL		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TEXBL		FCNX+	DbcConnexion	
+TEXAFF		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TEXAFF		FCNX+	DbcConnexion	
+ARTIDECO		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ARTIDECO		FCNX+	DbcConnexion	
+CFRAI1		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CFRAI1		FCNX+	DbcConnexion	
+AVOIRFAC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+AVOIRFAC		FCNX+	DbcConnexion	
+Erreurs		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Erreurs		FCNX+	DbcConnexion	
+COMPLEMS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+COMPLEMS		FCNX+	DbcConnexion	
+CFGAMME		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CFGAMME		FCNX+	DbcConnexion	
+CFPROCED		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CFPROCED		FCNX+	DbcConnexion	
+CFNOM		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CFNOM		FCNX+	DbcConnexion	
+CFSAUVE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CFSAUVE		FCNX+	DbcConnexion	
+CFART		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CFART		FCNX+	DbcConnexion	
+CFDEFTAB		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CFDEFTAB		FCNX+	DbcConnexion	
+CFMEM		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CFMEM		FCNX+	DbcConnexion	
+CFCONFIG		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CFCONFIG		FCNX+	DbcConnexion	
+CFVARIABLE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CFVARIABLE		FCNX+	DbcConnexion	
+CFCODE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CFCODE		FCNX+	DbcConnexion	
+INTERLO		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+INTERLO		FCNX+	DbcConnexion	
+ACTIONS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ACTIONS		FCNX+	DbcConnexion	
+TYPACT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TYPACT		FCNX+	DbcConnexion	
+PROSPECT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PROSPECT		FCNX+	DbcConnexion	
+PROJET		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PROJET		FCNX+	DbcConnexion	
+EMPLOYE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+EMPLOYE		FCNX+	DbcConnexion	
+HistoCo		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HistoCo		FCNX+	DbcConnexion	
+Connect		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Connect		FCNX+	DbcConnexion	
+CFLIEN		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CFLIEN		FCNX+	DbcConnexion	
+CFANALYS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CFANALYS		FCNX+	DbcConnexion	
+Unite		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Unite		FCNX+	DbcConnexion	
+PaysMonde		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PaysMonde		FCNX+	DbcConnexion	
+AccesEmployesCategories		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+AccesEmployesCategories		FCNX+	DbcConnexion	
+Categories		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Categories		FCNX+	DbcConnexion	
+AccesMagasinsCategories		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+AccesMagasinsCategories		FCNX+	DbcConnexion	
+AccesMenusCategories		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+AccesMenusCategories		FCNX+	DbcConnexion	
+AccesWDETATsCategories		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+AccesWDETATsCategories		FCNX+	DbcConnexion	
+AccesCFCONFIGCategories		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+AccesCFCONFIGCategories		FCNX+	DbcConnexion	
+Magasins		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Magasins		FCNX+	DbcConnexion	
+Menus		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Menus		FCNX+	DbcConnexion	
+DocumentsOFFRE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsOFFRE		FCNX+	DbcConnexion	
+DocumentsDETAILBC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsDETAILBC		FCNX+	DbcConnexion	
+DocumentsNOMENAF		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsNOMENAF		FCNX+	DbcConnexion	
+DocumentsNOMENDV		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsNOMENDV		FCNX+	DbcConnexion	
+DocumentsNOMENPC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsNOMENPC		FCNX+	DbcConnexion	
+Gisements		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Gisements		FCNX+	DbcConnexion	
+DocumentsAFFAIRE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsAFFAIRE		FCNX+	DbcConnexion	
+DocumentsARTICLEM		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsARTICLEM		FCNX+	DbcConnexion	
+DocumentsART		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsART		FCNX+	DbcConnexion	
+FournisseursQualifies		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FournisseursQualifies		FCNX+	DbcConnexion	
+FournisseursImposes		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FournisseursImposes		FCNX+	DbcConnexion	
+RelancesDETAILBC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+RelancesDETAILBC		FCNX+	DbcConnexion	
+HistoriquePrixARTICLEM		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HistoriquePrixARTICLEM		FCNX+	DbcConnexion	
+Colisage_N1		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Colisage_N1		FCNX+	DbcConnexion	
+Colisage_N2		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Colisage_N2		FCNX+	DbcConnexion	
+ListeUnite		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ListeUnite		FCNX+	DbcConnexion	
+CoefConversion		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CoefConversion		FCNX+	DbcConnexion	
+DocumentsENGAM		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsENGAM		FCNX+	DbcConnexion	
+DocumentsENDEVIS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsENDEVIS		FCNX+	DbcConnexion	
+DocumentsENGAPI		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsENGAPI		FCNX+	DbcConnexion	
+DocumentsGAMME		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsGAMME		FCNX+	DbcConnexion	
+DocumentsGADEVIS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsGADEVIS		FCNX+	DbcConnexion	
+DocumentsGAPIECE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsGAPIECE		FCNX+	DbcConnexion	
+DocumentsCLIENT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsCLIENT		FCNX+	DbcConnexion	
+DocumentsFOURNISS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsFOURNISS		FCNX+	DbcConnexion	
+DocumentsOUTILLAG		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsOUTILLAG		FCNX+	DbcConnexion	
+DocumentsCONTROLE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsCONTROLE		FCNX+	DbcConnexion	
+DocumentsPROSPECT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsPROSPECT		FCNX+	DbcConnexion	
+DocumentsAutres		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsAutres		FCNX+	DbcConnexion	
+HistoriqueQteRESERVE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HistoriqueQteRESERVE		FCNX+	DbcConnexion	
+HistoriqueRESERVE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HistoriqueRESERVE		FCNX+	DbcConnexion	
+Affactureurs		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Affactureurs		FCNX+	DbcConnexion	
+DocumentsPV		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsPV		FCNX+	DbcConnexion	
+DocumentsFNC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsFNC		FCNX+	DbcConnexion	
+Monnaies		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Monnaies		FCNX+	DbcConnexion	
+CALOUTIL		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CALOUTIL		FCNX+	DbcConnexion	
+DocumentsEmploye		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsEmploye		FCNX+	DbcConnexion	
+DocumentsCOMMANDE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsCOMMANDE		FCNX+	DbcConnexion	
+BLAttente		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+BLAttente		FCNX+	DbcConnexion	
+DocumentsBC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsBC		FCNX+	DbcConnexion	
+DocumentsTARIF		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsTARIF		FCNX+	DbcConnexion	
+DocumentsLOTIE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsLOTIE		FCNX+	DbcConnexion	
+DocumentsACTIONS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsACTIONS		FCNX+	DbcConnexion	
+DocumentsPROJET		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsPROJET		FCNX+	DbcConnexion	
+HistoriqueBC		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HistoriqueBC		FCNX+	DbcConnexion	
+DocumentsIDDEVIS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsIDDEVIS		FCNX+	DbcConnexion	
+ListeMotsCle		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ListeMotsCle		FCNX+	DbcConnexion	
+ListeCriteres		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ListeCriteres		FCNX+	DbcConnexion	
+CritereFamille		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CritereFamille		FCNX+	DbcConnexion	
+DefautCritereFamille		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DefautCritereFamille		FCNX+	DbcConnexion	
+ValeurCritere		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ValeurCritere		FCNX+	DbcConnexion	
+DefautCritere		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DefautCritere		FCNX+	DbcConnexion	
+AVANCEMENT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+AVANCEMENT		FCNX+	DbcConnexion	
+AVANCEMENT_A_PLANIFIER		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+AVANCEMENT_A_PLANIFIER		FCNX+	DbcConnexion	
+AVANCEMENT_PLANIFIE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+AVANCEMENT_PLANIFIE		FCNX+	DbcConnexion	
+FILE_D_ATTENTE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FILE_D_ATTENTE		FCNX+	DbcConnexion	
+FAMNUANCE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FAMNUANCE		FCNX+	DbcConnexion	
+TRADUCTUNICODE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TRADUCTUNICODE		FCNX+	DbcConnexion	
+ECHEANCFOUR		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ECHEANCFOUR		FCNX+	DbcConnexion	
+RIB		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+RIB		FCNX+	DbcConnexion	
+ENTETEAO		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ENTETEAO		FCNX+	DbcConnexion	
+DETAILAO		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DETAILAO		FCNX+	DbcConnexion	
+DocumentsDETAILAO		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DocumentsDETAILAO		FCNX+	DbcConnexion	
+HISTOEMPLCF		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HISTOEMPLCF		FCNX+	DbcConnexion	
+EMPEVOLUTION		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+EMPEVOLUTION		FCNX+	DbcConnexion	
+QUALIFICATIONTIERS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+QUALIFICATIONTIERS		FCNX+	DbcConnexion	
+WF_ACCES		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_ACCES		FCNX+	DbcConnexion	
+WF_RELEVE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_RELEVE		FCNX+	DbcConnexion	
+WF_ETAT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_ETAT		FCNX+	DbcConnexion	
+WF_DIFFUSION		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_DIFFUSION		FCNX+	DbcConnexion	
+WF_HISTORIQUE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_HISTORIQUE		FCNX+	DbcConnexion	
+WF_ATTENTE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_ATTENTE		FCNX+	DbcConnexion	
+WF_ORIGINE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_ORIGINE		FCNX+	DbcConnexion	
+WF_FAMILLE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_FAMILLE		FCNX+	DbcConnexion	
+WF_EVENEMENT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_EVENEMENT		FCNX+	DbcConnexion	
+WF_TYPE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_TYPE		FCNX+	DbcConnexion	
+WF_INDICATEUR		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_INDICATEUR		FCNX+	DbcConnexion	
+WF_BLOCAGE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_BLOCAGE		FCNX+	DbcConnexion	
+WF_TFILS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_TFILS		FCNX+	DbcConnexion	
+WF_PARAMETRE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_PARAMETRE		FCNX+	DbcConnexion	
+WF_COMPLEMENT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_COMPLEMENT		FCNX+	DbcConnexion	
+WF_MODIF_ETAT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+WF_MODIF_ETAT		FCNX+	DbcConnexion	
+BORDEREAUTRANSPORT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+BORDEREAUTRANSPORT		FCNX+	DbcConnexion	
+HISTOCOMPLEMS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HISTOCOMPLEMS		FCNX+	DbcConnexion	
+BUDGET		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+BUDGET		FCNX+	DbcConnexion	
+BUDGET_HISTO		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+BUDGET_HISTO		FCNX+	DbcConnexion	
+TRANSPORTEUR_ZONE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TRANSPORTEUR_ZONE		FCNX+	DbcConnexion	
+TRANSPORTEUR_TARIF		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TRANSPORTEUR_TARIF		FCNX+	DbcConnexion	
+DvDecDetMat		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DvDecDetMat		FCNX+	DbcConnexion	
+DvDecEntête		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DvDecEntête		FCNX+	DbcConnexion	
+DvDecGamDet		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DvDecGamDet		FCNX+	DbcConnexion	
+DvDecGamme		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DvDecGamme		FCNX+	DbcConnexion	
+DvDecPN		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DvDecPN		FCNX+	DbcConnexion	
+DvDecQté		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+DvDecQté		FCNX+	DbcConnexion	
+ALEAS_GT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ALEAS_GT		FCNX+	DbcConnexion	
+FNCCause		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FNCCause		FCNX+	DbcConnexion	
+FNCDescription		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FNCDescription		FCNX+	DbcConnexion	
+FNCCorrection		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FNCCorrection		FCNX+	DbcConnexion	
+FNCEntete		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FNCEntete		FCNX+	DbcConnexion	
+PDPCALCUL		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PDPCALCUL		FCNX+	DbcConnexion	
+PDPRECALAGE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PDPRECALAGE		FCNX+	DbcConnexion	
+PDPRESULTAT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PDPRESULTAT		FCNX+	DbcConnexion	
+TYPESYSTEME		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TYPESYSTEME		FCNX+	DbcConnexion	
+CalendrierFournisseur		RPP		répertoire des programmes
+CalendrierFournisseur		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+CalendrierFournisseur		FCNX+	DbcConnexion	
+FNCCAUSEDESCRIPTION		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FNCCAUSEDESCRIPTION		FCNX+	DbcConnexion	
+FNCCORRECTIONDESCRIPTION		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FNCCORRECTIONDESCRIPTION		FCNX+	DbcConnexion	
+FNCDEFAUT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FNCDEFAUT		FCNX+	DbcConnexion	
+GanttSimulation		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+GanttSimulation		FCNX+	DbcConnexion	
+OperationFigee		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+OperationFigee		FCNX+	DbcConnexion	
+Colisage_ContenuCarton		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Colisage_ContenuCarton		FCNX+	DbcConnexion	
+HistoriqueRéservationFab		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HistoriqueRéservationFab		FCNX+	DbcConnexion	
+PROGRAM		RPP		répertoire des programmes
+PROGRAM		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PROGRAM		FCNX+	DbcConnexion	
+HistoPARAM		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HistoPARAM		FCNX+	DbcConnexion	
+PROG_HISTO		RPP		répertoire des programmes
+PROG_HISTO		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PROG_HISTO		FCNX+	DbcConnexion	
+Param_Format_decoupe		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Param_Format_decoupe		FCNX+	DbcConnexion	
+HistoriqueCalcul		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HistoriqueCalcul		FCNX+	DbcConnexion	
+HistoriqueOrdo		RPP		répertoire des programmes
+HistoriqueOrdo		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HistoriqueOrdo		FCNX+	DbcConnexion	
+HistoriqueRessource		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HistoriqueRessource		FCNX+	DbcConnexion	
+HistoriqueReservations		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HistoriqueReservations		FCNX+	DbcConnexion	
+HistoriqueJourOrdo		RPP		répertoire des programmes
+HistoriqueJourOrdo		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HistoriqueJourOrdo		FCNX+	DbcConnexion	
+BLOCAGES		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+BLOCAGES		FCNX+	DbcConnexion	
+HISTOBLOCAGES		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HISTOBLOCAGES		FCNX+	DbcConnexion	
+PDPNET		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PDPNET		FCNX+	DbcConnexion	
+PREVCLIENT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PREVCLIENT		FCNX+	DbcConnexion	
+HISTOPREVCLIENT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+HISTOPREVCLIENT		FCNX+	DbcConnexion	
+ENFACFO		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+ENFACFO		FCNX+	DbcConnexion	
+TVAENFACFO		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TVAENFACFO		FCNX+	DbcConnexion	
+TTCENFACFO		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+TTCENFACFO		FCNX+	DbcConnexion	
+SAV_EQUIPEMENT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_EQUIPEMENT		FCNX+	DbcConnexion	
+SAV_HISTO_CONTRATS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_HISTO_CONTRATS		FCNX+	DbcConnexion	
+SAV_DocumentsEquipement		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_DocumentsEquipement		FCNX+	DbcConnexion	
+SAV_CONTRAT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_CONTRAT		FCNX+	DbcConnexion	
+SAV_EQUIPEMENTS_CONTRAT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_EQUIPEMENTS_CONTRAT		FCNX+	DbcConnexion	
+SAV_DocumentsContrat		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_DocumentsContrat		FCNX+	DbcConnexion	
+SAV_MAINT_EQUIPEMENT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_MAINT_EQUIPEMENT		FCNX+	DbcConnexion	
+SAV_MAINT_EQUIPEMENTCONTRAT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_MAINT_EQUIPEMENTCONTRAT		FCNX+	DbcConnexion	
+SAV_FICHE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_FICHE		FCNX+	DbcConnexion	
+SAV_DocumentsFiche		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_DocumentsFiche		FCNX+	DbcConnexion	
+SAV_INTERVENTIONS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_INTERVENTIONS		FCNX+	DbcConnexion	
+SAV_INTERVENANTS_INTERVENTIONS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_INTERVENANTS_INTERVENTIONS		FCNX+	DbcConnexion	
+SAV_DocumentsIntervention		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_DocumentsIntervention		FCNX+	DbcConnexion	
+SAV_PIECES_PREVUES		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_PIECES_PREVUES		FCNX+	DbcConnexion	
+SAV_PIECES_DIRECT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_PIECES_DIRECT		FCNX+	DbcConnexion	
+SAV_PIECES_ECHANGE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_PIECES_ECHANGE		FCNX+	DbcConnexion	
+SAV_HISTO_EQUIPEMENT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SAV_HISTO_EQUIPEMENT		FCNX+	DbcConnexion	
+Logs		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Logs		FCNX+	DbcConnexion	
+SynchroLiens		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+SynchroLiens		FCNX+	DbcConnexion	
+Qual_Blocage		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Qual_Blocage		FCNX+	DbcConnexion	
+Sav_EtatFiche		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Sav_EtatFiche		FCNX+	DbcConnexion	
+Sav_EtatIntervention		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Sav_EtatIntervention		FCNX+	DbcConnexion	
+Sav_Origine		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Sav_Origine		FCNX+	DbcConnexion	
+Sav_TypeSav		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Sav_TypeSav		FCNX+	DbcConnexion	
+Sav_Theme		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Sav_Theme		FCNX+	DbcConnexion	
+Sav_SousTheme		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Sav_SousTheme		FCNX+	DbcConnexion	
+Sav_TypeContrat		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Sav_TypeContrat		FCNX+	DbcConnexion	
+Sav_TypeIntervention		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Sav_TypeIntervention		FCNX+	DbcConnexion	
+Prod_TypeMaintenance		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Prod_TypeMaintenance		FCNX+	DbcConnexion	
+Trans_MotCleObservation		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Trans_MotCleObservation		FCNX+	DbcConnexion	
+Trans_ParametreImpression		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Trans_ParametreImpression		FCNX+	DbcConnexion	
+Prod_ModeleCalendrier		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Prod_ModeleCalendrier		FCNX+	DbcConnexion	
+Prod_ModeleCalendrier_Detail		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Prod_ModeleCalendrier_Detail		FCNX+	DbcConnexion	
+Qual_TypeProcesVerbal		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Qual_TypeProcesVerbal		FCNX+	DbcConnexion	
+Heure_Alea		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Heure_Alea		FCNX+	DbcConnexion	
+Heure_ArrondiPresence		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Heure_ArrondiPresence		FCNX+	DbcConnexion	
+Heure_Rupture		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Heure_Rupture		FCNX+	DbcConnexion	
+Tiers_Region		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Tiers_Region		FCNX+	DbcConnexion	
+Trans_Libelle		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Trans_Libelle		FCNX+	DbcConnexion	
+Tiers_AvancementProjet		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Tiers_AvancementProjet		FCNX+	DbcConnexion	
+Tiers_EtatProjet		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Tiers_EtatProjet		FCNX+	DbcConnexion	
+Tiers_OrigineProspect		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Tiers_OrigineProspect		FCNX+	DbcConnexion	
+Tiers_TypeProspect		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Tiers_TypeProspect		FCNX+	DbcConnexion	
+Trans_ChampSpecifique		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Trans_ChampSpecifique		FCNX+	DbcConnexion	
+Tech_EtatMatiere		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Tech_EtatMatiere		FCNX+	DbcConnexion	
+Tech_NuanceMatiere		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Tech_NuanceMatiere		FCNX+	DbcConnexion	
+Tech_Typologie		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Tech_Typologie		FCNX+	DbcConnexion	
+Trans_Compteur		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Trans_Compteur		FCNX+	DbcConnexion	
+Qual_FormationTiers		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Qual_FormationTiers		FCNX+	DbcConnexion	
+Qual_TypeQualif		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Qual_TypeQualif		FCNX+	DbcConnexion	
+Qual_Referentiel		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Qual_Referentiel		FCNX+	DbcConnexion	
+Qual_RespQualif		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Qual_RespQualif		FCNX+	DbcConnexion	
+Tiers_FonctionService		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Tiers_FonctionService		FCNX+	DbcConnexion	
+Tiers_Incoterm		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Tiers_Incoterm		FCNX+	DbcConnexion	
+Qual_TypeEchantillonnage_Entete		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Qual_TypeEchantillonnage_Entete		FCNX+	DbcConnexion	
+Qual_TypeEchantillonnage_Ligne		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Qual_TypeEchantillonnage_Ligne		FCNX+	DbcConnexion	
+Tiers_Fabricant		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Tiers_Fabricant		FCNX+	DbcConnexion	
+Compta_TaxeParafiscale		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Compta_TaxeParafiscale		FCNX+	DbcConnexion	
+QUAL_ETALONNAGE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+QUAL_ETALONNAGE		FCNX+	DbcConnexion	
+Qual_DocumentsOUTILINT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Qual_DocumentsOUTILINT		FCNX+	DbcConnexion	
+STK_Inventaire_Entete		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+STK_Inventaire_Entete		FCNX+	DbcConnexion	
+STK_Inventaire_Ligne		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+STK_Inventaire_Ligne		FCNX+	DbcConnexion	
+Trans_ConfigChampsObligatoires		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Trans_ConfigChampsObligatoires		FCNX+	DbcConnexion	
+Historique_ConfigChampsObligatoires		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Historique_ConfigChampsObligatoires		FCNX+	DbcConnexion	
+Compta_Cpte_Produit		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Compta_Cpte_Produit		FCNX+	DbcConnexion	
+Compta_Cpte_Charge		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Compta_Cpte_Charge		FCNX+	DbcConnexion	
+Compta_Cpte_Taxe_Produit		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Compta_Cpte_Taxe_Produit		FCNX+	DbcConnexion	
+Compta_Cpte_Taxe_Charge		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Compta_Cpte_Taxe_Charge		FCNX+	DbcConnexion	
+Compta_Section_Ana		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Compta_Section_Ana		FCNX+	DbcConnexion	
+Trans_ChampsPersonnalisation		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+Trans_ChampsPersonnalisation		FCNX+	DbcConnexion	
+FAI_FICHE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+FAI_FICHE		FCNX+	DbcConnexion	
+QUAL_LIEUDETECTNONCONF		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+QUAL_LIEUDETECTNONCONF		FCNX+	DbcConnexion	
+QUAL_ORIGINE_AQ		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+QUAL_ORIGINE_AQ		FCNX+	DbcConnexion	
+QUAL_CAUSESNONCONF		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+QUAL_CAUSESNONCONF		FCNX+	DbcConnexion	
+QUAL_PROCESSUS		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+QUAL_PROCESSUS		FCNX+	DbcConnexion	
+QUAL_TYPEDOCUMENT		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+QUAL_TYPEDOCUMENT		FCNX+	DbcConnexion	
+QUAL_ACTIONNONCONF		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+QUAL_ACTIONNONCONF		FCNX+	DbcConnexion	
+PARAM_MODELE_DECOUPE		BASE		La base du fichier est passée de HFSQL Classic à HFSQL Client/Serveur
+PARAM_MODELE_DECOUPE		FCNX+	DbcConnexion	
+DbcConnexion		CNX+		
