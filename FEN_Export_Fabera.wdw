@@ -349,7 +349,7 @@ window :
          					WHERE CONORME = (<§cs:3§>
          					SELECT NORME.CONORME<§cs:3§>
          					FROM DocumentsGAPIECE<§cs:3§>
-         					JOIN NORME ON NORME.N0CLEUNIK = DocumentsGAPIECE.N0CLEUNIK AND (NORME.LIBELLE = 'PLAN DE PHASE' OR NORME.LIBELLE LIKE 'CDC%')<§cs:3§>
+         					JOIN NORME ON NORME.N0CLEUNIK = DocumentsGAPIECE.N0CLEUNIK //AND (NORME.LIBELLE = 'PLAN DE PHASE' OR NORME.LIBELLE LIKE 'CDC%')<§cs:3§>
          					WHERE DocumentsGAPIECE.GPCLEUNIK={gpCleunik}) AND FLAG = 'O'<§cs:3§>
          				]
          				sdPhaseDrawing2D.gpCleunik=sdGapiece.GPCLEUNIK
