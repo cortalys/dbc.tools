@@ -289,7 +289,7 @@ window :
          				xlsFic..Ligne[i]..Cellule[tabEntete[s2DClient]] = fExtraitChemin(sFichier2D,fFichier+fExtension)
          				// 3d drawing steps search and copy
          				sDrawingFolder	est une chaine	= completerep(fExtraitChemin(sDrawing2D,fDisque+fRépertoire))
-         				sSteps			est une chaine	= fListeFichier(sDrawingFolder+ "*.step")
+         				sSteps			est une chaine	= fListeFichier(sDrawingFolder+ "*.step",frNonRécursif)
          				logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Liste des plans 3D STEP : "+Remplace(sSteps,RC,","))
          				sColPlan3D est une chaîne
          				POUR TOUTE CHAÎNE sStep DE sSteps SÉPARÉE PAR RC
@@ -301,7 +301,7 @@ window :
          				FIN
          				SI sColPlan3D<>"" ALORS xlsFic..Ligne[i]..Cellule[tabEntete[s3DClient]] = sColPlan3D
          				// 3d drawing SW search and copy
-         				sSldprts		est une chaine	= fListeFichier(sDrawingFolder+ "*.sldprt")
+         				sSldprts		est une chaine	= fListeFichier(sDrawingFolder+ "*.sldprt",frNonRécursif)
          				logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Liste des plans 3D SLDPRT : "+remplace(sSldprts,rc,","))
          				POUR TOUTE CHAÎNE sSldprt DE sSldprts SÉPARÉE PAR RC
          					sFichier3D est une chaîne = fConstruitChemin(sRepertoireExport+"3DPhase",fExtraitChemin(sSldprt,fFichier),fExtraitChemin(sSldprt,fExtension))
@@ -370,7 +370,7 @@ window :
          							logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Copie du plan 2D phase : "+fExtraitChemin(sFichierPhase2D,fFichier+fExtension))
          							xlsFic..Ligne[j]..Cellule[tabEntete[s2DPhase]]	= fExtraitChemin(sFichierPhase2D,fFichier+fExtension)
          							sFichierPhase3D		est une chaine	= ExtraitChaîne(fExtraitChemin(sFichierPhase2D,fFichier),1," ")
-         							sPrefixe est une chaine = ExtraitChaîne(sFichierPhase3D,1,"-")
+         							sPrefixe			est une chaine	= ExtraitChaîne(sFichierPhase3D,1,"-")
          							sFichierPhase3D									= sPrefixe+".SLDPRT_"+sFichierPhase3D+".step"
          							xlsFic..Ligne[j]..Cellule[tabEntete[s3DPhase]]	= sFichierPhase3D
          						FIN
