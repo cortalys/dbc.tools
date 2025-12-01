@@ -276,10 +276,7 @@ window :
          		FIN
          		SI sDrawing2D<>"" ALORS
          			// 2d drawing copy
-         			SI EnModeTest() ALORS sDrawing2D = Remplace(sDrawing2D,"P:\CLIENT","<RépertoireDocuments>",SansCasse)
-         			sDrawing2D	= Remplace(sDrawing2D,"<RépertoireDocuments>",sRepDocuments)
-         			sDrawing2D	= Remplace(sDrawing2D,"<RépertoireImages>",sRepImages)
-         			sDrawing2D	= Remplace(sDrawing2D,"\\","\")
+         			sDrawing2D = FormateChemin(sDrawing2D)
          			SI pas fFichierExiste(sDrawing2D) ALORS
          				logFabera.LogWarning(SansEspace(sdArt.GPCOPIECE)+" Plan 2D client introuvable : "+sDrawing2D)
          			sinon
@@ -359,10 +356,7 @@ window :
          					SI PAS HEnDehors(sdPhaseDrawing2D) ALORS
          						sPhaseDrawing2D=SansEspace(sdPhaseDrawing2D.FichierDocuments)
          						logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Plan 2D Phase dans la GED : "+sPhaseDrawing2D)
-         						SI EnModeTest() ALORS sPhaseDrawing2D = Remplace(sPhaseDrawing2D,"P:\CLIENT","<RépertoireDocuments>",SansCasse)
-         						sPhaseDrawing2D	= Remplace(sPhaseDrawing2D,"<RépertoireDocuments>",sRepDocuments)
-         						sPhaseDrawing2D	= Remplace(sPhaseDrawing2D,"<RépertoireImages>",sRepImages)
-         						sPhaseDrawing2D	= Remplace(sPhaseDrawing2D,"\\","\")
+         						sPhaseDrawing2D = FormateChemin(sPhaseDrawing2D)
          						SI pas fFichierExiste(sPhaseDrawing2D) ALORS
          							logFabera.LogWarning(SansEspace(sdArt.GPCOPIECE)+" Plan 2D phase introuvable : "+sPhaseDrawing2D)
          						sinon
@@ -795,6 +789,26 @@ window :
      code : |1-
       FinProgramme()
      type : 2
+  procedures :
+   -
+     name : FormateChemin
+     procedure_id : 1814184681070436971
+     type_code : 14
+     code : |1+
+      procédure restreinte FormateChemin(sChemin est une chaine) : chaîne
+      
+      sCheminRetour est une chaine = sChemin
+      SI EnModeTest() ALORS sCheminRetour = Remplace(sCheminRetour,"P:\CLIENT\","<RépertoireDocuments>",SansCasse)
+      sCheminRetour	= Remplace(sCheminRetour,"<RépertoireDocuments>",sRepDocuments)
+      sCheminRetour	= Remplace(sCheminRetour,"<RépertoireImages>",sRepImages)
+      sCheminRetour	= Remplace(sCheminRetour,"\\","\")
+      SI Gauche(sCheminRetour,1)="\" ALORS sCheminRetour="\"+sCheminRetour
+      
+      renvoyer sCheminRetour
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
  code_parameters :
   internal_properties : HwAAAB4AAAATJE33z8GJHL8wyaJCONZo6KRdMGsb1W7qj4D4VgDgCEgk+OW6jzutOyuhPC76yhPgorKKtlfIuup/5aujquTBD8ahIWf18Y+QF3RqgPYH4pwfw9aJKfTmsVk=
   original_name : Modele1
