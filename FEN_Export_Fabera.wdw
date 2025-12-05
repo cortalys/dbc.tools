@@ -341,20 +341,18 @@ window :
          				// Search phase drawing
          				sdPhaseDrawing2D est une Requête SQL	=
          				[
-         					SELECT NORME.REPDOC AS FichierDocuments <§cs:3§>
-         					FROM NORME <§cs:3§>
-         					WHERE CONORME = (<§cs:3§>
-         					SELECT NORME.CONORME<§cs:3§>
-         					FROM DocumentsGAPIECE<§cs:3§>
-         					JOIN NORME ON NORME.N0CLEUNIK = DocumentsGAPIECE.N0CLEUNIK //AND (NORME.LIBELLE = 'PLAN DE PHASE' OR NORME.LIBELLE LIKE 'CDC%')<§cs:3§>
-         					WHERE DocumentsGAPIECE.GPCLEUNIK={gpCleunik}) AND FLAG = 'O'<§cs:3§>
+         					SELECT DocumentsGAPIECE.NomFichier AS FichierDocument, N2.REPDOC AS FichierNorme  FROM DocumentsGAPIECE<§cs:3§>
+         					LEFT OUTER JOIN NORME ON NORME.N0CLEUNIK = DocumentsGAPIECE.N0CLEUNIK<§cs:3§>
+         					LEFT OUTER JOIN NORME AS N2 ON N2.CONORME = NORME.CONORME AND N2.FLAG='O'<§cs:3§>
+         					WHERE DocumentsGAPIECE.GPCLEUNIK = {gpCleunik}<§cs:3§>
          				]
          
          				sdPhaseDrawing2D.gpCleunik=sdGapiece.GPCLEUNIK
          				sPhaseDrawing2D est une chaîne
          				SI HExécuteRequêteSQL(sdPhaseDrawing2D) ALORS
+         					hlitpremier(sdPhaseDrawing2D)
          					SI PAS HEnDehors(sdPhaseDrawing2D) ALORS
-         						sPhaseDrawing2D=SansEspace(sdPhaseDrawing2D.FichierDocuments)
+         						sPhaseDrawing2D = sansespace(sdPhaseDrawing2D.FichierDocument)<>"" ? SansEspace(sdPhaseDrawing2D.FichierDocument) SINON SansEspace(sdPhaseDrawing2D.FichierNorme)
          						logFabera.LogInfo(SansEspace(sdArt.GPCOPIECE)+" Plan 2D Phase dans la GED : "+sPhaseDrawing2D)
          						sPhaseDrawing2D = FormateChemin(sPhaseDrawing2D)
          						SI pas fFichierExiste(sPhaseDrawing2D) ALORS

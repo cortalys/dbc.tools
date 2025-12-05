@@ -21,8 +21,8 @@ project :
     generation_name : Cortalys_DBC_Tools.exe
     version :
      major_version : 1
-     generation_version : 6
-     internal_generation_version : 14
+     generation_version : 7
+     internal_generation_version : 15
     icon_filename : .\Tools.ico
     language : 1
     64bits : true
