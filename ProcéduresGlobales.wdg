@@ -37,12 +37,14 @@ procedure_set :
       sDbName		est une chaîne	= ChargeParamètre(KEY_DATABASE_Name, DEF_DATABASE_Name)
       nDbCryptage	est une entier	= ChargeParamètre(KEY_DATABASE_Crypto, DEF_DATABASE_Crypto)
       
-      DbcConnexion..Provider			= hAccèsHFClientServeur
+      Operateur = ChargeParamètre(KEY_CLIPPER_USER_User)
+      
+      DbcConnexion..Provider				= hAccèsHFClientServeur
       DbcConnexion..Serveur				= sDbServer+(nDbPort<>"" ? ":"+nDbPort SINON "")
       DbcConnexion..Utilisateur			= sDbUser
       DbcConnexion..MotDePasse			= sDbPassword
-      DbcConnexion..BaseDeDonnées		= sDbName
-      DbcConnexion..Cryptage			= nDbCryptage
+      DbcConnexion..BaseDeDonnées			= sDbName
+      DbcConnexion..Cryptage				= nDbCryptage
       
       renvoyer HOuvreConnexion(DbcConnexion) _ET_ HChangeConnexion("*", DbcConnexion)
      type : 458752
