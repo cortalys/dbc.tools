@@ -14,9 +14,9 @@ window :
  internal_properties : HwAAAB4AAAA8Wsijqp08gzexYdIzFzbziE2HfOPxNcHJ0vaxdFrOpdHzQyZLQMN/YeebnlOEX0FR6i4VaLjt9Tndw1rk0+1p3qxTZUAc0MTw6yPnuR5+Zj+ZRECqNBs3JsFE9VN1hu3VgE9iG9L/6QuwVN1biBOrsfnUcvDyp412ua6AAi5Qkr9M3eI6QMX9ehkbdG0owyiR3VFC4Bn/K8u6U7pXI0O1tJhEm1EUN9ASik9trranas3OJk20icgeCnEPw58ZOaexhl2K6of02KdegA+ATHeAIuH2HMrfUeRgOXI3Yt+jZfdPwjMN7atTxEZkZfXcdyjf3Tl8Yu4eb16cGeeIgOmXrX8O8AO83Tlx6DvwwHRUGZhJooYDNawZUerLWbAHT27u885P/B9Nw0UgJkJ2Abopn8/37zz9zWiZe4VDXIfZzbiqKwrHjkusW89qBJN8DqAiVAYm6+kpEJP9ILO0i8v7rGSEHECRZp5wx2conomTcNl0DihQokdWtCCX9Rs35ptcv/4Z8z23RsqoxrU40XrZwCmwKFFLDwcDTS76YO4p701IBGoWToLrTopF9GvMRrrfij01fLFGmK+CrbCG6XZdby9xIJ3MiRQkR0445SiosTgYlBM4lmhtG9AQDx2kUw7HF5SrXql1OWlz8VWZcFcasFcQ2OQ/1oPTgvBFfQs37XhQs/OAAxvLMMLF9U/6ruvn1D0R49vXrCpMaExah42vV0KJGxibqb5haHnBQCKXwOrbfru37An2FtU2Flt+o1iJ/C0AiK0DVygEDrnoLxxzF7mx8FnzAmNPlKcukpXuqigAIFd/XoOf5iUhVmVMCzyKVUJ2jgoEHaYpTKb42UeesLCRX8sGe46HlYhGQSix4QOREKU7YH88seKDjiDvrMAZnTSsuFpAAtwrin3+JO6ENb0fCxE+ScvnqqvLbBWg65pYTx5ehW0YvBIjBFKZ9HQO6UDhNJVH+sIbwvP9pvehlZbCZHglInLhuTWFTzj8Otubq1rsAEJ6cc1yq6zLaNcfWonZKfWhuqQf1y1RwiCdPlbH787+5Bho97ZzIQu1+xkCvFONaxSXPse6pLHWxUzcPvtQX+PI/yjvjYydHIG12Bb0tCyNAqg2JjNXUvOq2+EHEm/rViQHYdKBbUZNnHpc0I02c293QYLVD2uf
  properties :
   width : 404
-  height : 385
+  height : 488
   widthClient : 402
-  heightClient : 353
+  heightClient : 456
  style : {}
  controls :
   -
@@ -177,8 +177,20 @@ window :
         type : 14
       -
         code : |1+
+         sRepertoireExport	est une chaîne
+         xlsFileName			est une chaîne
+         i					est un entier
+         j					est un entier
+         nCpt				est un entier
+         sFiltreCodePiece	est une chaîne
+         sFiltreRepere		est une chaîne
+         dFiltreDebut		est une Date
+         dFiltreFin			est une Date
+         xlsFic				est un xlsDocument
+         c					est un Champ		<- SAI_Log
+         
          // Data control
-         sRepertoireExport		est une chaîne	= ComplèteRep(SAI_Repertoire_Export)
+         sRepertoireExport = ComplèteRep(SAI_Repertoire_Export)
          SI sRepertoireExport = "" OU PAS fRepExiste(sRepertoireExport) ALORS
          	Erreur("Le répertoire d'export est obligatoire")
          	RepriseSaisie(SAI_Repertoire_Export)
@@ -186,15 +198,14 @@ window :
          sRepertoireExport=completerep(sRepertoireExport+DateDuJour+HeureSys)
          fRepCrée(sRepertoireExport)
          
-         Sablier(Vrai)
+         logFabera	est une CL_Log("FABERA",fConstruitChemin(sRepertoireExport,"logclipper_fabera",".log"),c)
          
-         xlsFileName	est une chaîne	= fConstruitChemin(sRepertoireExport,"export_clipper_fabera",".xlsx")
-         logFabera	est une CL_Log("FABERA",fConstruitChemin(sRepertoireExport,"logclipper_fabera",".log"))
+         Sablier(Vrai)
+         xlsFileName	= fConstruitChemin(sRepertoireExport,"export_clipper_fabera",".xlsx")
          logFabera.LogInfo("Répertoire des documents "+sRepDocuments)
          logFabera.LogInfo("Répertoire des images "+sRepImages)
          
          // Create XL document
-         xlsFic		est un xlsDocument
          xlsAjouteFeuille(xlsFic,"Export Clipper")
          xlsFic..Feuille					= 1
          // Set titles
@@ -202,13 +213,13 @@ window :
          	xlsFic..Ligne[1]..Cellule[col]	= titre
          FIN
          
-         i					est un entier		= 2
-         j					est un entier		= 2
-         nCpt				est un entier		= 0
-         sFiltreCodePiece	est une chaîne		= SAI_Piècecyclée
-         sFiltreRepere		est une chaîne		= SAI_Repère
-         dFiltreDebut		est une date		= SAI_DateDebut
-         dFiltreFin			est une date		= SAI_DateFin
+         i					= 2
+         j					= 2
+         nCpt				= 0
+         sFiltreCodePiece	= SAI_PieceCyclee
+         sFiltreRepere		= SAI_Repère
+         dFiltreDebut		= SAI_DateDebut
+         dFiltreFin			= SAI_DateFin
          sdArt				est une Requête SQL	=
          [
          	SELECT ART.* FROM ART<§cs:3§>
@@ -611,6 +622,57 @@ window :
         code : |1-
          
         type : 14
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        type : 338
+        enabled : false
+      -
+        type : 339
+        enabled : false
+  -
+    name : LIB_Logs
+    identifier : 0x2942728107ab089f
+    internal_properties : HwAAAB4AAABKuD8nyygSm8MGouNGZGaeqojU9l5DSaDRkrjP9oEhukOo6ztPARL5O+1ZnOe5JqYmShc8Q4ANyl+9mfSRw5RajSfOiKYD7Pm1taGqzUq5vbmKtuki1ZXKM/OP8FTTieBqSSIG+yZdyQwDwTvWD/Qa/ExQ57o2aX/YUQ19w3bI67/4BQKJt7jgwfEmhc7oqQqZD8gspj2ZudIQMW/6N2ihrEKOaa7MZb42iITmY49a71qrR6l/qD7NBs7QSBaPwxbmvIaYVxAyFXVt+0RPtSHe6Xlx/kDNaMhdWLj8/oz+EqK7Uu1eWThI19ARV/nkHK7PIyAOP111+YnUMWEXUWzBKpLmCoVZncA4GkejsH+po06+Q2j0Uw2K4H5Qr+iRRJiTMPTIVApeeTQMi8hZ18VzxxWzt+JJd83f6M91i7kYhobp7MJ1iR/6lTbSQF3ihUrJP+bPXKy0YCtInTTr9FZff+p2JSTp+xLRY6s=
+    properties :
+     x : 6
+     y : 323
+     width : 390
+     height : 23
+     anchor : 4
+     tab_stop : 0
+     take_focus : 0
+    style : {}
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+  -
+    name : SAI_Log
+    identifier : 0x2942728107ad089f
+    internal_properties : HwAAAB4AAAB180WujT1EyASkw4U/oTswgjP7P/Ojioyl19EY0ZnlISCrmvcadUt+2psEbRwFF8qbJvlsPUmQu0TzNz9pqeL0/xeIiB3kbyYUIVHB21bXWf2xleiuFjsF1jEKlbdyweuIgmceG+SgS1sdpqnRQCJh2AQTXA8dsYe8mnleDXVXAZ0zC92BzH9FVK9+DfOtTSiVsKuKf0kLxtPEMUqtUVqXVjtU8Lmtmj6ZHmAurQazsrI7x26get1IP39ul0g+0TJ8UmApyR5l40keeZbkYuVDI6yeRg7Jh6f41uUGxzQ6DkKqP61Ze0EXq6QbGlZYWLDHIHaKhKNiVqCOx3iQdCnwi5Q2o7SZh8qodME5OtaurmCdvMbnIzszFo1g9JLBX0xeJqRBCrr45w/xHAMF7JhYLW/3gJAO2gLcjLJSdN5JmnIpWYP2GCiGRQBCcR5H1vQ/Y2TmThuOYMx1LQFzNVkf3nWqVD10l32foMSu7vUMWeDhYXNFfXFt0ILdvrYsj+NdHgNgLPJr5i6O161+M01rhP+SXTF3cX449ql08+Keg5j8MStS4tvi7OB2aKLPOZELlxOy3GYRg4RSHepVZqkwlm32cu78tPMbXJQHmRqvZliGAEegRM/p6m6g2FRx9u88/3wAzCqE6+a70rCGnMt+kacNA2o4A7OYT91AAj1osX0DLWQ41NIceWCCBqwtlJgHOCMjAvxYANKxAWnsohkJIeCqn8gsJqeXEjDhygF04mYsBzUpjOd5Pf7PURlxkhbPeePKeE8uJAddh5JYmHAAEHxP11m5011hI9AZ3gJYD9lXk9UYtpYyNXehaQ8INdjr/j/iUCzZVpDR057l+0d5Joj7SLqsQsJde//EZm6ER/BaA7xxQchSUVR952mJZCGOhoA5VFnRzOn+DJUNWY5ADITyC097Tn2NSl/7ebsxwhzluu10Lewe+PX0jN/OwG49NRBBZfQyjTIjcCE3YY2sZ4qcYvrUXgdnfJjPDxmzAedWhSeI3M57OOoLrSByii/7hIihIVtl/mIEq/v1CZHGRU5owTQ5jsyocxpuKyerfX7GZomnDW1R/kHzILxxcDcnRBEsKQTN3B1FRvZQxdg9r2IPCABMu1f48fJqrZ5dVGrM1iJaaK4gvg7AO68heFOh+Bis1W7Rf5PKKw6XXRRstEuRVXUxcVE6aGkYR/UF7bRNWtHg16napABEuEDCwv7D4YvodWvl5e/1ESWOIIDDJlDbbzyF5LFs4ZB915HEBiGSsEwg27qKGvsIya0VvGKbBoO1uWVFUDyRSqwRu3UWeqWLBRLhwe85sP/x6aTf9VhbzWfMw1i1OaCLDxT0Gtk=
+    properties :
+     x : 6
+     y : 352
+     width : 390
+     height : 75
+     state : 1
+     anchor : 4
+     take_focus : 0
+     accelerator_key : 65535
+     tab_order : 9
+    style : {}
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
       -
         type : 276
         enabled : false

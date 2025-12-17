@@ -20,8 +20,11 @@ class :
       	prive
       		sName est une chaine
       		sFileName est une chaîne
+      		cChamp est un champ
       		sContent est une chaine
       		bAutoFlush est un booléen
+      		bSaveToFile est un booleen
+      		bSaveToField est un booleen
       fin
      type : 131072
    -
@@ -35,10 +38,39 @@ class :
      type_code : 27
      code : |1-
       procédure Constructeur(name est une chaine, fileName est une chaine, autoFlush = true)
-      sName = name
-      sFileName = fileName
-      bAutoFlush = autoFlush
+      sName			= name
+      sFileName		= fileName
+      bAutoFlush		= autoFlush
+      bSaveToFile		= vrai
+      bSaveToField	= faux
      type : 589824
+   -
+     name : Constructeur
+     procedure_id : 1806527493248047826
+     type_code : 27
+     code : |1+
+      procédure Constructeur(name est une chaîne, champ est un champ, autoFlush = True)
+      sName		= name
+      sFileName	= ""
+      cChamp <- champ
+      bAutoFlush		= autoFlush
+      bSaveToFile		= faux
+      bSaveToField	= vrai
+      
+     type : 589825
+   -
+     name : Constructeur
+     procedure_id : 1806527493248047826
+     type_code : 27
+     code : |1+
+      procédure Constructeur(name est une chaîne, fileName est une chaîne, champ est un Champ, autoFlush = True)
+      sName		= name
+      sFileName	= fileName
+      cChamp <- champ
+      bAutoFlush		= autoFlush
+      bSaveToFile		= Vrai
+      bSaveToField	= Vrai
+     type : 589826
    -
      name : Destructeur
      procedure_id : 1806527493248113362
@@ -77,14 +109,14 @@ class :
      code : |1-
       procédure privée sLogMessage(sMessage est une chaîne, nType est un entier )
       si sContent<>"" alors sContent+=rc
-      sContent+=dateSYS+" "+HeureSys + "|"
+      sContent+=dateSYS+" "+HeureSys + " | "
       selon nType
       	CAS 1
-      		scontent+="INFO   |"
+      		scontent+="INFO | "
       	cas 2
-      		sContent+="WARNING|"
+      		sContent+="WARN | "
       	cas 3
-      		sContent+="ERROR  |"
+      		sContent+="ERR  | "
       FIN
       sContent+=sMessage
       si (bAutoFlush) alors Flush()
@@ -95,7 +127,8 @@ class :
      type_code : 12
      code : |1-
       procédure Flush()
-      fSauveTexte(sFileName,sContent)
+      si bSaveToFile alors fSauveTexte(sFileName,sContent)
+      si bSaveToField alors cchamp..Valeur = scontent
      type : 458752
   procedure_templates : []
   property_templates : []
