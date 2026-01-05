@@ -1,0 +1,663 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : FEN_Import_Qualitime
+ major_version : 30
+ minor_version : 0
+ type : 2
+ description : ""
+ subtype : 0
+ options : 256
+window :
+ name : FEN_Import_Qualitime
+ identifier : 0x2941582101f1c907
+ internal_properties : HwAAAB4AAAAy3ljx40KNbiqUhvNjqVUtzaEZGqijfldSISpQ8eHOe5BBTVFD2xquqNuiWw116i5mKXblnasyCbiknl5JW5VDZxr6KA4grbPrUab30N4vnRcNTw+rzdLmaX/pQ/HOfWyxP/eAzvjK/Apl7o9skGQ+OWYl/PMfwM5AFrzK+9SmoS3NtYk3KlRbtf40G/LGqXRMrXmdS2lzPZyc+bQQUpAMTCZv8giAcH8O1Tx1kTHcy8A9vWXbpfkhlQuzmYOrjrgm/6nRPRzBShbPgy0PsNm3NngseQvbEg0ghJ3XJkR+tWnDB7aYNCqBmWBwehdFYBea+aHwk5mSz7ibp4tBwJkXT0K7SbKExG2Tmf/KORUEiDHRleC/9Puf72JjPrA+cWMgGC7ZFMvzzF4GUGLXg80rZfj8JyTYjEfLoJ8kX9DsPHtpBg+YykpKo7cGYVEVboeHVzDhe4vZpo5ER60kCQY3nRaTciR8d2VGWqat6pV/1h/SX6q/UbpQ4zZwiFQZ2YnWR03GgznwgUPEie/cJFgLIjPjBNXcGW6GpzQ2We6E9JHME6mGZit/g5aS7VfgdnXX/3UQPbJUxC6/I+c1gtECp+giJXrtuFJZhwVp3S00wn38oS3CAa6DwvDY+BRTwlCDBstkl2tCqKAiFwNDe/hjds+Mroszc7WWTUgmytNKsxGstLGTcxZ0j1aAlAjhbkDbTDIbClIn2gV6FFbsCsOfR8dmNs2gG3FBKLOPpWCxQ4DxajBdZnVwe0Z9OkxkyjrrA5uk8eSjeLb59VbzYhxX+egCutxOf/3IP/pQeG6dYUalnPMP5kWutVQ3WAu7b92O9ew3SIDM7K0A2m1vRr6v00DtxxT8l5NKsW4T/LpCq4uA+oaPRcF7Ukszce8wonZQF49/P/FZxWvsf7IxL67GfaMuJNHFJALfg6qDqSOxQG1wnPCrcN8yz1Wev58Dliz1HUtF4Hn+loLdnoQi66xeG3ZqbcXO
+ properties :
+  width : 404
+  height : 407
+  widthClient : 402
+  heightClient : 375
+ style : {}
+ controls :
+  -
+    name : SAI_Fichier_CSV
+    identifier : 0x29415a210cbb9b2a
+    internal_properties : HwAAAB4AAADlTcmbq2H7kmA3lrQLkvtpAIJ5fgi0q2pUyzpLEhVN6Qir8zdPtRcnMM47hdq/paSiFMzoxpsraC0UdvTcMCklOjvu14Y2tN8u+AXJjMmWP14uuk8b+eAgK78nC1BizI++xTYc0DUNdrpEYiBwurwD7ywfVyva4U/GxEvtqtqONKqwrZaP5XdoUqjOcWonClvpnfxpEiCkbxfwf/EwU+EBCDNckJdWez653HynVXpp/ZgqbkgYDIHLRpfcqbfJElFohIUOcTCTYI8mALOTUz6W8moCtyuYVl8uOve3ibQYz757tBcys1jmF8yoY5WrhQ8xhVPpWhVJDvMpXIomDfKCA0sjrBFWrwMfXWm9l196haTKwLYqJ5qzW1ZYNK3YiRf+UaNPnvH176YJqS/HIxdtY3e7XErqAmnEqCMtd2KDGf/8uu3YdpZjIPp0/Kl44CFjVvJUyyYU3DKKm999FciImgvC3VsgxrPqkOv3ZcJg3/Su1nI8N9NF9KffIfhVUO3uUzsaOCPyqi+S9n4zy6rggmePL14NWsZ2d16ECUb3hT3nwJ3xrCd6Uaf3BxO2biWKBmwBLIYBFmNqOsYd8DFItAr5uDTqRbI+mdmKZV+aSyXYFm1YN+cLBDZdNpiLdQoOElwskxnG2JhHmiVaEsTh83YtygfF7a5ub56Lx2VIiQAxSISOpLgZAGmgkuhgeuLCJ+M4XXdxQg2V/56sigo7yDefaO9GGfmKW5MWCHyIMTYrVbu+HIZsPWa/+KeOPgy2iQuSUIvKYNuwB2A+glZFybX4DiCUTIthjPW5Qg1nxPwk1voQXqodsWvI5MayhGE0cAHDdOy7uhG3NooLBK6ITlg5sozqkRZkxHt1IpQdWkwby9PCsU50hu6QQ6fsKhTBfcDJOV5IWM8+cwhHvtlbkyDOKucn5XCEAyMZTHn/ULW+2cg5gRH0tiYb4kD56ldj75z5s/RQCaXyWULG0Y9YhGEtubGy7PjZZKqVpVAAH9aPmNwm0rTULwsojkAfTfzSRQYz+ZdEPzZFFY3vKdYFopfkAcwpcLh9BJnMQyDNPkTEW81elcSxCB6BdR9XcZiQ/F2AqEka/bUQYHEjBRINCB46ofDyV/ILIRRTErbD76pCuASTDuYJtMGOE12MCUtuMLLh8m7Jlfy1wPidMlwunacidpNxR63pPA0o/GxMERYXwSFtBTcVeF0QHTJ2ef6BQrUbUMCyKeMZ4Ykh6Wkfj6PhYR0U19Iqe3sdN3NjBKswwq7DXSzFWlOkn6Sph8A/mEMOEFhrJ/Iqy3x6oqOQ5lkmfamt47Np0iK82vueWfwed+yLavpzZc8xZlYePTUc7qUs/w3vl4A2xiblJoZtTEH8U343+XkGWAI1uXRxct3jsrbxqLyVj+IY+/8H46GPdJVlrhGsgJRunI6lTe0c7DmR1bg4lmwmPgZmQ2mvqf3kZA==
+    properties :
+     x : 6
+     y : 234
+     width : 363
+     height : 25
+     anchor : 8
+     accelerator_key : 65535
+     tab_order : 3
+    style : {}
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        code : |1-
+         // Version 1
+         // Description 
+         // Sélecteur de fichier
+        type : 14
+      -
+        code : |1+
+         si SAI_Fichier_CSV="" alors retour
+         SI Droite(Minuscule(SAI_Fichier_CSV),4)<>".csv" ALORS
+         	Erreur("Seuls les fichiers CSV sont acceptés")
+         	SAI_Fichier_CSV=""
+         	RETOUR
+         FIN
+         
+         si pas fFichierExiste(SAI_Fichier_CSV) alors
+         	Erreur("Le fichier "+SAI_Fichier_CSV+" n'existe pas")
+         	SAI_Fichier_CSV=""
+         	retour
+         FIN
+         
+         sNomFichier est une chaine = fExtraitChemin(SAI_Fichier_CSV,fFichier)
+         tabChaine est un tableau de chaînes = chainedecoupe(sNomFichier,"_")
+         nTableauOccurrence est un entier = TableauOccurrence(tabChaine)
+         si nTableauOccurrence=0 alors retour
+         nNumGamme est un entier = tabChaine[nTableauOccurrence]
+         si nNumGamme<=0 alors retour
+         
+         SAI_NumGammePiece=nNumGamme
+         executetraitement(SAI_NumGammePiece,trtSortie)
+         
+        type : 16
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        type : 338
+        enabled : false
+      -
+        type : 339
+        enabled : false
+      -
+        code : |1-
+         
+        type : 17
+  -
+    name : BTN_Fichier
+    identifier : 0x29415a210cbd9b39
+    internal_properties : HwAAAB4AAADT+OPkMj/vZIj4FpvD85Ha1CX1JsvZ2mu7RLCpXH1CWwkEwg3U5r4rA4fI9nVkpMG0ltdBUX/i4zcKfcNOdnXlxwOsanOsKp7tkFInWJTqdaJwTpBRsC8VPQ8yo/1o0a1iDa/+JzTQ3h4sFrMqzaLwhMUrj/hRJ/GDEnsAICb+X22jCPzOybYLXJnoWDAgykSYmiAyNkDMtSgqlYtW/lrL0SWqhP5zi9EouCXZ17WTawnPzXyQ4ht7rPuX3j6vlAE2ee/ardA3y3GHQ+Eh9Vqv7qP/6DWv9ry8EP6xdLZeie62pf/2lBpA2zvPfnAjeIPdGw3SfBHaZW+9BQZE+TvIJRXjwgEy7wlR7L0vq5cifWCx4SggucZLSEp/flej2YosIgQZtnLKWTrf19RGohNkLIXm70Qeii3Kef74sS4vr3JPc2QdEEiz4HEkJq1Lx5mlnbN54dxxkNCwQvBIuer4HDv3+wM8J/hvJFLK6GIHlFuRBs3GGVvs3aDIeldXBoJmwgqWMrVWerzqTY4pR2/pNejfy4tQ3tENw2R7F0wIy9CCq6JuMzDWFO82nCauDTCffuSCpN15E4DvW29pSKdSHy6pU/it5E13qE/I4Iwa75XlqctPJFSolNIlAkqVqukJBB/nMZZ9EtmKtN1veXa2FPxcY9vEoLgyleLRMNCclV1G8nQRMDxBhr3GqceMHRV8wG9nQpAkRNUwWm/y+0VOvtYYqaxCAWu479mqgXE1Yw68H8xNLKwjdTfr9rnKuOe9fe84LXYAf+tVt8b0tk6g1lk/evsWqmGQvwHq5vzwL4P4/IaLId4ke1g6UgUm/ILEA7KKkT13b2kCTeYpDOdljapctDpOedPXBCGWuQdkVRsILop0WQER4FdHVTf0zbKo7QmiDesbP/cDaFsj0ACPO1sSb3xjd+zRayiObqWn/YBgbkQv9UmlmiXBvbb+07iLYCFQVz51oDp5dmTKCbpdipszsK0XK9jH+8hguxUXABJ5rkjs
+    properties :
+     x : 375
+     y : 236
+     width : 21
+     height : 21
+     anchor : 4
+     accelerator_key : 65535
+     tab_order : 4
+    style : {}
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         sFichier est une chaîne
+         
+         // Ouvre le sélecteur de fichiers
+         soit sCheminOuverture = fExtraitChemin(SAI_Fichier_CSV,fDisque+fRépertoire)
+         soit sFichierInitial = fExtraitChemin(SAI_Fichier_CSV,fFichier+fExtension)
+         soit sTitre=<§R19415a2100d29b39¤fr-FR¤Sélectionner un fichier CSV¤en-GB¤Select a file...¤es-ES¤Seleccione un archivo...¤0§>
+         soit sFiltre=<§R19415a2100d39b39¤fr-FR¤Fichiers CSV (*.csv)¤en-GB¤All files (*.*)¤es-ES¤Todos los archivos (*.*)¤0§>+TAB+"*.csv"
+         // ouvre le sélecteur
+         sFichier = fSélecteur(sCheminOuverture, sFichierInitial, sTitre, sFiltre, "", fselOuvre + fselExiste)
+         
+         si sFichier<>"" alors
+         	SAI_Fichier_CSV =  sFichier
+         	ExécuteTraitement(SAI_Fichier_CSV,trtSortie)
+         FIN
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : LIB_Import_gamme_contrôle_Qualitime
+    identifier : 0x29415a490cec347c
+    internal_properties : HwAAAB4AAAD6rhs2FH83UWbo0buvVZh38fk+56UhTmQnMdCnzzktGyVw0zSopvLCq/neW3GxMIULeR7L48geI5kD+6FKeTuOl7FV3pT2cdoQFAzcv1p0qGKLmPuQBLlvQeiz0V64UDF/3JfE+aEL8Z4ns4Is5c6X2CLKpAvaeU1iU6lAVHS5GJOS7+oDiGsd7tpNLH9pYo3sBHu1Ou37IaCZeaYXQSwpXfFTnUe2fgZbGXGtopCyy7xSyX/hyJPU/KPZyxQIhdyEiLE0rZQR6ktszp0Mf1dV5NDRhrkFBRFaA3JO5aaqGNgqjuqS5IZXlS8JGLR3AZqFtEgc5AtOgDhh652VZOcf4cO/5CbRdZLDkXxqgM/vc2pY6wjlBHqLqu85M0nPsu3SbF5IRrXXcc37O0l9p4xxBQ2sGbKLK7AtpDuDEtH10rQeirw44wQPvNiL1gl2H7N49utFa0+h8lmiOtaTOGaACnJ1SP8OUNGEF0j+UhGCQsS7fYC3XHrHVADVt98=
+    properties :
+     x : 6
+     y : 10
+     width : 390
+     height : 24
+     tab_stop : 0
+     take_focus : 0
+    style : {}
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes :
+      -
+        code : |1+
+         // Version 1
+         // Description 
+         // Libellé pour écrire un titre
+        type : 14
+  -
+    name : BTN_Importer
+    identifier : 0x29415a490cee347c
+    internal_properties : HwAAAB4AAABm0ul/iyV+I8zmP0X/dvyyFbHO4UeJOf//C5PIfyq7l1rUOeG7hXAdWxlgqs0X1Dn12nYmlbLhjKnoIQ3OrDSf6XRCtyt0lwstxWOMUhHK6NbR/SwJ1u8jP+eyntQ4SUHFvWOSjUgndCPO6g/Ef6C+J+FNjWA/rktmLJ6hviIYqTPNu/Gb0W+mmb9bNJeu3QYu+e8B93sYZ3wk8Oex7egWRk9Fr28Y4Vc0JumOwlYDPANunDKDrkVD3bD8aHr5l7PPpfH/7yCY/h3/SypGjCRwf0H8Nhgh7rru5xwLOJxXVb5NlbhcbtptfQ+JxC8g9+o8PfmT1Lab/N65r8IB/2tBaR+ck1e0DdgBKLNjoUN0elh1XNv0+lRXerIjhaUoy2KqDyEJuNWIgF4/L/Yrm8+5/hTvs1jHodQ4YxBDdInF+Giizl7svXbrmntxoiQXpLm2fdvAuCDe8Vw50xmYIwjgrxIGvs6ufXu5SHp6GCC3q0T4qKcqpwH/kD2VtQtgYYcRy5kFFRYFN5wli38qr3UmWvVNGuajZD8iIlqHHePht79yhG4aRxERtUnaKGxmkn3QXGSFr0mJbtD8CyYs/iIGEPWVFm3eJsqE7J8VEzmexGSi6isA+yJJU7/+BU5CR3aJp5vMXqbFhJ1k+lHDQJcUrLexolMZ7hSiXPQUrWkTfQcLDShmWB/ii176nTMPaYuN/3zvuI1Y/07oDykHEnAj/2Pys0GklRfhNDPCwbnGdoqyVeICvrWlPUHo60Axfz3pTBvvlS3LvfMHcZ9iVPqolp8fofOdcTNThYykM7XPByFQ6jhGKTdlx6FNyT220QurgFHegWwFKFwxsovcEew/MjuHJqtJyfcMD0e8rHxYoPcJy4XtHh7PAfno3gE4fsoaoVPvhnQRqYLPdBNzTbINc/c=
+    properties :
+     x : 6
+     y : 57
+     width : 99
+     height : 24
+     accelerator_key : 65535
+     tab_order : 0
+    style : {}
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1-
+         
+        type : 14
+      -
+        code : |1+
+         bStartImport		est un booléen		= Faux
+         rOrdre				est un réel			= 0
+         nNumGam				est un entier		= SAI_NumGammePiece
+         sIndice				est une chaîne		= ""
+         sCsv				est une chaîne
+         tabCsv				est un tableau de 0 par 0 chaînes
+         c					est un champ		<- SAI_Log
+         logQT				est une CL_Log("ImportQT",c)
+         
+         sCsv	= fChargeTexte(SAI_Fichier_CSV)
+         SI sCsv="" ALORS RETOUR
+         logQT.LogInfo("Import du fichier "+SAI_Fichier_CSV)
+         
+         CSVVersTableau(sCsv,tabCsv)
+         logQT.LogInfo(TableauOccurrence(tabCsv)+" lignes à importer")
+         si TableauOccurrence(tabCsv)<=1 alors
+         	erreur("Aucune ligne à importer")
+         	logQT.LogError("Aucune ligne à importer")
+         	retour
+         FIN
+         
+         sqlCountGamautoc	est une requête SQL	=
+         [
+         	SELECT COUNT(*) AS NbEnr,MAX(GAMAUTOC.ORDRE) as MaxVal, MIN(GAMAUTOC.GCCLEUNIK) AS GcCleunik FROM GAMAUTOC WHERE GPCLEUNIK={p_GPCLEUNIK}<§cs:3§>
+         ]
+         
+         sqlCountGamautoc.p_GPCLEUNIK=nNumGam
+         SI HExécuteRequêteSQL(sqlCountGamautoc,hRequêteDéfaut) et sqlCountGamautoc.NbEnr>0 alors
+         	logQT.LogInfo("La gamme existe déjà, il y a "+sqlCountGamautoc.NbEnr+" lignes existantes")
+         	rOrdre			= sqlCountGamautoc.MaxVal
+         	bStartImport	= ouinon("Il existe déjà "+sqlCountGamautoc.NbEnr+" lignes dans le fichier. Souhaitez vous continuer et importer à la suite ?")=oui
+         	hlitrecherche(COMPLEMS,COPARCléunik,["GCCPL01",sqlCountGamautoc.GCCLEUNIK])
+         	si htrouve alors sIndice=sansespace(complems.Complément)
+         sinon
+         	bStartImport =  ouinon("Lancer l'import ?") = Oui
+         fin
+         
+         si pas bStartImport alors
+         	logQT.Logwarning("Import annulé par l'utilisateur")
+         	retour
+         FIN
+         logQT.loginfo("Import démarré par l'utilisateur")
+         
+         pour i=2 _a_ TableauOccurrence(tabCsv)
+         	sOrdre		est une chaine	= sansespace(tabCsv[i][1])
+         	sRepere		est une chaine	= SansEspace(tabCsv[i][2])
+         	sAttribut	est une chaine	= SansEspace(tabCsv[i][3])
+         	sCaract		est une chaîne	= SansEspace(tabCsv[i][4])
+         	sCriti		est une chaîne	= SansEspace(tabCsv[i][5])
+         	sCoteCible	est une chaîne	= SansEspace(tabCsv[i][6])
+         	sTolMin		est une chaîne	= SansEspace(tabCsv[i][7])
+         	sTolMax		est une chaîne	= SansEspace(tabCsv[i][8])
+         	sTailleLot	est une chaîne	= SansEspace(tabCsv[i][9])
+         	sFrequence	est une chaîne	= SansEspace(tabCsv[i][10])
+         	sMoyen		est une chaîne	= SansEspace(tabCsv[i][11])
+         	sObs		est une chaîne	= SansEspace(tabCsv[i][12])
+         	sVoie		est un chaîne	= SansEspace(tabCsv[i][13])
+         	si sansespace(sCoteCible)<>"" alors
+         		hraz(GAMAUTOC)
+         		nCaract est un entier = tableaucherche(tabCaract,tcLinéaire,sCaract)
+         		si nCaract<0 ou nCaract>20 alors nCaract=0
+         		gamautoc.SIGLEDIMENSION=(nCaract+1)
+         		si sCoteCible<>"" alors
+         			si val(sCoteCible)<> 0 alors
+         				GAMAUTOC.COTENOM=Val(sCoteCible)
+         			SINON
+         				gamautoc.DESIGN=sCoteCible
+         			FIN
+         		FIN
+         		gamautoc.TOLERMAX	= val(remplace(sTolMax,",","."))
+         		gamautoc.TOLERMin	= val(Remplace(sTolMin,",","."))
+         		GAMAUTOC.COCONTR	= -1
+         		hlitrecherche(OUTILLAG,GA_OUTILL,sMoyen)
+         		si htrouve alors gamautoc.COCONTR=outillag.GA_OUTILL
+         		gamautoc.RENSEIGN	= sObs
+         		GAMAUTOC.GPCLEUNIK	= nNumGam
+         		gamautoc.ORDRE		= rOrdre + val(sOrdre)
+         		gamautoc.REPERE		= sRepere
+         		hajoute(gamautoc)
+         		logQT.LogInfo("Création de la ligne "+GAMAUTOC.ORDRE+" ("+sCaract+") : Côte cible "+sCoteCible + ", Moyen "+sansespace(sansespace(sMoyen)+" "+sansespace(OUTILLAG.GA_OUTILL))+ ", Obs " +sObs)
+         		pour j=1 a 16
+         			sValeur est une chaine = ""
+         			hraz(complems)
+         			complems.COPAR		= "GCCPL"+numeriqueverschaine(j,"02d")
+         			complems.Cléunik	= gamautoc.GCCLEUNIK
+         			SELON j
+         				CAS 1
+         					sValeur = sIndice
+         				CAS 2
+         					sValeur = sansespace(GAMAUTOC.DESIGN)<>"" ? 2 sinon 1
+         				CAS 3
+         					sValeur = sFrequence
+         				CAS 4
+         					sValeur = sTailleLot
+         				CAS 5
+         					sValeur = 0
+         				CAS 6
+         					sValeur = sCriti
+         				CAS 7
+         					sValeur =0
+         				CAS 8
+         					sValeur =0
+         				CAS 9
+         					sValeur =0
+         				CAS 10
+         					sValeur =0
+         				CAS 11
+         					sValeur = val(sVoie)
+         				CAS 12
+         					sValeur = nNumGam
+         				CAS 13
+         					sValeur=datesys()
+         				CAS 14
+         					sValeur=Operateur
+         				CAS 15
+         					sValeur=DateSys()
+         				CAS 16
+         					sValeur=Operateur
+         			FIN
+         			complems.Complément=sValeur
+         			hajoute(complems)
+         		FIN
+         		logQT.LogInfo("Ajout des 16 champs complémentaires terminé")
+         	FIN
+         FIN
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : BTN_Configuration
+    identifier : 0x29415a530cf05aff
+    internal_properties : HwAAAB4AAADfTp9c2IcMVfRkn8WZgLWl+enWpCRgQtjLQtKbECVmyB8FahiQknzuST+mlGiscY/m8E3Y7bby2HHywrBXfD+HofMjYBICAvRWJNYErDv+Es3WIYK0yCVLeoiijBucfD5pDjxMy1uiDJSkrGo+Udyq1YfU+luvJfbY6rNaz4jafdXjxc7jl7OpiQPfbct99zew2hQrgxBI+cvbZPKC3ZRs+uWpCMaMH+tlIiBzXVe/+1CVM8GjlEMX7YXfeFV5vFpJa04o/rBLy9RlmXsDzCsDdxZwPxAvLohogiKQrMaebRGUtZBo5q6lh4Dykb7BURSz9Xh7qWUfbOkjUpj6XAoMqx7Cmkwx8OuRjSIEP+qwCcBHA0DXojU7b6WbAsO5ktyfhVoN/7TeGk9U49rGwPgiaqcy++CRlW0g/nbxG7qKvfEpvjh7ORXGVmDgVYXmZS1LrQiFZZOwwgHoDVEok8DfEyMiXbD3y0N1F63lWmGzuI2ox1NWKiInhGgpW+8VJtwBWZ0LCWtcsh/ImV0iwBTps7k4I5OMej9s+mSi+H2MwYoeB6B0XrB3BFaOhZ5HPINDBoVI5xS/7KBwd3BR0F5hoVClHlhz/YyKfrUnfwmalsKTiZq7v5dqe8hjEFaFQYYkOxP0eEddmmVn7hJ6rLnXE8EMVnpBGZGhSA0ASJf4/J6H9gm7vp7geJp8E4oE0lNo614dHnMdyX/7ds1EYlvEC8Ia+8M+CkwAW5FyarmfH94t59usZ52rwxtOfpnjLtXfGPyRfev8SwK0xURYOv8Dwf7D9yY/BoNYf44a8r2b2dWq46Or3TQsDR+hZZcc9A0xrGK+Z+CEZkRpg1DFZMyVgcg0HxxXgDGelG0ApA==
+    properties :
+     x : 363
+     y : 57
+     width : 33
+     height : 24
+     anchor : 4
+     take_focus : 0
+     accelerator_key : 112
+     tab_order : 1
+    style : {}
+    type : 4
+    code_elements :
+     type_code : 4
+     p_codes :
+      -
+        code : |1+
+         // Version 1
+         // Description 
+         // Bouton au style aide
+         
+        type : 14
+      -
+        code : |1-
+         Ouvrefille(FEN_Configuration)
+        type : 18
+      -
+        type : 161
+        enabled : false
+  -
+    name : LIB_Gamme_de_contrôle_pièce
+    identifier : 0x29415a640cfc9f0d
+    internal_properties : HwAAAB4AAAAU5aBSvs46gfhZHB1orzvR/B0tln6NIfqLDNS4sgY6Z4Ccpi5TKuQvSwIekbinbz/1gqvIJFrIFgutYnyUAwvAYEahdr9ZexLQRysi5Qv9fPYgGnIvlZQD+lrYfr55JiPMHQ5IW4P0qkXgdXLBvlMJVhselYUMBKwoJJSR46JiY13JQ3baKVCkyj7NZU1D3Gbif02QptZbwfsXX+LZpdUISbDo6K0E550TvDBOjM2Zf4rK8sV0iYWyfQRJJ8SQWQbWc9JezDY46C2oNUGPvOX+m30dxcD+fWPy+tWZGT7atML9QQG5CRpa46+y+KlmWO7REi5/LqRgLbiEGAMio8rw3oZptX+TIdq7rk0P/FlVjT5NQAloQJ5wac/vag32pSFUX/nJWDgbfAIhAhv8OOfTPkf5QB83qaqbH6JfIsgqNAuv4zc+CNKRVKiwVPJMBd3/OgYJqBWdoeaa2irzoPnv/jDvWo7j2XhLOEcfeqkTcZNFJedaeiwRUNK7+sK6nRcMQkWcFfW5t02EnsMuowkbDg==
+    properties :
+     x : 6
+     y : 92
+     width : 390
+     height : 23
+     anchor : 8
+     tab_stop : 0
+     take_focus : 0
+    style : {}
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+  -
+    name : LIB_Fichier_CSV
+    identifier : 0x29415a6f0cfeca24
+    internal_properties : HwAAAB4AAADxuUjsgu07F7fQ/5P+K/VUlfNin60p3dXXuAtMgEsA7e0firIX71ptv7tBFXtm65SvXsjMykty1OEsCxwlWtkt9Tp0jRJ8vOglg2BJ+nvf+lu5lGq/TWcJ4bPOg2QmPg9iMQLT782+MK1ghQLrhpbMp6NpJa39xNtSZN2Ofy1PwWXlmfTUZMpd0RJejUqheEjfTaF7BNthGRo4SMLH62Sr1WgTYUFjote72QsDh5zgMvTXGKTvy8JyYHW14yAoGv7PioH2/RkXExrDYRw9zc711vwBctK8YJczkynSJ+GVoRkMIZCtjREIoObUj4enhWWwvXzefKahV9tppLgYhmVpObuNZAdLJL6kD7OWytSMUu/w9np6lp2mFPgJh+Np9N5dJmUycvY03uNO7vYAHZym/aSdQ9OLzG549h6m6HOMYsvtyqd1IRJARpDDONYWpYX/mb9x+w9I0Gtf56FuajJUz8tHt8nRfDwcD3DHCpzI0K9XXd/40JlDE/s=
+    properties :
+     x : 6
+     y : 205
+     width : 390
+     height : 23
+     anchor : 8
+     tab_stop : 0
+     take_focus : 0
+    style : {}
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+  -
+    name : SAI_NumGammePiece
+    identifier : 0x29415a810d0011bc
+    internal_properties : HwAAAB4AAAD8O6TE+OsCnHRlgKYra87WV9NnmN+NVaXbYFt0yS7goe8iF4Vn+8OiQu40qTMhH0m5D8rzLhwlv/FNPIn3/o3rV86+zCNvS35f0xvANrIxw/m0VdveJY2w3GaoE2NyeTitc1Rtslf+EWCejh2Zm4s5WVYX4vpOsgx3apPT3wocFoxj5pR7j42XO7f+R9U6DAqYRDzhF/VPCsLyfcLAKqZFXlNKvzxYHFY/g4zX1ZlcoZsqhkEpWypvTdGD+9dQblyjxkI83Av8r910RTuJIimmfx7kn3fQQCUB46PQ9IMTEFzzF6AiUC4lczIvzIPGMvn2rHXfELL1htGHp0m1QI80ruMlIOIR6u9gNCOBsQftmy4F61D48IyRkZCXYEsUfsrqS8XGqct64NlY8Wjzfhhhm1qgLUMRKNkVdjPO+jow62K7TgUqjKUxbLidj2hfoO2LyOTtsCrVzF45FOGxEi71xacBGlnAaG0x2UJ5+lxYITBVkGBnOyljG0bC5mgPRNUdaNwemWSJiBnq5b4kQyJlqEMA8mSc3SzFLK6PQXr/WFpUBg+iob2eBq4XnPlokHPTmQE26kaJEPjm0zeHFHoyUZP1jDx5zgm5p1g4MYv+z0Kr01ZUoTjdeSrPVDyw30KX9atWxjz/QEphfMYTQgRjL9VembgNjbf258iS8DobdHoolRP+AULOLLoAsQRK14AkfHmT9xftiHEw3KtgsI9TXzkc9FdSODUiUjNa6cQR2pLyZdohkRTJapNAV/H3l266XZGK27vpkhFyDk4qZ0aqbPDluGzCwah6Hbqn3K6n63SvJIFafhCeIXKOgfDhwRoTzcCHhP2n+3XUCZLI+qtMBq9mXIjwE2FPR39CKexathhOkHS8RJL+m3dmoR1qQPoIUz5e6meTXmjS/44twRlz4yg8226IUw5eb6l+tudUxQdva8wI+GLbjqDKxszSt3/F1t8bZhyX1+d21EZ8wsVfeZLtrJtxIAUQXbvbQzpjiR5OvfVBTyPHbNy2gqrsAFPFZ1Rza3mgdqxt/B4j1vPDRMMVpzaE8n/iLf56yHl+VJYrGf71Fc989O33Ua8BDg+AQiHyf/0WK7Bs7PnCNFofET6A5odhGC8mwykRFsHVVB3wirK8cSll2OFgibqD7uqSG2MZucr8WJX+95DEgfZ6dWQN3nwTgElWFJ3Y5RapW0b+rgeaorUt3P8DNWMVGHa65eAmt/1ZBOuzuTdwA9t1dXoa5EdSL09Jh7pr1rmY4+mAOuxTSmtjvBot55gs2b0Ih+M5c4AP33sLaeX2j9ePeKyGIuAZDHHzLxOnDzEp+B42Eq9izGTvOzk9viLuEqgzzvrSpqVrQK78ccFbRgVXVXi0SAQDDi70HKlP7eWrY9jXEY54qZketisBtDpKkd4GOafZi32LypyloYwr5MZyiU0=
+    properties :
+     x : 6
+     y : 121
+     width : 363
+     height : 22
+     anchor : 8
+     accelerator_key : 65535
+     tab_order : 2
+    style : {}
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        code : |1+
+         si SAI_NumGammePiece=0 alors retour
+         hlitrecherche(GAPIECE,GPCLEUNIK,sai_NumGammePiece)
+         si pas htrouve alors
+         	erreur("Aucune gamme trouvée pour le numéro "+SAI_NumGammePiece)
+         	SAI_NumGammePiece=0
+         	SAI_Piece=""
+         	SAI_Opération=""
+         SINON
+         	sai_piece=gapiece.GPCOPIECE
+         	SAI_Opération=gapiece.GA_DES
+         FIN
+         
+        type : 16
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        type : 338
+        enabled : false
+      -
+        type : 339
+        enabled : false
+  -
+    name : SAI_Piece
+    identifier : 0x2941728671bce3ae
+    internal_properties : HwAAAB4AAAA2bYYNIaCqTxTP1d00sKsATZp1EummFaTBia8u1aWEklSDqYQIv5ZhqsU7AtPokot5cTruxvIKWMwTsp1n4rH00Uuct5M2ULijyROPhCXjScWJMMUQJTf2o/yqg2S8kDfHlks7v2QHJwTxDs4f26WCz3CFIq8Bua6d8VwnSx3R5SU4WVjL7/ymGcnJH4uHhrw/kL42+p5Mo0MvCUqbMcBgq36jaKqXIlsIZcdlJ93yU4QMHKfqDthIwYxi8NlEedCwKdIeDsTNfGJnzJaYVbZsuQXwqcvEolGxv3PNWY+vsVn4zgR9dhvKui9NuBR+7at5ma5royuAfBHuAx6aSMaWPQN5s7zAWj0Na8Vy05ZRCOVnG29xsEw838FI+GtcbIzC/YqB5Q1DQxknk8lXs2l/oKzQKxddQZPxoMRwV++n0BZW9mJKH/3pUq3IhK3syqdejb47Zaj+nAygmZ5Z1MN43TT8kW1exbrrdRIGne6KpIq6Rp88+tvVK6RyMODmjDxjcVTM5w/16Mo3Rx4CAbbJDE23ru9vk0pPwKBs6SmTU+ryI/Pp9c6JRm7NwPb66we0fQzRyKUqENsZ6cfsgL1ArlcY0kIIm1Cos9r5h6KECN65OvEmGkhFhnvBKmcDfFsrbThio9cj9KBdsKRaQXHFcueZvaSa8xwv/NMedfn39wmdOfxh+vW0q+C+5P2cLk4A+tUNzqW6snQH/9b6BcEJOrvkkICpJiKu58yd4INYj2V753RNNmzcGSqlWmD0hW8DpvT7SevjUAPSq5NWPn8sBqQZLICJxcH2K3zCZ2rSczZ2Z9wCnF7bEPlyc7Q1vYR9u0A1XPVjIoeYcXife2K9Y6OZWZg+jxkNwcOTqzM3cN+JCkycDhGz6KsQsJ/NqL3SqozQkH/55EZ8N3+u/EYk41H98XRqIEnbOpGUxNK9nog1q965JrtLx8vPYpMYG/ET5skT+APF3pwZcHfffPfhPk9ZfE6lMyjmWQtndaJA6NRG/fwHD9cBqlFt9qhx8LSnZWYpSb5G5Vaq40S14kA1gGhBGCy52zBXssQRAvbaOIcIBSwfyuNGq/uweGN2lEQn1XIwIbmuKtEvYufH183jsik4KLCzFgjN3Cv4Xdz+QUVP86U8onyovLfoqZ4L/uZY5OylCLSGneNF7K/mgI/xV1XLZ2EGr3J5W/RLvaT2RiyolrXJHH5x0XW2flDLFyyYqyn5JyBjeUyvpxsvFPGbs8NPQg9zixekIXLTr/mJLy4PjSY7AbHDP8r15jNP74dPhWygzKlJqFJNfTr0VWne1+oSddFcAYjlVVmmKWnmAA2EePg6FQLpfOtESwIW62NKtO1j6IcrK5eZfSXzev9W3VDMuCu+nPNCfZRIRXs68oppqndb0SqfZDGcp5uLVtJtpueon8iU1YR5w+Mx8jk6
+    properties :
+     x : 6
+     y : 149
+     width : 363
+     height : 22
+     state : 1
+     anchor : 8
+     tab_stop : 0
+     take_focus : 0
+     accelerator_key : 65535
+     tab_order : 3
+    style : {}
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        code : |1-
+         
+        type : 14
+      -
+        code : |1-
+         
+        type : 15
+      -
+        code : |1-
+         
+        type : 16
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        type : 338
+        enabled : false
+      -
+        type : 339
+        enabled : false
+      -
+        code : |1-
+         
+        type : 17
+  -
+    name : SAI_Opération
+    identifier : 0x294172b871c2a75c
+    internal_properties : HwAAAB4AAAC17b7SuAoIMhnEmEDpGdy8YCTbmHk1MB+qgiCAZvzee6WSnePPyNIrgRHo3QS9c280QHOD5tV/q4aEKRZbr0WscwrrKC9KGmjmiPOWfojEzc2O78K8oRjZvP21XVO+dbhQnGVoZhT+n2yRv3eGv/CIznStsSknmyhEKUNhzGt4tHPy8+sep0rT6gu+8RiVBXca/VifL3YPZL/jFv9GeBMoHLObgI515DzKs1N2w+aI+jc2EWC4tFcc4Mv8R5kO/tsofcX9o94tQb8p64d/pS489lfpbWkQW1jM9QF8toWtz3d2SvbChAC8sA8aOcddi+W1iY5s7n20B0dJgeHtYatoHSOjNRKxPdCSJH/EV7sJ5hc+ZteJ8kXwhrMfrhTE8h5yPr1v60DkDL5POIfht+AIE2/+CUjUte1fFqRPDKDEWK7xwctAb62ti87JS5KTpdFDiy3R2EC48O5QIWM4sYkwBfLvYA930LKvKXRuJEGs46KZP0+5lZb54eHL7AQIqwqpUe495luWVHw/nXbR26Uj0fg2pSRCNEJXRfvEW89S+eKZp0yG0pWTN1xn7T3CJNytyuL8BUz7S1FPfcyMbVwP60gm9Fc35VtKDLxHCrDVI8e0rI4c4IZXveQ+Q+TIFAZ/fNb4xaLJZf38i4og9P7YTba6EAxdZljTwOnW9JYzPQdvoTI9SzFmnSgqBKi+Jy62F5raPk9pt36dDr52llcgZ0nKu+4PFF3/CEdutGveQJuNP0NaL6Q18sh5R5KRGwGE6Ar73XpBInsNUwc7NMN4QYf6uJLXK5sl78brv9zhYg576nmD6txHTFfxpCM8k66ChfDvn+diH444keemTGdUhwr6AZNFpPrZnBIyfrK/u0XnQHu3AtZC4zbuWQ7Jm5ZvTbioILvE4muIOQI+3SY8w5NhhDK6XQC1zTnNL52je2Jdh/ZpPi4ejiHzpVi0gdvOnnhk70FkXSUunNN/fYhFcIclqmMRJne0nijVt/aJfguiHO/jlLaHweDxd2YVwpTS6BKQ6JVdxBDn/caKj0iJWFFm7d/+ZGH2J0sb2zuDDdgEJiwEWbFrc8WyooxK0LG8p5sM9ywdjSqWlxrm54tiAmAptogkziCkk2JsFBmIT830StJXLKGR4s6G/jrLd3kViT4ua2i9tZbKoL89GVP6IF+N0AU93mpfE0r8dV7bG4VqLlcAC0jqSRvwi0TF5N/8f6SG3o0Clj7wxAp7uXzm/HwTWugr6rmiAqFYVPzlXVEXd15WohRp3NW8ZE7ZtsY+ZFKR2zCBozsKM2/aHmbR6sY8xPoMinmv6BdJqKtesK8TjvLeSp6AmFrA+em6O2HRXR45S7ECWBI9+Tw+kqNqPSnJVLgUu7w=
+    properties :
+     x : 6
+     y : 177
+     width : 363
+     height : 22
+     state : 1
+     anchor : 8
+     tab_stop : 0
+     take_focus : 0
+     accelerator_key : 65535
+     tab_order : 3
+    style : {}
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        code : |1-
+         
+        type : 14
+      -
+        code : |1-
+         
+        type : 15
+      -
+        code : |1-
+         
+        type : 16
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        type : 338
+        enabled : false
+      -
+        type : 339
+        enabled : false
+      -
+        code : |1-
+         
+        type : 17
+  -
+    name : LIB_Logs
+    identifier : 0x2942705805e39673
+    internal_properties : HwAAAB4AAABHY3+ndzuAqtDY64SjCdvssIiR6AlRiqJkLv/b1Y6AgIPwNNTXqhsKYZmw7RQnB30ms+WyEOXRR6wbCtAPA5bONsJFo9RWhkPFX+q16dqQlrGMsf0hQjQSVMpwddmDt/HS2bpDsvzw5Zd6FM9Y/YMCZBS5YxELjyUygjaA3KSIMbxzaM4nFQyFRbeTry562yD8oaUVWP4egl1RhAn2iMXQrYBeZOq9wzj34ueCqm/In2PD/Bx9EDiZbgp5uWqnFSpqDivNd2DxmbCDR4PFQsO73YiVlZwf7knFo9kfi8iMRazwXy2RfGkMQAhIoEVOvDtJj1xNYA83wXnHBHV4RSRpYG93UbcIRqQCIXvZuoHJ7kBg3pU4o4HWuJpNSM84Z0Aeeh19wCHANgv8Oh/Ezi02XBYbjJdIZvTG4nRpAHZt2L43aGAjzNiCnCxFM9caTcwVHcWGTqDYPqXBwpechauP1QQ0pxolLXdW+W9nXSpLqmtKwg==
+    properties :
+     x : 6
+     y : 265
+     width : 390
+     height : 23
+     anchor : 8
+     tab_stop : 0
+     take_focus : 0
+    style : {}
+    type : 3
+    code_elements :
+     type_code : 2
+     p_codes : []
+  -
+    name : SAI_Log
+    identifier : 0x2942706f05faef80
+    internal_properties : HwAAAB4AAABPK3USG+nvkmzyGYE4QAdlKn/1BVOLloN9WlYyT0T6OI2zddN+xAhulG53tOC01QmY8MhrNjKckAU+/VVkzMqg85Ru/rxGSwf+GnX/5MbGhnHMzBFCqS+lZFaq52bUMr7BvVffB0H4Htx1FvZbFSiyGua4uR5JkeYi8XRdtXRyrGoZoXLsGEmhXhP4qIOvH/z+7Ivmro7HCSqkaJzKFILowIgABruiWYEKU3L52f0Kpjq2ji7zeKLq0QXUEdobYbKgfpD11KJMv4/WuHy3ICybBJdPIdLWSqJMjejLpiTQV2y/iJ9jtBuQlsDhdDlhavifJzi2Pj+fuInNd7sE4z9Z8xNy2aBGBW0WFG8OtTLn2sfcpxlzzf3OhjZ2oqZfKzOVJeJ7+dHevHSgR83TQZmARpG6Y6P4o1n+2gycMWcc781BqxoXZsx0AQrWo5LG/ngEM+7YHTpa2ipVV5x47g+0mURCrwogIslIk35ixs5qN2r7H68vnXveCH5CyGtK/gkKDAs9G0WR7qL96I6eF8Eb4UJJVD9A3jN8iRCvobXmHgKpyoh0rxM5ZoOaU9Hf/9FMGG6B15NcfMsC9MTAnYUtZBOuOoJCldOJoyx8ixVTJbFTpo8n5iwfaQj5QHDCbneU8+Da6e/AMjrl9/thjvQ22DnSI9DIyuaak1Gony64afYe/Agw1UJXPec74VKYYt/vcdZ0C1S3aeK00vaMse/503/auhQwNLRxQ8ktN6xzhd4egwgGwAfeuabgJpukU9Hnhae1/uVDQV4zBg3PsJW4j1xeQlA+aPw7omRw90s1NLjVPFmlUtJCjmhm8gEy/nD+aDtsvRzXbc/dlKGGYXwMFKXPynd9w7RxcWGd+Cgve324PTy3sPzJFO/m+Owzq93ONMWwUCl2LgIqzyXm4boh0auv5iCSc2vsJARzKcMFaBbg3F3HeFOkFztQxb5lUMTlmSQM/Zi5ONmtryJxTPu4ZJC+Mz0QWhfwW1ano/kCfsFnRIR8Wzcv966GObeNxbGGjGaAq0SZ/nTJrTp34xexx/h7MAJ1Y2JDs5gef1tV+ajgRx6ZB9t6e6kHSl5fvtTD2ulUTGKY4uUeZoYdV3TF4u9mBqP8hO6arwDQQDQzcOF2dDX7zwg3DDaHSbAZu+dUJrD1Wb9c+jJATG6h1JFYwTrK4rTchAskre8e2Mgvo1OEwt0B1fIb2mVPugSbKsNPYdY1cdA23Up86qLyz3t++RCl3xLLKu7yyb4yMpFI7OW2YGNjyVlh9lEvsbjs4VeuzWXOWuh6zKpIa00vLPiLhFOQdrCP5xMyhGM3213Bq7bJDPSU9vPfxAEpuZLks628X8R/qFo8NAApe0Aa9BHAp82lqSggF8j+fY9x+b352V4VnhalIlU2Rc93zUDUtmJqBtFoqJgECw/rJfQsYSmELcJs7n1kwDPidTf6zt2MdZlykmaNoXTMbC/HTNAwj1LVg0dDny5r1S5cHlqkD0b09bW2g4hDOzOHCT0DHR5Aqf6fC9VoWzzt2eAL8RxIaFy0+zbzhNwnFxtpKY/nc+XqUGcCKpNgDiPteE08K610KcMfrCGL2PPWjq1nyIKWKIOVxehpSppFxg==
+    properties :
+     x : 6
+     y : 294
+     width : 390
+     height : 75
+     state : 1
+     anchor : 10
+     take_focus : 0
+     accelerator_key : 65535
+     tab_order : 5
+    style : {}
+    type : 2
+    code_elements :
+     type_code : 3
+     p_codes :
+      -
+        type : 276
+        enabled : false
+      -
+        type : 277
+        enabled : false
+      -
+        type : 278
+        enabled : false
+      -
+        type : 338
+        enabled : false
+      -
+        type : 339
+        enabled : false
+ menu :
+  name : _Menu
+  identifier : 0x292573e513b5f221
+  internal_properties : HwAAAB4AAAAE1pQ0cgqQ+TvanjTUDq/hLGlHrzfIoGQ5ktO0NGxMqRRu/HYzyDONZtOE1e8FBhPEKKkDZo3KARHv38pwMXlVtn27M2eNb5xqujrkrZO8Jn5vDs2b78M71h3Ws05qSjgEZN8e71dyQwWoPgFgSjdiaOlMS4jJ56t0eTY1D9YXkxFQ3Y3Md5oMTTxu39PLAYbhUhh1d/QFFaQsvF5pUMUykm9rqa4GIElDzfwg0T+TCENYWBfvzpScsw0C2Xr3HtvWtEWdmQZ3DCDqWbutZTf4bzYgmNbszZLfp7y6mjFWUwYkw5Si
+  properties : {}
+  style : {}
+  options : []
+ languages :
+  - fr-FR
+ popup_menus : []
+ message_bar :
+  internal_properties : HwAAAB4AAAAGhKkh5ZPvD1IGufEWzfQ/iMrhHXC2Br3OqR0NIXWRCbpw0wZcjkeecVjJnMlE8nQDtxnyQ+2GVded5Yh3MzoUnX9OVgfLEUnywkZwnVrSWt94DDAqPz4zmY0ELBrTYms0KeU=
+ actionbar : {}
+ code_elements :
+  type_code : 1
+  p_codes :
+   -
+     code : |1-
+      PROCEDURE MaFenêtre()
+      
+      ExplorerAccepte(vrai,"")
+      
+      tabCaract est un tableau de chaînes
+      TableauAjoute(tabCaract,"Longueur")
+      TableauAjoute(tabCaract,"Diamètre")
+      TableauAjoute(tabCaract,"Linéarité")
+      TableauAjoute(tabCaract,"Planéité")
+      TableauAjoute(tabCaract,"Circularité")
+      TableauAjoute(tabCaract,"Cylindricité")
+      TableauAjoute(tabCaract,"Rayon")
+      TableauAjoute(tabCaract,"Profil de surface")
+      TableauAjoute(tabCaract,"Parallélisme")
+      TableauAjoute(tabCaract,"Perpendicularité")
+      TableauAjoute(tabCaract,"Angle")
+      TableauAjoute(tabCaract,"Localisation")
+      TableauAjoute(tabCaract,"Concentricité")
+      TableauAjoute(tabCaract,"Symétrie")
+      TableauAjoute(tabCaract,"Visuel")
+      TableauAjoute(tabCaract,"Battement")
+      TableauAjoute(tabCaract,"Double battement")
+      TableauAjoute(tabCaract,"Rugosité")
+      TableauAjoute(tabCaract,"Tampon")
+      TableauAjoute(tabCaract,"Maxi matière")
+   -
+     code : |1+
+      
+      
+     type : 34
+   -
+     code : |1+
+      
+      
+     type : 234
+   -
+     code : |1+
+      
+      
+     type : 165
+   -
+     code : |1+
+      
+      
+     type : 177
+   -
+     type : 180
+     enabled : false
+   -
+     type : 230
+     enabled : false
+   -
+     code : |1+
+      
+      
+     type : 2
+   -
+     code : |1-
+      // Nombre de fichiers posés dans l'application par Drag and Drop
+      nbFic	est un entier	= ExplorerRécupère(_EVE.wParam)
+      si nbFic <= 0 alors RETOUR
+      si nbFic>1 alors
+      	erreur("Un seul fichier est accepté")
+      	retour
+      FIN
+      
+      SAI_Fichier_CSV=ExplorerRécupère(_EVE.wParam, 1)
+      ExécuteTraitement(SAI_Fichier_CSV,trtSortie)
+     type : 66099
+ code_parameters :
+  internal_properties : HwAAAB4AAAATJE33z8GJHL8wyaJCONZo6KRdMGsb1W7qj4D4VgDgCEgk+OW6jzutOyuhPC76yhPgorKKtlfIuup/5aujquTBD8ahIWf18Y+QF3RqgPYH4pwfw9aJKfTmsVk=
+  original_name : Modele1
+resources :
+ string_res :
+  identifier : 0x19415817000da293
+  internal_properties : HwAAAB4AAAAbY53bgJCA6ACd5sR5fZYih4LkZ0z/7MNl2ie3oeS6YrMl61oqequUz9/EYNu6qdnQHBIqcP9y4NZw
+custom_note :
+ internal_properties : HwAAAB4AAAAw1yJwJOWnBFt8iy6Ww8JWR1G08XnjNT9VuwnlXBOxjoNDueSgBJd4Fg==
+rad :
+ internal_properties : HwAAAB4AAADk2Hz6/QT0adx8e89Zvm7g9bWRpROkGCmpSKmSd1HXAi8ev5F7h+hr
