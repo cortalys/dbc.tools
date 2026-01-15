@@ -22,8 +22,8 @@ project :
     generation_name : Cortalys_DBC_Tools.exe
     version :
      major_version : 1
-     generation_version : 10
-     internal_generation_version : 20
+     generation_version : 12
+     internal_generation_version : 22
     icon_filename : .\favicon.ico
     language : 1
     64bits : true

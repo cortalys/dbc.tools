@@ -55,12 +55,16 @@ procedure_set :
      code : |1-
       procédure  ParamDécrypte(sMessage est une chaine) : chaîne
       
-      bMessage est un buffer = sMessage
-      SI bMessage..Vide ALORS RENVOYER ""
+      sRetour est une chaîne = ""
+      si sMessage <> "" alors
+      	bMessage est un buffer = sMessage
+      	SI pas bMessage..Vide ALORS
+      		bufRetour est un Buffer = DécrypteStandard(bMessage,CleCryptageIni,crypteAES128)
+      		sRetour =  bufRetour..Vide ? "" SINON bufRetour
+      	FIN
+      FIN
       
-      bufRetour est un Buffer = DécrypteStandard(bMessage,CleCryptageIni,crypteAES128)
-      
-      RENVOYER bufRetour..Vide ? "" SINON bufRetour
+      renvoyer sRetour
      type : 458752
    -
      name : ParamCrypte

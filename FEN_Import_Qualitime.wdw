@@ -22,7 +22,7 @@ window :
   -
     name : SAI_Fichier_CSV
     identifier : 0x29415a210cbb9b2a
-    internal_properties : HwAAAB4AAADlTcmbq2H7kmA3lrQLkvtpAIJ5fgi0q2pUyzpLEhVN6Qir8zdPtRcnMM47hdq/paSiFMzoxpsraC0UdvTcMCklOjvu14Y2tN8u+AXJjMmWP14uuk8b+eAgK78nC1BizI++xTYc0DUNdrpEYiBwurwD7ywfVyva4U/GxEvtqtqONKqwrZaP5XdoUqjOcWonClvpnfxpEiCkbxfwf/EwU+EBCDNckJdWez653HynVXpp/ZgqbkgYDIHLRpfcqbfJElFohIUOcTCTYI8mALOTUz6W8moCtyuYVl8uOve3ibQYz757tBcys1jmF8yoY5WrhQ8xhVPpWhVJDvMpXIomDfKCA0sjrBFWrwMfXWm9l196haTKwLYqJ5qzW1ZYNK3YiRf+UaNPnvH176YJqS/HIxdtY3e7XErqAmnEqCMtd2KDGf/8uu3YdpZjIPp0/Kl44CFjVvJUyyYU3DKKm999FciImgvC3VsgxrPqkOv3ZcJg3/Su1nI8N9NF9KffIfhVUO3uUzsaOCPyqi+S9n4zy6rggmePL14NWsZ2d16ECUb3hT3nwJ3xrCd6Uaf3BxO2biWKBmwBLIYBFmNqOsYd8DFItAr5uDTqRbI+mdmKZV+aSyXYFm1YN+cLBDZdNpiLdQoOElwskxnG2JhHmiVaEsTh83YtygfF7a5ub56Lx2VIiQAxSISOpLgZAGmgkuhgeuLCJ+M4XXdxQg2V/56sigo7yDefaO9GGfmKW5MWCHyIMTYrVbu+HIZsPWa/+KeOPgy2iQuSUIvKYNuwB2A+glZFybX4DiCUTIthjPW5Qg1nxPwk1voQXqodsWvI5MayhGE0cAHDdOy7uhG3NooLBK6ITlg5sozqkRZkxHt1IpQdWkwby9PCsU50hu6QQ6fsKhTBfcDJOV5IWM8+cwhHvtlbkyDOKucn5XCEAyMZTHn/ULW+2cg5gRH0tiYb4kD56ldj75z5s/RQCaXyWULG0Y9YhGEtubGy7PjZZKqVpVAAH9aPmNwm0rTULwsojkAfTfzSRQYz+ZdEPzZFFY3vKdYFopfkAcwpcLh9BJnMQyDNPkTEW81elcSxCB6BdR9XcZiQ/F2AqEka/bUQYHEjBRINCB46ofDyV/ILIRRTErbD76pCuASTDuYJtMGOE12MCUtuMLLh8m7Jlfy1wPidMlwunacidpNxR63pPA0o/GxMERYXwSFtBTcVeF0QHTJ2ef6BQrUbUMCyKeMZ4Ykh6Wkfj6PhYR0U19Iqe3sdN3NjBKswwq7DXSzFWlOkn6Sph8A/mEMOEFhrJ/Iqy3x6oqOQ5lkmfamt47Np0iK82vueWfwed+yLavpzZc8xZlYePTUc7qUs/w3vl4A2xiblJoZtTEH8U343+XkGWAI1uXRxct3jsrbxqLyVj+IY+/8H46GPdJVlrhGsgJRunI6lTe0c7DmR1bg4lmwmPgZmQ2mvqf3kZA==
+    internal_properties : HwAAAB4AAABTJyP9RUvdPHodsFK1fN0TvqyjcHLGReTMyaRFuENTmyJ1caElQ2ERJgSlh6itv2r8Xurq5Cmd8nvqGLZ6RgtjJDVEUawElrEs/j9jKrcgveavHA3Hs9TORReNT7oExoNI2Q4Y3HOVoPiAqABeWBLDxcy/K/+EheHAfPEteIhwSMwkxeZ7z5t66PzQefDdSONfrWShmuZUuV3UsWG6lT+pXvtMoBuYH6BXyIL/q1gvbQ56Ujxo4tE9VNPSxWEbxDXqSME+YRKnJmHWYs8NrVBiYMq+kzOCeqF8BvFL4yamnxi3TMPOlaSg0SQeN8f9M1/vbUehans5FKmVLvo4b0Bi4av/vBloY0FFyeuVZVVE4T6GpE5O6W5hpT7eCIdyc/t47ZNrEluxIQDBX7/J1WFJ7SOrAE54EmPOKLkFzdAFtfFQ3jVQBBbhkoJGLHPyBjmhFtKw9wyc0nyKJduTK35oCMuOnat2toEwLNnzf3xyW/LWSl4QBaNzQqNFBc7z/s1MixOCJHWGbLX+6LLpGQjI7KMDM2IPzpTsU2DEcwjVdSs/UI1dej8gj4Mdy9HEUFnMWgiRLAS5DN1CID5n8jusDgb1kBxMqUAo4V+Cb8Hg+98E+oWMFcepJk6HPp5h0zKYhmh85yvyIkrXiA0gyAYN5Qot+kcfAcTUYzCbwecmsRYBZOQeBnQz+klWpvYmpM7EC5v0WYVhVENZfRZ68JhD5kaIUfB7FFI3vngXCVmlToU2CigzlcW9fsEk+eAjs/m9ZAi3LcQBqQTrNDEXd1vCfDTBn5EZ13R+y1Yu/67kRd8HKxd1J2na3iZtDS9XSaKHE47oUf0KW7bu/z8AvXfRYVseRwlzEIfJW6Qq51XiJ7OKRKwLZvnR85HVxOh5tyUwHBFCwst7vTwFRIWEZ1bQtnPTV6RgJDFxKsQeSeo8iUzV+ilapkQZ62E44wGGZ8w+Pt06DKH7wh75Wk/TMgxdk3T6VhYbE4Gu3x8+TqWVLJ3G0V2Xt1+xFDYtl0kUdiWdSCuwjijLBCdAyu5I/qtaCUrR/kGyx2Eag2px6DHi08MXcPojzruGPeU6WsTQ3onzTwJNXZIpShJHIb5wBhMOa/UTuvmfwl+gUM3g5+8o1Ol1Rek4p0W2UcDvMLL9ntgtI0dmDw9gSkWg3YFu/3nHHFpfazi6jvLS87aN2TV1OtFKrlaqxvbyVeC1HnMzykuMEUbMsbXtQij0LnLCJrpsUrb+ptpdHgtjBuhGGJBMbXK/kwfkcofekz6RwM1uuPWCX6SvAb3WIG+prLG3C+hVHSAnBpK6rowmJeftS7irZruJ/Gn4y1nAauY6O9sHmgxvBLU44x3/t+y6Rno5zr6lbHWsz2I/CSniZCrBFdyZGk1nykJlOIw1q07wBwOXYxkXsD0lqhls8KACJgTTP/MmlmNLq9baNIoAWCAMKZOFg9c+zg==
     properties :
      x : 6
      y : 234
@@ -38,9 +38,7 @@ window :
      p_codes :
       -
         code : |1-
-         // Version 1
-         // Description 
-         // Sélecteur de fichier
+         moimeme=""
         type : 14
       -
         code : |1+
@@ -87,6 +85,10 @@ window :
         code : |1-
          
         type : 17
+      -
+        code : |1-
+         OnDropFile()
+        type : 66099
   -
     name : BTN_Fichier
     identifier : 0x29415a210cbd9b39
@@ -230,12 +232,13 @@ window :
          		nCaract est un entier = tableaucherche(tabCaract,tcLinéaire,sCaract)
          		si nCaract<0 ou nCaract>20 alors nCaract=0
          		gamautoc.SIGLEDIMENSION=(nCaract+1)
-         		si sCoteCible<>"" alors
-         			si val(sCoteCible)<> 0 alors
+         		selon sAttribut
+         			CAS "Mesure"
          				GAMAUTOC.COTENOM=Val(sCoteCible)
-         			SINON
-         				gamautoc.DESIGN=sCoteCible
-         			FIN
+         				GAMAUTOC.DESIGN=""
+         			cas "Attribut", "Texte"
+         				GAMAUTOC.COTENOM	= 0
+         				GAMAUTOC.DESIGN	= sCoteCible
          		FIN
          		gamautoc.TOLERMAX	= val(remplace(sTolMax,",","."))
          		gamautoc.TOLERMin	= val(Remplace(sTolMin,",","."))
@@ -257,7 +260,14 @@ window :
          				CAS 1
          					sValeur = sIndice
          				CAS 2
-         					sValeur = sansespace(GAMAUTOC.DESIGN)<>"" ? 2 sinon 1
+         					SELON sAttribut
+         						CAS "Mesure"
+         							sValeur = 1
+         						CAS "Attribut"
+         							sValeur = 2
+         						CAS "Texte"
+         							sValeur = 3
+         					FIN
          				CAS 3
          					sValeur = sFrequence
          				CAS 4
@@ -366,7 +376,7 @@ window :
   -
     name : SAI_NumGammePiece
     identifier : 0x29415a810d0011bc
-    internal_properties : HwAAAB4AAAD8O6TE+OsCnHRlgKYra87WV9NnmN+NVaXbYFt0yS7goe8iF4Vn+8OiQu40qTMhH0m5D8rzLhwlv/FNPIn3/o3rV86+zCNvS35f0xvANrIxw/m0VdveJY2w3GaoE2NyeTitc1Rtslf+EWCejh2Zm4s5WVYX4vpOsgx3apPT3wocFoxj5pR7j42XO7f+R9U6DAqYRDzhF/VPCsLyfcLAKqZFXlNKvzxYHFY/g4zX1ZlcoZsqhkEpWypvTdGD+9dQblyjxkI83Av8r910RTuJIimmfx7kn3fQQCUB46PQ9IMTEFzzF6AiUC4lczIvzIPGMvn2rHXfELL1htGHp0m1QI80ruMlIOIR6u9gNCOBsQftmy4F61D48IyRkZCXYEsUfsrqS8XGqct64NlY8Wjzfhhhm1qgLUMRKNkVdjPO+jow62K7TgUqjKUxbLidj2hfoO2LyOTtsCrVzF45FOGxEi71xacBGlnAaG0x2UJ5+lxYITBVkGBnOyljG0bC5mgPRNUdaNwemWSJiBnq5b4kQyJlqEMA8mSc3SzFLK6PQXr/WFpUBg+iob2eBq4XnPlokHPTmQE26kaJEPjm0zeHFHoyUZP1jDx5zgm5p1g4MYv+z0Kr01ZUoTjdeSrPVDyw30KX9atWxjz/QEphfMYTQgRjL9VembgNjbf258iS8DobdHoolRP+AULOLLoAsQRK14AkfHmT9xftiHEw3KtgsI9TXzkc9FdSODUiUjNa6cQR2pLyZdohkRTJapNAV/H3l266XZGK27vpkhFyDk4qZ0aqbPDluGzCwah6Hbqn3K6n63SvJIFafhCeIXKOgfDhwRoTzcCHhP2n+3XUCZLI+qtMBq9mXIjwE2FPR39CKexathhOkHS8RJL+m3dmoR1qQPoIUz5e6meTXmjS/44twRlz4yg8226IUw5eb6l+tudUxQdva8wI+GLbjqDKxszSt3/F1t8bZhyX1+d21EZ8wsVfeZLtrJtxIAUQXbvbQzpjiR5OvfVBTyPHbNy2gqrsAFPFZ1Rza3mgdqxt/B4j1vPDRMMVpzaE8n/iLf56yHl+VJYrGf71Fc989O33Ua8BDg+AQiHyf/0WK7Bs7PnCNFofET6A5odhGC8mwykRFsHVVB3wirK8cSll2OFgibqD7uqSG2MZucr8WJX+95DEgfZ6dWQN3nwTgElWFJ3Y5RapW0b+rgeaorUt3P8DNWMVGHa65eAmt/1ZBOuzuTdwA9t1dXoa5EdSL09Jh7pr1rmY4+mAOuxTSmtjvBot55gs2b0Ih+M5c4AP33sLaeX2j9ePeKyGIuAZDHHzLxOnDzEp+B42Eq9izGTvOzk9viLuEqgzzvrSpqVrQK78ccFbRgVXVXi0SAQDDi70HKlP7eWrY9jXEY54qZketisBtDpKkd4GOafZi32LypyloYwr5MZyiU0=
+    internal_properties : HwAAAB4AAACqEVKaPqk44o6rwmRpoRyghRm0948NUk2MURi1/1zIwVMgQ3mN+bWAZuw8LVEno2015S5vSEAHzFdJkI0bksGXm6LisLcTr4oLX9dc8h5dtxWAgWfKcSlUsCq8cB/uk4H4+B9dyCUon5gMyr3vCXtR4bw3whislK7TDLevOeQYIvjlcsA9EaOtP5k6z9Oo9MIA+jjVKccVsAIgzbZa/GqxJulaj97KsmRr7VQbnwtEmRfUIrUnYRTF7TdvUxWOrhRnsD441oU60YFeEc9zpKVSo+B8NzESnru1ZYPwKunXtDC9f5A0KgSP84iHWF3ANo3yti3/Zqj/PGnd+3HbJksgShWdMFiXnKWAMj85F3Vxf6Z761h+5vYjSQ7fHCWGXrI2JZW2J0Hcni0Soejx3FQVN3x4tSm3upNR4HfiPGx4q5Ih6hEYsm/nLGYle7p5pCnD/hhxPlCPstrbcLFXyGJRZe154g9+mg89i5pBkEpAcXTffFwJtWed8xz2cjLJHBUJUkSWG37/LqmY0TayGYoVvI3EhsqC3zLBXtrv53AL7BZWdm/I11/4KrBnFHcGYLNDJ5GeANR7iigMjzup9hpS8bkp8EoPIBO9mZgEA5Xub07Vo7ZiV6KvQVjDrCreO27vm8M+dKK5tnaTXB7xMEyzd9v24W6zXynK8bg6fjAPoM5qDfuIS8h8EOREXWaUp/BwPrkTgeErKnU7cd69MwAisPT9k7AB2WxPCWRpKqM+rS9Jck3GfBkU3xIxpgLGQJVHfNY1IDYuFTZRp7VbVk/xOQey+ynNtqdTIMdKMWn0DmGGMQTvIZ3NMmWLVJ1UQuFE8OHmJWQQuu5X1tWVPeA/B7qfg2HfFMDwurxFJh8vcW1lXZeBt0+F6A7H+IYBNZ1BNn8NKyaEoS3pQBU22AZmMJ+JDisLcJFzZvI91/bNpCxWQOf9y0+uu6fj7U0xUPaahSxOM0ccliwFTQ0lOUL6lkHCR+hsVfytvFSCNClwpGvFAjD2klCC3S/T9SdvDYbS/oG2IETl2am0bS1cnTRi5cY2BufTw2oTGNOlpWwD1xcmAvUeLNgHYbzgsOCg557B7XoZMMS/Zv07JYBLa6vWqsEZbQDwOSovxhZsCxx2G1Y7A0kV4LrUaWRFLMd2f0kjprRIigGFjyo9KF/lsMeBAjt60YEedVg/N7L7UpkamvMN29rPdXJ8bSIY2PiwAU2nJEVRjCD2w4gSQuZJWoTcFuUz21i5SKoK+j/2u8Qdxroje5usOay6QZnu5pkr2nwNzphkQDMMhuSeznDD8my1W6g9i0u22O3/G8/jU+31NIrqniPuuPhT350xgp6yVjxX2u5eOskn7ILuTtRaR3jk3CWL8VP8ZZtnhQA45M5CDDt4jIOLdk837mA2XHKiOiTMB/ULRbvNjFLrZ8ZtooCoX5s=
     properties :
      x : 6
      y : 121
@@ -380,6 +390,10 @@ window :
     code_elements :
      type_code : 3
      p_codes :
+      -
+        code : |1+
+         moimeme=""
+        type : 14
       -
         code : |1+
          si SAI_NumGammePiece=0 alors retour
@@ -639,17 +653,28 @@ window :
      type : 2
    -
      code : |1-
+      OnDropFile()
+     type : 66099
+  procedures :
+   -
+     name : OnDropFile
+     procedure_id : 1827656421524640271
+     type_code : 14
+     code : |1+
+      procédure OnDropFile()
       // Nombre de fichiers posés dans l'application par Drag and Drop
       nbFic	est un entier	= ExplorerRécupère(_EVE.wParam)
-      si nbFic <= 0 alors RETOUR
-      si nbFic>1 alors
-      	erreur("Un seul fichier est accepté")
-      	retour
+      SI nbFic <= 0 ALORS RETOUR
+      SI nbFic>1 ALORS
+      	Erreur("Un seul fichier est accepté")
+      	RETOUR
       FIN
       
       SAI_Fichier_CSV=ExplorerRécupère(_EVE.wParam, 1)
       ExécuteTraitement(SAI_Fichier_CSV,trtSortie)
-     type : 66099
+     type : 458752
+  procedure_templates : []
+  property_templates : []
  code_parameters :
   internal_properties : HwAAAB4AAAATJE33z8GJHL8wyaJCONZo6KRdMGsb1W7qj4D4VgDgCEgk+OW6jzutOyuhPC76yhPgorKKtlfIuup/5aujquTBD8ahIWf18Y+QF3RqgPYH4pwfw9aJKfTmsVk=
   original_name : Modele1
