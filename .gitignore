@@ -17,6 +17,13 @@ Sauvegarde
 *.wdcoverage
 *.wpf
 HstDuree.log
+*.exe
+/Install_Qualitime*
+/Sauvegarde*
+/Exe
+/Historique
+/Svg*
+*.zip
 #
 #WEBDEV
 *\res
@@ -26,9 +33,3 @@ HstDuree.log
 # WINDEV Mobile 
 android
 *.xcode.gen
-*.exe
-Install_Qualitime*
-Sauvegarde*
-Exe
-Historique
-Svg*
