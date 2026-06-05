@@ -1,0 +1,84 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : ETAT_Etiquette
+ major_version : 30
+ minor_version : 0
+ type : 3
+ description : ""
+ subtype : 0
+ options : 256
+report :
+ identifier : 0x5a21af750058a215
+ internal_properties : HwAAAB4AAADUSyS9upVsAUGXHQZ3uzD6I2uiL8e2yGmzrzYwg1e/gvZB3+tHs4aXqOo2TmeSxHAeajFvS3OHKqNQoL1oIsgFN+LzCuzjm33OsAhCXXw4J5MIkHwkrnfp8Tvn79EbLd+oQzGbHxo7ExRrFWW82x9wUBUnYx7pYqxR133ulDlYph6zk+L8F4Z6PpUIBtz3pAWCc980Ce2fYU4Wbu/TiPpyR+vE7R1bdMJulWnYb9Gk65JMBeXNJYd7SrMwrQHF9C5NwDe3J+8b8xvbfj7eexs9v5ZOo26rswylP4ZZI1HMEuJGF9oOTcss3StLPoGfNvod+9oenMIYLxAw1A7TqNuntxvhprVO/AconISaEHDa/Pm7pznKuts9yvqgk+XHpICTnaumwD3V+Z5Q850G/9InYvcJDDTnX90vLSTWZiFy0Ftt2i4CoQpvyUQDa713mZUGRTZIw2ZrNUyxj9GhxCkMHPFg2KDJSZXvNCFgyNu9bTOgt3oSql+zc9nVlQa5vzVu+fOyyZXKi7A3LUdEiyPMHZwB/1qXbUlr9VbMcEU0cchSJQmhqGAD757Nd6jf4e4QtunNtWL9KxtXhznLZJ2Wtb9WiwUMOzvklpqK9ajCDMGQOV2D8srTZTnI9A8IIQz7L+bUIQhtP2bEGuF0Ma8xZjMRAv7N1e1E36d5xzY2CRJBbQmJ0AFY3szJGFHss2igcVrPj9y1lCWWLLBvWA==
+ languages :
+  - fr-FR
+ blocks :
+  -
+    name : CORPS
+    identifier : 0x5a21af750094a215
+    internal_properties : HwAAAB4AAAAqdSw0CQLp93aMFbjd+ZHKRCNZ9aMW0IwCCVLZQHO48WD+rHl9ib4KHWd59+5hQ9aQNE7txpQSrGdH/dT0PLvfk6z+rBaivD6aH4V4JHo9/cNyEzX3RgtT3tSJXxdvj8TO+Dyk1pZvxGEmwSyyWT7zLmnPJo+zd4dySShwUj2/92bopPmdSYd+AmrHt/3x8l8VzGCHtcNuxphpjkmJhq72f7E3qdii8vHjgd7nx4TN/PvZJdVA/VEnHUevysgJYozYrQkx9w2jog==
+    controls :
+     -
+       name : IMG_SansNom
+       identifier : 0x5a21b25d0219fcb3
+       internal_properties : HwAAAB4AAABZMMMdp6Iw3WwthqN1zijXjCCsyuLMMIo5UWVrctO4Fd7uM9coUaLDeegJYed7m8c4ZnRGJ+OC45bR2KQnPR8solve8uFAV38yhAyxIiinvg0JQ8viuHzCJ/+Qdugr5gqFCn+sm3YhbfMj5ACMYjWsS0+70AiKKl+3WZjCdkVkUcNFZPYhC2c8K/qID6MgW7BOE5YvRCnr7QuPzYebrb+TiSssqoJKy4BNouQe80RMFlF5UU3qwNpeQPt5gEALIdFQ1caYQjme019xDYWI5CoYCzBfL+RDmEoC+iH6mRnspSkihFJOD9zKKovUM0d7c3mFXj5j4ZXptRQ+iXDom+lQQZYBuDS0Z4+oGFk+s1ryjuaGR8sypOiClBrUYApT/rgeCkJj7HVGCoX11ZMZhkaeOULSfneEs5jlfmeaErqdi+SvC0GcOw==
+       properties :
+        width : 52.917
+        height : 47.625
+       code_elements :
+        type_code : 29
+        p_codes : []
+     -
+       name : LIB_SansNom
+       identifier : 0x5a21b45a02f0c188
+       internal_properties : HwAAAB4AAAB4D8+93ATcuuYW9HcikCYUcsTDXDucxcC0VEdYbzos77FKvA4dIDVV/9cpSAu38djkskR29n90KinI4k2ix6CeyEGqIyrElJdo78al0a8cHsAJexYbsWMnkrxVwvSTDihJuJLlMKRuVxBlj1ePVxZ6TpDVXa0B0zF7xTeMQBuxTY5cE7xlRIx+EDCn8ff+a/jFwAo74zKIv3dfszYbaqx7xYc+6+It1oROignZHFyhRgs0ffhGLZDHTofh3ixJ0z6p54LJUULYE6BuOYuwhAdgtVGp9lgIWyGSD8Je3lR3wA7XkJeXpxQO2aqqct6LyN3BUZ3M3PtXvRRFaW5QASO+r0ICr0Ffk+TCgwWth5HWWfAINiWjPc9IZ85LFY9ZL8d2uyMtriqlKAiXb+gw47nkAfZi4SV7SLtruh6foyWMSGW8wONnrQym8v1fHVUa1ADBXsI9R32E0pdq3XBK6h7ZodxzAA==
+       properties :
+        width : 32.015
+        height : 7.
+       code_elements :
+        type_code : 29
+        p_codes : []
+    properties :
+     width : 80.
+     height : 51.858
+    code_elements :
+     type_code : 30
+     p_codes : []
+ controls : []
+ code_elements :
+  type_code : 13
+  p_codes :
+   -
+     code : |1-
+      PROCEDURE MonEtat(nGacleunik est un entier,jSon est une chaine,nLargeur est un entier, nHauteur est un entier,gNbEtiquette est un entier)
+      
+      gIndex est un entier = 0
+      IMG_SansNom.Image = ProcéduresEtiquette.DessineAperçu(json,nlargeur,nhauteur,nGacleunik)
+     type : 327680
+   -
+     code : |1-
+      gindex++
+      renvoyer gIndex <= gNbEtiquette
+     type : 327695
+   -
+     code : |1-
+      
+     type : 327696
+   -
+     code : |1-
+      
+     type : 327682
+   -
+     code : |1-
+      
+     type : 327704
+ code_parameters :
+  internal_properties : HwAAAB4AAAB7MB8NZB5rGUbyk77+IjQnJ74vm430Ar3yq0zmP05sGBBw0ur17uG6ZWry
+  original_name : ETAT_SansNom1
+resources :
+ string_res :
+  identifier : 0x1a21af750208a215
+  internal_properties : HwAAAB4AAAA809Qj/IAi+r8QXyrnW7sarQeYORCUjKBkmMeTFexSj5AuvTfTUpN0Eg==
+custom_note :
+ internal_properties : HwAAAB4AAAAw1yJwJOWnBFt8iy6Ww8JWR1G08XnjNT9VuwnlXBOxjoNDueSgBJd4Fg==

@@ -1,0 +1,221 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : ProcéduresEtiquette
+ major_version : 30
+ minor_version : 0
+ type : 7
+ description : ""
+ subtype : 0
+ options : 256
+procedure_set :
+ identifier : 0x1a21b37903665148
+ internal_properties : HwAAAB4AAADjksEavC8JwuEiHc63C+ul0ggS/BOiC8PJfOp/6aEkSKX4qEWcBw==
+ code_elements :
+  type_code : 31
+  p_codes :
+   -
+     code : |1-
+      stItemEtiquette est une Structure
+      	nOrdre								est un entier
+      	sType								est un chaîne
+      	nPosX, nPosY, nLargeur, nHauteur	sont des entiers
+      	sTitre								est une chaîne
+      	sValeur								est une chaîne
+      	nTailleTexte						est un entier
+      	sPolice								est une chaîne
+      	bGras								est un booléen
+      	bItalique							est un booléen
+      	sNomFichierImage					est une chaîne
+      	sFormatCodeBarre					est une chaîne
+      FIN
+      
+      CONSTANT
+      	C_TYPE_LIBELLE				= "Libellé"
+      	C_TYPE_CHAMP				= "Champ"
+      	C_TYPE_IMAGE				= "Image"
+      	C_TYPE_CODEBARRE			= "Code barre"
+      
+      	C_POLICE_ARIAL				= "Arial"
+      	C_POLICE_CALIBRI			= "Calibri"
+      	C_POLICE_COURIER			= "Courier"
+      	C_POLICE_GARAMOND			= "Garamond"
+      	C_POLICE_HELVETICA			= "Helvetica"
+      	C_POLICE_TIMES				= "Times New Roman"
+      
+      	C_CB_EAN8					= "EAN8"
+      	C_CB_EAN13					= "EAN13"
+      	C_CB_EAN128					= "EAN128"
+      	C_CB_DATAMATRIX				= "Datamatrix"
+      	C_CB_QR						= "QR Code"
+      	C_CB_CODE39					= "Code 39"
+      
+      FIN
+      
+      nTypeOutillage	est un entier	= 9
+      nDpiImpression	est un entier	= 300
+      nDpiApercu		est un entier	= 96
+      nEchelle		est un réel		= nDpiImpression/25.4
+      
+      //local
+      //dc est un entier sur 4 octets = AppelDLL32("gdi32","CreateICA","Display",Null,Null,Null)
+      //si dc alors
+      //	LOGPIXELSX	est un entier	= 88
+      //	LOGPIXELSY	est un entier	= 90
+      //	nbpx		est un entier	= AppelDLL32("gdi32","GetDeviceCaps" , dc , LOGPIXELSX)
+      //	nbpy		est un entier	= AppelDLL32("gdi32","GetDeviceCaps" , dc , LOGPIXELSY)
+      //	nDpiApercu = max(nbpx,nbpy)
+      //	appeldll32("gdi32","DeleteDC",dc)
+      //fin
+     type : 720896
+  procedures :
+   -
+     name : DessineEtiquette
+     procedure_id : 1882983511676717392
+     type_code : 15
+     code : |1-
+      procédure DessineEtiquette(nGacleunik est un entier, sJsonConfig est une chaine,nLargeurEtiqMm est un entier, nHauteurEtiqMm est un entier) : image
+      
+      hlitrecherche(gamme,GACLEUNIK,nGacleunik)
+      HLitRecherche(engam,NAF,gamme.NAF)
+      hlitrecherche(affaire,naf,gamme.naf)
+      HLitRecherche(commande,cocde,affaire.cocde)
+      hlitrecherche(ART,GPCOPIECE,engam.EN_PIECE)
+      hlitrecherche(client,cocli,affaire.cocli)
+      si pas htrouve(gamme) ou pas htrouve(engam) OU PAS HTrouve(affaire) OU PAS HTrouve(commande) OU PAS HTrouve(art) OU PAS HTrouve(client) alors
+      	erreur("Certaines enregistrements sont introuvables")
+      	renvoyer Null
+      FIN
+      
+      tabItems	est un tableau de stItemEtiquette	= JSONVersVariant(sJsonConfig)
+      gpwImg		est une Image
+      gpwImg.Largeur	= nLargeurEtiqMm*nEchelle
+      gpwImg.hauteur	= nHauteurEtiqMm*nEchelle
+      dDébutDessin(gpwImg)
+      dEfface(Blanc)
+      
+      POUR TOUT stItem de tabItems
+      	nX			est un entier	= stItem.nPosX * nEchelle
+      	nY			est un entier	= stItem.nposy * nEchelle
+      	nLargeur	est un entier	= stItem.nLargeur * nEchelle
+      	nHauteur	est un entier	= stItem.nHauteur * nEchelle
+      	SELON stItem.sType
+      		CAS C_TYPE_LIBELLE,C_TYPE_CHAMP
+      			vAttrPolice est un Variant
+      			si stItem.bGras et stItem.bItalique alors
+      				vAttrPolice = iGras + iItalique
+      			sinon si stItem.bGras ALORS
+      				vAttrPolice = iGras
+      			sinon si stItem.bItalique ALORS
+      				vAttrPolice = iItalique
+      			sinon
+      				vAttrPolice = inormal
+      			FIN
+      			sValeur est une chaine = ""
+      			si stItem.sType = C_TYPE_LIBELLE alors
+      				sValeur = stItem.sValeur
+      			sinon
+      				quand exception DANS
+      					sValeur =  {stItem.sValeur}
+      				FAIRE
+      					sValeur = "ERREUR"
+      				FIN
+      			FIN
+      			nTailleTexte est un entier = stItem.nTailleTexte*0.3527*nechelle
+      			dPolice(gpwImg,stItem.sPolice,nTailleTexte, vAttrPolice)
+      			dTexte(gpwImg,nX,nY,sValeur)
+      		cas C_TYPE_IMAGE
+      			si ffichierexiste(stItem.sNomFichierImage) alors
+      				dImageIMG est une Image
+      				dImageIMG = dChargeImage(stItem.sNomFichierImage)
+      				SI dImageIMG <> Null ALORS
+      					dCopie(dImageIMG,gpwImg,0,0,dImageIMG.Largeur,dImageIMG.Hauteur,nX,nY,nLargeur,nHauteur)
+      				SINON
+      					ToastAffiche(ErreurInfo(errComplet))
+      				FIN
+      			sinon
+      				ToastAffiche("Image introuvable : "+stItem.sNomFichierImage)
+      			FIN
+      		CAS C_TYPE_CODEBARRE
+      			clCB est un CodeBarres
+      			QUAND EXCEPTION DANS
+      				clCB.Contenu = {stItem.sValeur}
+      			FAIRE
+      				clCB.Contenu = ""
+      			FIN
+      			clCB.TypeContenu = cbTypeTexte
+      			selon stItem.sFormatCodeBarre
+      				CAS C_CB_EAN8
+      					clCB.TypeCodeBarres	= CB_EAN8
+      				CAS C_CB_EAN13
+      					clCB.TypeCodeBarres	= CB_EAN13
+      				CAS C_CB_EAN128
+      					clCB.TypeCodeBarres = CB_EAN128
+      				cas C_CB_QR
+      					clCB.TypeCodeBarres	= CB_QRCODE
+      				CAS C_CB_DATAMATRIX
+      					clCB.TypeCodeBarres = CB_DATAMATRIX
+      				CAS C_CB_CODE39
+      					clCB.TypeCodeBarres	= CB_CODE39
+      				autre CAS
+      					clCB.TypeCodeBarres	= CB_CODE39
+      			FIN
+      			dImageCB est une Image
+      			dDébutDessin(dImageCB)
+      			dImageCB.Largeur	= nLargeur
+      			dImageCB.Hauteur	= nHauteur
+      			dImageCB			= CBVersImage(clCB,dImageCB.Largeur,dImageCB.Hauteur,Blanc,Noir)
+      			SI dImageCB <> null ALORS
+      				dCopie(dImageCB,gpwImg,0,0,dImageCB.Largeur,dImageCB.Hauteur,nX,nY,dImageCB.Largeur,dImageCB.Hauteur)
+      			sinon
+      				ToastAffiche(ErreurInfo(errComplet))
+      			FIN
+      	FIN
+      FIN
+      dFinDessin()
+      
+      renvoyer gpwImg
+     type : 458752
+   -
+     name : ImprimeEtiquette
+     procedure_id : 1883191654337937607
+     type_code : 15
+     code : |1-
+      procédure ImprimeEtiquette(nGacleunik est un entier, sJson est une chaîne, nLargeurMM est un entier, nHauteurMM est un entier,nMarge est un entier, nNbExemplaire est un entier	= 1, sImprimante est une chaîne = "")
+      
+      SI sImprimante <> "" ALORS
+      	si sImprimante="PDF" alors
+      		sFichier est une chaîne
+      		sFichier = fSélecteur("", "TestEtiquette.pdf", "Enregistrer le PDF sous...", "Fichier PDF" + TAB + "*.pdf", "*.pdf", fselCrée)
+      		iDestination(iPDF,sFichier)
+      	sinon
+      		iConfigure(sImprimante,Vrai)
+      	FIN
+      
+      FIN
+      iParamètre(iLargeurPapier,nLargeurMM*10)
+      iParamètre(iHauteurPapier,nHauteurMM*10)
+      iParamètre(iOrientation,iOrientation_Portrait)
+      imarge(nMarge,nMarge,nMarge,nMarge)
+      nLargeur est un entier = nLargeurMM-2*nMarge
+      nHauteur est un entier = nHauteurMM-2*nMarge
+      
+      imgEtiq est une Image = DessineEtiquette(nGacleunik, sJson, nLargeur, nHauteur)
+      
+      POUR i = 1 _À_ nNbExemplaire
+      	iImprimeImage(imgEtiq, 0, 0,nLargeur,nHauteur,iAffichageHomoCentré)
+      	SI i < nNbExemplaire ALORS iSautePage()
+      FIN
+      iFinImprime()
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : HwAAAB4AAAB7MB8NZB5rGUbyk77+IjQnJ74vm430Ar3yq0zmP05sGBBw0ur17uG6ZWry
+  original_name : COL_SansNom1
+resources :
+ string_res :
+  identifier : 0x1a21b3720364365d
+  internal_properties : HwAAAB4AAAA809Qj/IAi+r8QXyrnW7sarQeYORCUjKBkmMeTFexSj5AuvTfTUpN0Eg==
+custom_note :
+ internal_properties : HwAAAB4AAADnl3uxgA6ylw4vtqUKEOJQD3VAAOKeNUmhPNojcRFoDpHEcUyYAw==

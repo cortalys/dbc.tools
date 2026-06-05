@@ -151,7 +151,7 @@ class :
      name : ParamOui
      procedure_id : 1609717361356050077
      type_code : 12
-     code : |1+
+     code : |1-
       // Résumé : renvoit vrai si le param existe et que valpar = OUI / O / 1
       // Paramètres :
       //	sCopar (chaîne ANSI) : copar du parametre interrogé
@@ -169,8 +169,8 @@ class :
       FIN
       
       ST_Courant = m_taParametres[sParam]
-      sVal = ST_Courant.sVALPAR
-      renvoyer sVal~=<§@3eb7b3d93da3426300b1§> _ou_ sVal~="OUI" _ou_ sVal~="O" _ou_ sVal~="1"
+      sVal = sansespace(ST_Courant.sVALPAR)
+      si sVal=""_ou_ sVal="OUI" _ou_ sVal="O" _ou_ sVal="1" alors renvoyer vrai sinon renvoyer faux
      type : 458752
    -
      name : Sauve
